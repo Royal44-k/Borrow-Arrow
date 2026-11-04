@@ -1,0 +1,11 @@
+const {chromium}=require('playwright');const fs=require('fs'),path=require('path');
+const out=path.resolve(__dirname,'../qa');fs.mkdirSync(out,{recursive:true});
+(async()=>{const browser=await chromium.launch({headless:true,channel:'msedge'});const page=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'});const failures=[];
+await page.route('**/*',route=>new URL(route.request().url()).hostname==='127.0.0.1'?route.continue():route.abort());
+page.on('pageerror',e=>failures.push(e.message));page.on('response',r=>{if(r.status()>=400)failures.push(`${r.status()} ${r.url()}`)});page.on('console',m=>{if(m.type()==='error')failures.push(m.text())});
+await page.goto('http://127.0.0.1:8197/Borrow-Arrow/');await page.waitForTimeout(1500);await page.screenshot({path:out+'/cover.png'});
+await page.getByRole('button',{name:'进入新的故事'}).click();for(let i=0;i<5;i++)await page.locator('.v1-dialogue .continue').click();
+await page.getByRole('button',{name:'以鲁肃入局'}).click();await page.locator('.v1-login select').selectOption('S001');await page.getByRole('button',{name:'进入课件',exact:true}).click();
+await page.locator('.v1-heading h1').waitFor({timeout:60000});await page.screenshot({path:out+'/initial-scene.png'});
+fs.writeFileSync(out+'/smoke.json',JSON.stringify({failures,title:await page.title(),body:await page.locator('body').innerText()},null,2));console.log(JSON.stringify({failures,title:await page.title()}));await browser.close();if(failures.length)process.exitCode=1;
+})().catch(e=>{console.error(e);process.exit(1)});
