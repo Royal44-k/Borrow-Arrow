@@ -1,0 +1,4 @@
+.v1 .scene-back.scene-forward{left:auto;right:16px;width:48px;border-radius:20px 0 0 20px}
+.v1:has(.scene-forward) .v1-heading{max-width:calc(100vw - 200px)}
+.scene-forward:focus-visible,.scene-back:focus-visible{outline:2px solid #e2bd74;outline-offset:5px}
+@media(max-width:650px){.v1 .scene-back.scene-forward{right:8px}.scene-back{left:8px}.scene-back small{font-size:10px}.v1:has(.scene-forward) .v1-heading{max-width:calc(100vw - 125px)}}

@@ -1,0 +1,6529 @@
+[
+  {
+    "entry": "R_LUSU",
+    "scenario": "responsive_dense",
+    "expected": "T1",
+    "actual": "T1",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 90000,
+          "deliverable": 80000,
+          "acquired": 80000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E13",
+        "source": "R0:E13",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E19",
+        "source": "R0:E19",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E25",
+        "source": "R0:E25",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "46cda4b41e7456583eb4e3b583f3d1cf5cebab779562b10d98aa8df2afc5c874",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "2d9d03f6f2358e2482bb7c2ede7996fdf2aadb52e82c6df447c55dc71d158f45",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "476fbddf5b403aabf84ab553f86e2893b82cfa2bc636c8c5253f2f3c30631413",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E12",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E13",
+        "type": "authored_receipt",
+        "source": "R0:E12",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "476fbddf5b403aabf84ab553f86e2893b82cfa2bc636c8c5253f2f3c30631413",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E16",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "124302a3ba9baec5afec606a5cdedf96ff3291a334f3c38ced5da242d217894c",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E17",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E18",
+        "type": "cao_volley",
+        "batch": 2
+      },
+      {
+        "id": "R0:E19",
+        "type": "authored_receipt",
+        "source": "R0:E18",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E20",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "124302a3ba9baec5afec606a5cdedf96ff3291a334f3c38ced5da242d217894c",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E21",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E22",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "52c40b2a2db542ff6dfd254cf574c02cd901927071c46dfd3d76ab6f0549780f",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E23",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E24",
+        "type": "cao_volley",
+        "batch": 3
+      },
+      {
+        "id": "R0:E25",
+        "type": "authored_receipt",
+        "source": "R0:E24",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E26",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "52c40b2a2db542ff6dfd254cf574c02cd901927071c46dfd3d76ab6f0549780f",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E27",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E28",
+        "type": "proposal",
+        "source": "R0:E27"
+      },
+      {
+        "id": "R0:E29",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E27",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E30",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "3f12117b7e01a544cddc38a725dbf185c1a24a08b7b3d405fa6b0849e7f9bd28",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E31",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E32",
+        "type": "closure",
+        "endpoint": "T1",
+        "deliverable": 120000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E33",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "71001fa6796942338a0c117fb2dd1339f1bd3fb2ea2fe57db31e66c5eac5328e",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_LUSU",
+    "scenario": "responsive_dense",
+    "expected": "T2",
+    "actual": "T2",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E13",
+        "source": "R0:E13",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "e348941b95a4de173908d4ba9bbe18bf399cb0ef0a26ce0e7c35de5b4301aa42",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "10fa3095fd7410e55e143bf7c402ba1d01e52afa65e1dc3415efec94a983bfb1",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "51aa68dada8ea1bfe7bee6e9df6129a6434cb4c7b9b79297ffc7721144181e40",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E12",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E13",
+        "type": "authored_receipt",
+        "source": "R0:E12",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "51aa68dada8ea1bfe7bee6e9df6129a6434cb4c7b9b79297ffc7721144181e40",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E16",
+        "type": "proposal",
+        "source": "R0:E15"
+      },
+      {
+        "id": "R0:E17",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E15",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E18",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "9830376ef3cd8dc32f53812be5c2fb89c8f8017b9e06b69bb01e0190320b8bf9",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E19",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E20",
+        "type": "closure",
+        "endpoint": "T2",
+        "deliverable": 40000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E21",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "c88433571d40dd186895c8a33d2fe261a7a057d6ea5f0c43664332ac81ebf8bf",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_LUSU",
+    "scenario": "skeptic_clear",
+    "expected": "T3",
+    "actual": "T3",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_NEAR",
+        "node": "N05_OBSERVE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_PROBE",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_probe",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_probe",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_probe",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E18",
+        "source": "R0:E18",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "4c0612c4aed7cf3658a586f7ef75ea00a5601e62583ac8593bce531564f37497",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "6851fbc4d6aaedc29394ea50464f0fe61155e05db95f7bd1685f6c8e79c63d09",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_NEAR",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "proposal",
+        "source": "R0:E9"
+      },
+      {
+        "id": "R0:E11",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E9",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E12",
+        "type": "visible_outline",
+        "detail": "straw"
+      },
+      {
+        "id": "R0:E13",
+        "type": "scene_enter",
+        "node": "N05_OBSERVE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "4fc1c612958e795ea7c916ad60949eb9681f1f8d4614d0a33efb8e09d7ec7f35",
+        "retry_action": "A_NEAR",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E14",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E15",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "7b056b582327eaf1caff9c4e9461761fc8fab85cf5a1c45193b3efda39577ffe",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E16",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "outline_straw",
+          "river_movement"
+        ],
+        "policy": "skeptic"
+      },
+      {
+        "id": "R0:E17",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E18",
+        "type": "authored_receipt",
+        "source": "R0:E17",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E19",
+        "type": "visible_outline",
+        "detail": "straw"
+      },
+      {
+        "id": "R0:E20",
+        "type": "scene_enter",
+        "node": "N06_ANOMALY",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "7b056b582327eaf1caff9c4e9461761fc8fab85cf5a1c45193b3efda39577ffe",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E21",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "7b056b582327eaf1caff9c4e9461761fc8fab85cf5a1c45193b3efda39577ffe",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E22",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E23",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "ddf6cc437523bf0a6a1bb131cc26c34060228c98c738e6a66788412f2903719f",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E24",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "outline_straw",
+          "river_movement",
+          "stationary_after_hits"
+        ],
+        "policy": "skeptic"
+      },
+      {
+        "id": "R0:E25",
+        "type": "cao_hold",
+        "private_reason": "stationary_after_hits is a hypothesis cue, not proof"
+      },
+      {
+        "id": "R0:E26",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "ddf6cc437523bf0a6a1bb131cc26c34060228c98c738e6a66788412f2903719f",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E27",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PROBE",
+        "params": {}
+      },
+      {
+        "id": "R0:E28",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_probe",
+          "audible_signal",
+          "hold_order",
+          "outline_straw",
+          "river_movement",
+          "stationary_after_hits"
+        ],
+        "policy": "skeptic"
+      },
+      {
+        "id": "R0:E29",
+        "type": "cao_hold",
+        "private_reason": "stationary_after_hits is a hypothesis cue, not proof"
+      },
+      {
+        "id": "R0:E30",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "a0fae8ddd910a916282db5ce066cdffb1eaeca768bcd8928f5c4cb160ebeaea7",
+        "retry_action": "A_PROBE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E31",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E32",
+        "type": "proposal",
+        "source": "R0:E31"
+      },
+      {
+        "id": "R0:E33",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E31",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E34",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "4ab4ccbb380c7ea8f443407d1a67d74cdf49d9939195fc6fc0d2039d9b98f1b6",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E35",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E36",
+        "type": "closure",
+        "endpoint": "T3",
+        "deliverable": 40000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E37",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "3ad3fec647afe31be76403ba26725d298d997779f60a6472c16cbd961ed8766c",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_LUSU",
+    "scenario": "quiet_dense",
+    "expected": "T4",
+    "actual": "T4",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "no_arrow_response",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "no_arrow_response",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "no_arrow_response",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "84e5578d2902be7eb62de815eabe0d0d863cdb34e27c4695524c790ef7b1570b",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "ad523d5f5b2ecb0e3033b5187a7592d7950bbd4c0e4abfc3c3fca54de6f6bf66",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "2dd789039c4eb566cf22a92a494d592df5770411a2be44d1cc8021fed2bc0ab4",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "quiet"
+      },
+      {
+        "id": "R0:E12",
+        "type": "cao_hold",
+        "private_reason": "declared observation-first policy"
+      },
+      {
+        "id": "R0:E13",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "2dd789039c4eb566cf22a92a494d592df5770411a2be44d1cc8021fed2bc0ab4",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E14",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E15",
+        "type": "proposal",
+        "source": "R0:E14"
+      },
+      {
+        "id": "R0:E16",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E14",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E17",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "b6ad4f39c7429f4fce7a6ff976a253f1b6f8fb16d166a62cd5056df898b3714e",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E18",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E19",
+        "type": "closure",
+        "endpoint": "T4",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E20",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "a601a5085ba87541eeae74e189c3216375931234174431cb9083b7ab0bdbc3c3",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_LUSU",
+    "scenario": "fire_contact",
+    "expected": "T5",
+    "actual": "T5",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N11_FIRE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_RESOLVE_FIRE",
+        "node": "N11_FIRE",
+        "inventory": {
+          "available": 35000,
+          "deliverable": 25000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 15000
+        },
+        "actor_observations": [
+          "actual_contact",
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_EVADE",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 35000,
+          "deliverable": 25000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 15000
+        },
+        "actor_observations": [
+          "actual_contact",
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 35000,
+          "deliverable": 25000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 15000
+        },
+        "actor_observations": [
+          "actual_contact",
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E13",
+        "source": "R0:E13",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 15000,
+        "remaining": 25000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "7d97b9c24db0012ffcb4f64cef6c520f3dcb722d1f0c1cd38ea82919ed4abca3",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "0f1b1982e2d6a52cd708d201e401b29c21d5360d4df5e7b64eb525f3f719d681",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "2ad6b5a1031df92cccdd59f58960442a80d8f7b59fc27fa2f5ea7e65da5a2457",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "fire"
+      },
+      {
+        "id": "R0:E12",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E13",
+        "type": "authored_receipt",
+        "source": "R0:E12",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "2ad6b5a1031df92cccdd59f58960442a80d8f7b59fc27fa2f5ea7e65da5a2457",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E16",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "0b2983a8ff21d498f6309e6b211cdb68338b41354501caa6cbd55fe54fe32d93",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E17",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "fire"
+      },
+      {
+        "id": "R0:E18",
+        "type": "fire_launched"
+      },
+      {
+        "id": "R0:E19",
+        "type": "scene_enter",
+        "node": "N11_FIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "0b2983a8ff21d498f6309e6b211cdb68338b41354501caa6cbd55fe54fe32d93",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E20",
+        "type": "system_continuation",
+        "actor": "R_LUSU",
+        "action": "A_RESOLVE_FIRE",
+        "params": {
+          "_actor": "system"
+        }
+      },
+      {
+        "id": "R0:E21",
+        "type": "authored_fire_contact",
+        "source": "declared scenario outcome, not a physics prediction"
+      },
+      {
+        "id": "R0:E22",
+        "type": "scene_enter",
+        "node": "N11_FIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "53f0ff1cf500c7e2749b3c14fd740206932eb79b5c7ed86daba574acdc9f04ef",
+        "retry_action": "A_RESOLVE_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E23",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_EVADE",
+        "params": {}
+      },
+      {
+        "id": "R0:E24",
+        "type": "proposal",
+        "source": "R0:E23"
+      },
+      {
+        "id": "R0:E25",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E23",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E26",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "00fe578f64fc6fd9890035e1703b60c279fb8da974553fb519f01d8d050161bd",
+        "retry_action": "A_EVADE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E27",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E28",
+        "type": "closure",
+        "endpoint": "T5",
+        "deliverable": 25000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E29",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "831e1f045de7499d1e977a5d97f988f05b555501eada6de2aab31ee80e546de6",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_LUSU",
+    "scenario": "battle_dense",
+    "expected": "T6",
+    "actual": "T6",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_RETURN_FIRE",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E13",
+        "source": "R0:E13",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 30000,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E22",
+        "source": "R0:E22",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "d4701f78dc636fc36608b3c9c06220d515095b14d2d93c415b029a2ae8cbb2d8",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "dd59cd9c8cb925e889173b6bd56c8541aa2f55a63e545ffca64798dd5f43bc2b",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "ac205a926d054daaf5346cb563aa6cb240bab74fe4e7f3702c5798488a3f9f45",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "battle"
+      },
+      {
+        "id": "R0:E12",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E13",
+        "type": "authored_receipt",
+        "source": "R0:E12",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "ac205a926d054daaf5346cb563aa6cb240bab74fe4e7f3702c5798488a3f9f45",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_RETURN_FIRE",
+        "params": {}
+      },
+      {
+        "id": "R0:E16",
+        "type": "proposal",
+        "source": "R0:E15"
+      },
+      {
+        "id": "R0:E17",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E15",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E18",
+        "type": "scene_enter",
+        "node": "N10_RETURN_FIRE",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "b35e2ece6f31913225fcd11d45be5b9f2c3f5d53ed55fcfbc646e2ccfbc5de2e",
+        "retry_action": "A_RETURN_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E19",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "incoming_arrows",
+          "river_movement"
+        ],
+        "policy": "battle"
+      },
+      {
+        "id": "R0:E20",
+        "type": "public_clash",
+        "source": "observed incoming arrows and declared response"
+      },
+      {
+        "id": "R0:E21",
+        "type": "cao_volley",
+        "batch": 2
+      },
+      {
+        "id": "R0:E22",
+        "type": "authored_receipt",
+        "source": "R0:E21",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E23",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "b35e2ece6f31913225fcd11d45be5b9f2c3f5d53ed55fcfbc646e2ccfbc5de2e",
+        "retry_action": "A_RETURN_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E24",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E25",
+        "type": "proposal",
+        "source": "R0:E24"
+      },
+      {
+        "id": "R0:E26",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E24",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E27",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "b9c76069007e124d1ffa4fac153d5e72d62b045fd1097408bc91cd26d228182b",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E28",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E29",
+        "type": "closure",
+        "endpoint": "T6",
+        "deliverable": 50000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E30",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "d66bc5a133d0c427a2924c1f5458a2d2ff3ecf7fad3833158f57704b4b01d88d",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_LUSU",
+    "scenario": "no_fog_stays",
+    "expected": "T7",
+    "actual": "T7",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_WAIT_WEATHER",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "new_weather_report"
+        ]
+      },
+      {
+        "action": "A_CANCEL",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "new_weather_report"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "new_weather_report"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "398242db12afb576f49d4a1797e6b71048d10766e6a1f0695a8d996d0e7485ef",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WAIT_WEATHER",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "2a89bcf0f2bba4837aa1a58f2fad57de8fea2b51e5d85408d6fef66e46bd5420",
+        "retry_action": "A_WAIT_WEATHER",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_CANCEL",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "proposal",
+        "source": "R0:E9"
+      },
+      {
+        "id": "R0:E11",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E9",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "9f1e3703d7ad360a4d523bb138c86fff6efadcbf4090e67ede6c35baf67d8fae",
+        "retry_action": "A_CANCEL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "closure",
+        "endpoint": "T7",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E15",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "e9e9c3023e7a57787372e5ff310c07dab1806f71b5a956de10f26a5923e680dd",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_LUSU",
+    "scenario": "responsive_dense",
+    "expected": "T8",
+    "actual": "T8",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WAIT_WINDOW",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WAIT_WINDOW",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "fog_window_closed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "fog_window_closed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "fog_window_closed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "c0516c65e305ab4709b35428307b38b7189924cbb95c3b3ce73f6be09752dd5b",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "proposal",
+        "source": "R0:E5"
+      },
+      {
+        "id": "R0:E7",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E5",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "1ed0135b7fd76ccc63baed8a28d78bcdd1e943b19d32e913a46b300ccd42de36",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WAIT_WINDOW",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "proposal",
+        "source": "R0:E9"
+      },
+      {
+        "id": "R0:E11",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E9",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E12",
+        "type": "authored_environment_phase",
+        "phase": {
+          "fog": "thinning",
+          "closed": false,
+          "report": "fog_thinning"
+        },
+        "source": "explicit plot wait; not elapsed wall-clock time"
+      },
+      {
+        "id": "R0:E13",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "0fa16e064e335d0a4a14c2f45a2b4d1b52364f912a6ad124980333db0e8d0fac",
+        "retry_action": "A_WAIT_WINDOW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E14",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WAIT_WINDOW",
+        "params": {}
+      },
+      {
+        "id": "R0:E15",
+        "type": "proposal",
+        "source": "R0:E14"
+      },
+      {
+        "id": "R0:E16",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E14",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E17",
+        "type": "authored_environment_phase",
+        "phase": {
+          "fog": "clear",
+          "closed": true,
+          "report": "fog_window_closed"
+        },
+        "source": "explicit plot wait; not elapsed wall-clock time"
+      },
+      {
+        "id": "R0:E18",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "c16e06edf62cc6c6737459d7b313a1b1bfbe5b8b7d6b2c92a6d137c26869d71c",
+        "retry_action": "A_WAIT_WINDOW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E19",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E20",
+        "type": "proposal",
+        "source": "R0:E19"
+      },
+      {
+        "id": "R0:E21",
+        "type": "authorization",
+        "by": "R_ZHUGE",
+        "source": "R0:E19",
+        "rule": "declared limited delegation; action legality already checked"
+      },
+      {
+        "id": "R0:E22",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "8afe5a302ece1a7e80818ea90f11457fde3f4a475e078a7c9dfa06e7bb433e1f",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E23",
+        "type": "learner_action",
+        "actor": "R_LUSU",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E24",
+        "type": "closure",
+        "endpoint": "T8",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E25",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "d92c10a3e8b28ba435c7d3776388672b124200777ee9a7866b8e76a44a5f26b4",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "responsive_dense",
+    "expected": "T1",
+    "actual": "T1",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 90000,
+          "deliverable": 80000,
+          "acquired": 80000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E11",
+        "source": "R0:E11",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E17",
+        "source": "R0:E17",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E23",
+        "source": "R0:E23",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "fbe8e9a8ae23280b8d6ba970f2a1b1095541a625f39c45200c0a857937989036",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "478546fe4ad826ed10bcf4323aa351c90fe2cd781a0b3dac89cbea6d86cfb573",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "dbf59d44650890f7402c85ff27b541c2f2e4ec279640f803eb7249981ddb53de",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E10",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E11",
+        "type": "authored_receipt",
+        "source": "R0:E10",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "dbf59d44650890f7402c85ff27b541c2f2e4ec279640f803eb7249981ddb53de",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "66c208619b4f174d711949826ccfa95c61ec6a191270830808bb9342400e35ae",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E16",
+        "type": "cao_volley",
+        "batch": 2
+      },
+      {
+        "id": "R0:E17",
+        "type": "authored_receipt",
+        "source": "R0:E16",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E18",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "66c208619b4f174d711949826ccfa95c61ec6a191270830808bb9342400e35ae",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E19",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E20",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "220f19a091068a31d84c5e1c8f08d68ea1f0f774748f2dedc70df7792d8fac79",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E21",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E22",
+        "type": "cao_volley",
+        "batch": 3
+      },
+      {
+        "id": "R0:E23",
+        "type": "authored_receipt",
+        "source": "R0:E22",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E24",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "220f19a091068a31d84c5e1c8f08d68ea1f0f774748f2dedc70df7792d8fac79",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E25",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E26",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "8a8a8ea890a527101e3bb62c33bd4f5eb4a260de499e7c47014ce9a4e748d405",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E27",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E28",
+        "type": "closure",
+        "endpoint": "T1",
+        "deliverable": 120000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E29",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "d2ec2562370c5a8bd97ec52a50625e00240db61df0ca0ac1c6c884e6107aa27f",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "responsive_dense",
+    "expected": "T2",
+    "actual": "T2",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E11",
+        "source": "R0:E11",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "d1027fdc05100b21a967c0d2bdd092555051e19dde27a40f51c5cfc5f1d1cbd1",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "f2cc962ca7c8068c0467b59ad4631550cb65be0302251a9527570c78ef53e647",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "c4eb38747402abcbff5e331d3c03eae768f38f7852d94f31daa3bbde65800198",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "responsive"
+      },
+      {
+        "id": "R0:E10",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E11",
+        "type": "authored_receipt",
+        "source": "R0:E10",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "c4eb38747402abcbff5e331d3c03eae768f38f7852d94f31daa3bbde65800198",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "99b6b26387e2ce12cbae525dbb6e3ce671202f94acab9d755965d1ee5fdcda36",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E16",
+        "type": "closure",
+        "endpoint": "T2",
+        "deliverable": 40000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E17",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "3184d491ee2584a17d004efc5950ca8e93e80f519bddb100e2f7d08187914bb2",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "skeptic_clear",
+    "expected": "T3",
+    "actual": "T3",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_NEAR",
+        "node": "N05_OBSERVE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_PROBE",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_probe",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_probe",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_probe",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E14",
+        "source": "R0:E14",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "8abaed28e43046d236e86e91a4da6e86de5712304ec0939453db03e46d97bc04",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "312ac1eb9130e198c5117b2f0adc1a1c3b1709f14bc9af014b1916faefdc03e5",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_NEAR",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "visible_outline",
+        "detail": "straw"
+      },
+      {
+        "id": "R0:E9",
+        "type": "scene_enter",
+        "node": "N05_OBSERVE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "a2dbbe7326632f4cbbcffdea2d0740f47d875dd51016c5a3ed9be22f4f12c0f6",
+        "retry_action": "A_NEAR",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E10",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E11",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "bc357ad54c5099338bc161f18be8389fa345c9516952f1d839b6a741c3a50490",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E12",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "outline_straw",
+          "river_movement"
+        ],
+        "policy": "skeptic"
+      },
+      {
+        "id": "R0:E13",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E14",
+        "type": "authored_receipt",
+        "source": "R0:E13",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E15",
+        "type": "visible_outline",
+        "detail": "straw"
+      },
+      {
+        "id": "R0:E16",
+        "type": "scene_enter",
+        "node": "N06_ANOMALY",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "bc357ad54c5099338bc161f18be8389fa345c9516952f1d839b6a741c3a50490",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E17",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "bc357ad54c5099338bc161f18be8389fa345c9516952f1d839b6a741c3a50490",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E18",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E19",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "f47a7b122871fd20e13dbc2a6ee74cae574b5f1e91a56ec3bc8d2d39e94b87e1",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E20",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "outline_straw",
+          "river_movement",
+          "stationary_after_hits"
+        ],
+        "policy": "skeptic"
+      },
+      {
+        "id": "R0:E21",
+        "type": "cao_hold",
+        "private_reason": "stationary_after_hits is a hypothesis cue, not proof"
+      },
+      {
+        "id": "R0:E22",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "f47a7b122871fd20e13dbc2a6ee74cae574b5f1e91a56ec3bc8d2d39e94b87e1",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E23",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PROBE",
+        "params": {}
+      },
+      {
+        "id": "R0:E24",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_probe",
+          "audible_signal",
+          "hold_order",
+          "outline_straw",
+          "river_movement",
+          "stationary_after_hits"
+        ],
+        "policy": "skeptic"
+      },
+      {
+        "id": "R0:E25",
+        "type": "cao_hold",
+        "private_reason": "stationary_after_hits is a hypothesis cue, not proof"
+      },
+      {
+        "id": "R0:E26",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "da7271562a12f1c48286a3ea8fcd442ea66883e334d616312561d751440d0fdf",
+        "retry_action": "A_PROBE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E27",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E28",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "359250d6b9e1cf7a2da63f583f330dc194ec76b810faaca8d877c77f4b8f853e",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E29",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E30",
+        "type": "closure",
+        "endpoint": "T3",
+        "deliverable": 40000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E31",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "b0a107c98f543424e3c543e80027589f997b9c72964ea49bdbc66a661e1aa28a",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "quiet_dense",
+    "expected": "T4",
+    "actual": "T4",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "no_arrow_response",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "no_arrow_response",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "no_arrow_response",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "88fbc1e8c1c339955f449d80834bf5b41ba05d8073fb064d2dd8e5af185f6798",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "e829e97e1498c1fcf0708f4b04698c30386828c114c5247869f1ae93a2c0b84c",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "840b90885e1d58762b001ecf74c274887a7ecd55f4e51655d76e8f0ff94b8f05",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "quiet"
+      },
+      {
+        "id": "R0:E10",
+        "type": "cao_hold",
+        "private_reason": "declared observation-first policy"
+      },
+      {
+        "id": "R0:E11",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "840b90885e1d58762b001ecf74c274887a7ecd55f4e51655d76e8f0ff94b8f05",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E12",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E13",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "63c26a339b8a8282e161a806cdaaf97e0b89d7300934353a62d7fa8321753bbe",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E14",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E15",
+        "type": "closure",
+        "endpoint": "T4",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E16",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "122569a699a5bca807750cb0af596ddf4de773a8184f792389df7304e2c33911",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "fire_contact",
+    "expected": "T5",
+    "actual": "T5",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N11_FIRE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_RESOLVE_FIRE",
+        "node": "N11_FIRE",
+        "inventory": {
+          "available": 35000,
+          "deliverable": 25000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 15000
+        },
+        "actor_observations": [
+          "actual_contact",
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_EVADE",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 35000,
+          "deliverable": 25000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 15000
+        },
+        "actor_observations": [
+          "actual_contact",
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 35000,
+          "deliverable": 25000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 15000
+        },
+        "actor_observations": [
+          "actual_contact",
+          "arrows_fired",
+          "audible_signal",
+          "fire_light_seen",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E11",
+        "source": "R0:E11",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 15000,
+        "remaining": 25000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "3c6b52f1dcef168ae46ad1bef265cf2cb1caadfd4887cf821998270e3d618098",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "997499b91bd625a37425c04b668dfaf6b01e924cfe62fe549b0a26036db2adfb",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "32ec667a9d927dff7511ae4c7aa5f4c0d8d1c290ba9b85a484854618e0c57ea4",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "fire"
+      },
+      {
+        "id": "R0:E10",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E11",
+        "type": "authored_receipt",
+        "source": "R0:E10",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "32ec667a9d927dff7511ae4c7aa5f4c0d8d1c290ba9b85a484854618e0c57ea4",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "e736eba59a4f8405f27ff719c6bf03ba853122705ffdb0635aa447e3480e3094",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "fire"
+      },
+      {
+        "id": "R0:E16",
+        "type": "fire_launched"
+      },
+      {
+        "id": "R0:E17",
+        "type": "scene_enter",
+        "node": "N11_FIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "e736eba59a4f8405f27ff719c6bf03ba853122705ffdb0635aa447e3480e3094",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E18",
+        "type": "system_continuation",
+        "actor": "R_ZHUGE",
+        "action": "A_RESOLVE_FIRE",
+        "params": {
+          "_actor": "system"
+        }
+      },
+      {
+        "id": "R0:E19",
+        "type": "authored_fire_contact",
+        "source": "declared scenario outcome, not a physics prediction"
+      },
+      {
+        "id": "R0:E20",
+        "type": "scene_enter",
+        "node": "N11_FIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "cd6629da6dcafc5a71df009dff386e32c51386b50427b4edfee0f00043b5c224",
+        "retry_action": "A_RESOLVE_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E21",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_EVADE",
+        "params": {}
+      },
+      {
+        "id": "R0:E22",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "70c9dc49d29ae1ebfae3b75665f46e5f1940147dc5cc5a505d80c408a8379b38",
+        "retry_action": "A_EVADE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E23",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E24",
+        "type": "closure",
+        "endpoint": "T5",
+        "deliverable": 25000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E25",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "0dec9383ee86e2a392fd00d03c0d68d05064004c3920a48858044087d72ebd59",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "battle_dense",
+    "expected": "T6",
+    "actual": "T6",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_SIGNAL",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_RETURN_FIRE",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E11",
+        "source": "R0:E11",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 30000,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E18",
+        "source": "R0:E18",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "6e41cd82fdf41b584084a1fb8d51ad8abfb5229b05542fe30f5589b0368eda73",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "cab6f44bba6c7969c3c9e3d3836bc2d181321f24253f4fc10ee176b91798f35d",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_SIGNAL",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N09_SIGNAL",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "757af748fa47f431e76f333f8280af53863ce2b22a2042d02d8c954dc46ca770",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "audible_signal",
+          "river_movement"
+        ],
+        "policy": "battle"
+      },
+      {
+        "id": "R0:E10",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E11",
+        "type": "authored_receipt",
+        "source": "R0:E10",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "757af748fa47f431e76f333f8280af53863ce2b22a2042d02d8c954dc46ca770",
+        "retry_action": "A_SIGNAL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_RETURN_FIRE",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N10_RETURN_FIRE",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "0a5ca324b71aa7c548f14c38d33ba6f76040ac0725f8fb694b33c03d1c0533c0",
+        "retry_action": "A_RETURN_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "npc_policy_input",
+        "actor": "R_CAO",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "incoming_arrows",
+          "river_movement"
+        ],
+        "policy": "battle"
+      },
+      {
+        "id": "R0:E16",
+        "type": "public_clash",
+        "source": "observed incoming arrows and declared response"
+      },
+      {
+        "id": "R0:E17",
+        "type": "cao_volley",
+        "batch": 2
+      },
+      {
+        "id": "R0:E18",
+        "type": "authored_receipt",
+        "source": "R0:E17",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E19",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "0a5ca324b71aa7c548f14c38d33ba6f76040ac0725f8fb694b33c03d1c0533c0",
+        "retry_action": "A_RETURN_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E20",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E21",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "eb9635fe59f4353ccf607a7d32b2024bc8a8c1f46b9df31d859a7765c11a8e74",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E22",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E23",
+        "type": "closure",
+        "endpoint": "T6",
+        "deliverable": 50000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E24",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "6fc522703fdcf56d0a98e5a6ffee1c7d894ab80c25c6f83de9e143bc74e0ddfb",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "no_fog_stays",
+    "expected": "T7",
+    "actual": "T7",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_WAIT_WEATHER",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "new_weather_report"
+        ]
+      },
+      {
+        "action": "A_CANCEL",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "new_weather_report"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "new_weather_report"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "5eddf97f11e104d6905ceb06a3c227b65da4f1c7892a0942c982fe04de6374e3",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WAIT_WEATHER",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "494b8405157d3e7215255bde5c2979d4cb0c042f9e5642b89a18e8a17b75b1a5",
+        "retry_action": "A_WAIT_WEATHER",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_CANCEL",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "cd8219ce66e02f105a5e4382e38f7fd7c60cf0a58d50ceaa53b4215022ece314",
+        "retry_action": "A_CANCEL",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "closure",
+        "endpoint": "T7",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E11",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "20d823c2e196325a1eff8e2b6712bed96e9672cd7fa54d115c029223e9b94525",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_ZHUGE",
+    "scenario": "responsive_dense",
+    "expected": "T8",
+    "actual": "T8",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PREP_STRAW",
+        "node": "N01_WEATHER",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": []
+      },
+      {
+        "action": "A_LAUNCH",
+        "node": "N03_NO_RESPONSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WAIT_WINDOW",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WAIT_WINDOW",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "fog_window_closed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_WITHDRAW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "fog_window_closed",
+          "river_movement"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "fog_thinning",
+          "fog_window_closed",
+          "river_movement"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N02_PREP",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_PREP_STRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "fixed_receiver_confirmed"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "e7b7198a11e1d946f5baec653f3645cff432958f3e31e945d8c7b14487660b78",
+        "retry_action": "A_PREP_STRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_LAUNCH",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N03_NO_RESPONSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "82ed2c6bbe7985eacce05f7c4853789a8bae60f600efc5a97c907b4563c6250d",
+        "retry_action": "A_LAUNCH",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WAIT_WINDOW",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "authored_environment_phase",
+        "phase": {
+          "fog": "thinning",
+          "closed": false,
+          "report": "fog_thinning"
+        },
+        "source": "explicit plot wait; not elapsed wall-clock time"
+      },
+      {
+        "id": "R0:E9",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "ba79ed59dbf2b33d5c58ca7bdad0adf4f851e47b0d727e81f73bffff3729d0e4",
+        "retry_action": "A_WAIT_WINDOW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E10",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WAIT_WINDOW",
+        "params": {}
+      },
+      {
+        "id": "R0:E11",
+        "type": "authored_environment_phase",
+        "phase": {
+          "fog": "clear",
+          "closed": true,
+          "report": "fog_window_closed"
+        },
+        "source": "explicit plot wait; not elapsed wall-clock time"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "28a989310399a854038e507b44106ec15d5eb549c46c7712f2d03bb5afad992d",
+        "retry_action": "A_WAIT_WINDOW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_WITHDRAW",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "71a64f59d619fcfc2cd373c55aa32ebe4f4dc3e294671c5d0d680727756b8a00",
+        "retry_action": "A_WITHDRAW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "learner_action",
+        "actor": "R_ZHUGE",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E16",
+        "type": "closure",
+        "endpoint": "T8",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E17",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "4976f94cc53a2f4aaf33bcefd240efef669f5579807c7f4713e86669e4ff986b",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "responsive_dense",
+    "expected": "T1",
+    "actual": "T1",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_VOLLEY",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal"
+        ]
+      },
+      {
+        "action": "A_VOLLEY",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 90000,
+          "deliverable": 80000,
+          "acquired": 80000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal"
+        ]
+      },
+      {
+        "action": "A_VOLLEY",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 130000,
+          "deliverable": 120000,
+          "acquired": 120000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E5",
+        "source": "R0:E5",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E10",
+        "source": "R0:E10",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E15",
+        "source": "R0:E15",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "preset_contact",
+        "source": "declared scenario prehistory"
+      },
+      {
+        "id": "R0:E2",
+        "type": "scene_enter",
+        "node": "N04_CAO_REPORT",
+        "renderable": true
+      },
+      {
+        "id": "R0:E3",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_VOLLEY",
+        "params": {}
+      },
+      {
+        "id": "R0:E4",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E5",
+        "type": "authored_receipt",
+        "source": "R0:E4",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E6",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "standard"
+      },
+      {
+        "id": "R0:E7",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "4616c4150341cd052cddbab36dd571282bde317e725a9d10edadf7a0b5ef8e87",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E8",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_VOLLEY",
+        "params": {}
+      },
+      {
+        "id": "R0:E9",
+        "type": "cao_volley",
+        "batch": 2
+      },
+      {
+        "id": "R0:E10",
+        "type": "authored_receipt",
+        "source": "R0:E9",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E11",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "standard"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "abc4d7051d119fc50c214a7c93f7964e8c78a4af2bde4ba8b18b3aca5e8b9a8e",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_VOLLEY",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "cao_volley",
+        "batch": 3
+      },
+      {
+        "id": "R0:E15",
+        "type": "authored_receipt",
+        "source": "R0:E14",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E16",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "standard"
+      },
+      {
+        "id": "R0:E17",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "a7a66380426db208bedb52543fa6c5bd2f81ad8c6fe62fc6875f7200edf09fc0",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E18",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E19",
+        "type": "closure",
+        "endpoint": "T1",
+        "deliverable": 120000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E20",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "193b9a7d127b3b97468e9f0bae537038ef1de26cb33db269bc60f87124f8b835",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "early_return",
+    "expected": "T2",
+    "actual": "T2",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_VOLLEY",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E5",
+        "source": "R0:E5",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "preset_contact",
+        "source": "declared scenario prehistory"
+      },
+      {
+        "id": "R0:E2",
+        "type": "scene_enter",
+        "node": "N04_CAO_REPORT",
+        "renderable": true
+      },
+      {
+        "id": "R0:E3",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_VOLLEY",
+        "params": {}
+      },
+      {
+        "id": "R0:E4",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E5",
+        "type": "authored_receipt",
+        "source": "R0:E4",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E6",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "early_return"
+      },
+      {
+        "id": "R0:E7",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "300011df5b1b19b34cbb9e295d3ba44287d404f2e68bdcd682ca1e21cc877c20",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E8",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E9",
+        "type": "closure",
+        "endpoint": "T2",
+        "deliverable": 40000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "c12f7a5f4a571f0d3bfd45de239572efb84577f1076bd8ee33634b585b385f9a",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "skeptic_clear",
+    "expected": "T3",
+    "actual": "T3",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_NEAR",
+        "node": "N05_OBSERVE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "outline_straw"
+        ]
+      },
+      {
+        "action": "A_VOLLEY",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "outline_straw",
+          "stationary_after_hits"
+        ]
+      },
+      {
+        "action": "A_HOLD",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "hold_order",
+          "outline_straw",
+          "stationary_after_hits"
+        ]
+      },
+      {
+        "action": "A_PROBE",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_probe",
+          "audible_signal",
+          "hold_order",
+          "outline_straw",
+          "stationary_after_hits"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 50000,
+          "deliverable": 40000,
+          "acquired": 40000,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_probe",
+          "audible_signal",
+          "hold_order",
+          "outline_straw",
+          "stationary_after_hits"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E8",
+        "source": "R0:E8",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "preset_contact",
+        "source": "declared scenario prehistory"
+      },
+      {
+        "id": "R0:E2",
+        "type": "scene_enter",
+        "node": "N04_CAO_REPORT",
+        "renderable": true
+      },
+      {
+        "id": "R0:E3",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_NEAR",
+        "params": {}
+      },
+      {
+        "id": "R0:E4",
+        "type": "visible_outline",
+        "detail": "straw"
+      },
+      {
+        "id": "R0:E5",
+        "type": "scene_enter",
+        "node": "N05_OBSERVE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "1ba6fd296e9145326f24eff10c9fef1529c193b776f64362e3ce6da9f4dbd27d",
+        "retry_action": "A_NEAR",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E6",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_VOLLEY",
+        "params": {}
+      },
+      {
+        "id": "R0:E7",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E8",
+        "type": "authored_receipt",
+        "source": "R0:E7",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E9",
+        "type": "visible_outline",
+        "detail": "straw"
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N06_ANOMALY",
+        "renderable": true,
+        "phase": "action_transition",
+        "retry_checkpoint": "6b16f616e54bdadbcf5f88792afcb0b9ea4065e3f5c1217f41aa1796ff438bcd",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "stop_after_probe"
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "6b16f616e54bdadbcf5f88792afcb0b9ea4065e3f5c1217f41aa1796ff438bcd",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E13",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_HOLD",
+        "params": {}
+      },
+      {
+        "id": "R0:E14",
+        "type": "cao_hold",
+        "private_reason": "player chose to hold"
+      },
+      {
+        "id": "R0:E15",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "stop_after_probe"
+      },
+      {
+        "id": "R0:E16",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "964f87e61f234d0454dcd4230ecd1e1cad96653ba3cd463858d46770aa23144b",
+        "retry_action": "A_HOLD",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E17",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_PROBE",
+        "params": {}
+      },
+      {
+        "id": "R0:E18",
+        "type": "cao_hold",
+        "private_reason": "observing after probe"
+      },
+      {
+        "id": "R0:E19",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "arrows_stopped",
+          "audible_probe",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "stop_after_probe"
+      },
+      {
+        "id": "R0:E20",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "a0f97c53cac1aeee689faf23f21a24369065db8c78c1e482344c81a397000baf",
+        "retry_action": "A_PROBE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E21",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E22",
+        "type": "closure",
+        "endpoint": "T3",
+        "deliverable": 40000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E23",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "c523fb2eb84001327343092a4aaf2a8faa52259d1f7132bddfd014e83e2952ef",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "quiet_dense",
+    "expected": "T4",
+    "actual": "T4",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_HOLD",
+        "node": "N07_CEASEFIRE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "hold_order"
+        ]
+      },
+      {
+        "action": "A_PROBE",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_probe",
+          "audible_signal",
+          "hold_order"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_probe",
+          "audible_signal",
+          "hold_order"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "preset_contact",
+        "source": "declared scenario prehistory"
+      },
+      {
+        "id": "R0:E2",
+        "type": "scene_enter",
+        "node": "N04_CAO_REPORT",
+        "renderable": true
+      },
+      {
+        "id": "R0:E3",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_HOLD",
+        "params": {}
+      },
+      {
+        "id": "R0:E4",
+        "type": "cao_hold",
+        "private_reason": "player chose to hold"
+      },
+      {
+        "id": "R0:E5",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "audible_signal",
+          "no_arrow_response"
+        ],
+        "policy": "stop_after_probe"
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N07_CEASEFIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "f06ac64af614389304b6211f56a8b404668dab99a152e255072a6ecbf7570c3b",
+        "retry_action": "A_HOLD",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_PROBE",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "cao_hold",
+        "private_reason": "observing after probe"
+      },
+      {
+        "id": "R0:E9",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "audible_probe",
+          "audible_signal",
+          "no_arrow_response"
+        ],
+        "policy": "stop_after_probe"
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "1853bf46a1df7380a93eb78eb0dd68917d00647f6177a01fd8b1c08aab87e0a1",
+        "retry_action": "A_PROBE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E12",
+        "type": "closure",
+        "endpoint": "T4",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E13",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "14c2929194a4f9d119e77ce05372b3f6716d61f5702f1d2ca8e5b76e72205271",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "fire_contact",
+    "expected": "T5",
+    "actual": "T5",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_FIRE",
+        "node": "N11_FIRE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "fire_light_seen"
+        ]
+      },
+      {
+        "action": "A_RESOLVE_FIRE",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 0,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 10000
+        },
+        "actor_observations": [
+          "audible_signal",
+          "fire_light_seen"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 0,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 10000
+        },
+        "actor_observations": [
+          "audible_signal",
+          "fire_light_seen"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 10000,
+        "remaining": 0,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "preset_contact",
+        "source": "declared scenario prehistory"
+      },
+      {
+        "id": "R0:E2",
+        "type": "scene_enter",
+        "node": "N04_CAO_REPORT",
+        "renderable": true
+      },
+      {
+        "id": "R0:E3",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_FIRE",
+        "params": {}
+      },
+      {
+        "id": "R0:E4",
+        "type": "fire_launched"
+      },
+      {
+        "id": "R0:E5",
+        "type": "scene_enter",
+        "node": "N11_FIRE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "eb119fb57484f6675f7b29feba32fc1db76f937b4052798ed4f47524a81e57ae",
+        "retry_action": "A_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E6",
+        "type": "system_continuation",
+        "actor": "R_CAO",
+        "action": "A_RESOLVE_FIRE",
+        "params": {
+          "_actor": "system"
+        }
+      },
+      {
+        "id": "R0:E7",
+        "type": "authored_fire_contact",
+        "source": "declared scenario outcome, not a physics prediction"
+      },
+      {
+        "id": "R0:E8",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "actual_contact",
+          "audible_signal",
+          "fire_light_seen"
+        ],
+        "policy": "standard"
+      },
+      {
+        "id": "R0:E9",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "93709aea94c59becf045f387dabeb8061baa6d5c4743a66daea8b31c2dbf2e97",
+        "retry_action": "A_RESOLVE_FIRE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E10",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E11",
+        "type": "closure",
+        "endpoint": "T5",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E12",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "55b1ed4722f0415c76002ad50488fe3a0819984f988345c12f12c06160e11b64",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "battle_dense",
+    "expected": "T6",
+    "actual": "T6",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_VOLLEY",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 20000,
+          "deliverable": 10000,
+          "acquired": 40000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "incoming_arrows"
+        ]
+      },
+      {
+        "action": "A_VOLLEY",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "incoming_arrows"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 60000,
+          "deliverable": 50000,
+          "acquired": 80000,
+          "spent": 30000,
+          "lost": 0
+        },
+        "actor_observations": [
+          "arrows_fired",
+          "audible_signal",
+          "incoming_arrows"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      },
+      {
+        "id": "R0:E5",
+        "source": "R0:E5",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 30000,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": true
+      },
+      {
+        "id": "R0:E11",
+        "source": "R0:E11",
+        "kind": "acquired",
+        "initial": 40000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 40000,
+        "eligible": true
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "preset_contact",
+        "source": "declared scenario prehistory"
+      },
+      {
+        "id": "R0:E2",
+        "type": "scene_enter",
+        "node": "N04_CAO_REPORT",
+        "renderable": true
+      },
+      {
+        "id": "R0:E3",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_VOLLEY",
+        "params": {}
+      },
+      {
+        "id": "R0:E4",
+        "type": "cao_volley",
+        "batch": 1
+      },
+      {
+        "id": "R0:E5",
+        "type": "authored_receipt",
+        "source": "R0:E4",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E6",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "battle"
+      },
+      {
+        "id": "R0:E7",
+        "type": "npc_ship_return_fire",
+        "qty": 30000
+      },
+      {
+        "id": "R0:E8",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "48c5cba71c0419c53e5e9872b8b009b439f26580256bbe48024bccde45709270",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E9",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_VOLLEY",
+        "params": {}
+      },
+      {
+        "id": "R0:E10",
+        "type": "cao_volley",
+        "batch": 2
+      },
+      {
+        "id": "R0:E11",
+        "type": "authored_receipt",
+        "source": "R0:E10",
+        "qty": 40000,
+        "unit": "支（剧本预置数量，非物理预测）"
+      },
+      {
+        "id": "R0:E12",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "arrows_fired",
+          "audible_signal",
+          "receipt_observed"
+        ],
+        "policy": "battle"
+      },
+      {
+        "id": "R0:E13",
+        "type": "public_clash"
+      },
+      {
+        "id": "R0:E14",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "b5ac8fd64f5ce1ef3f23e0a25e043ce026769469d9d076ec663944c7e726b500",
+        "retry_action": "A_VOLLEY",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E15",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E16",
+        "type": "closure",
+        "endpoint": "T6",
+        "deliverable": 50000,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E17",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "504d273d6ac1b2f6f412b55f09c87d713d590f31e9f02e314eb2293388ccd2fa",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "no_contact_patrol",
+    "expected": "T7",
+    "actual": "T7",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_PATROL_CLOSE",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "patrol_no_contact"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "patrol_no_contact"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "scene_enter",
+        "node": "N01_WEATHER",
+        "renderable": true
+      },
+      {
+        "id": "R0:E2",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_PATROL_CLOSE",
+        "params": {}
+      },
+      {
+        "id": "R0:E3",
+        "type": "npc_ship_not_launched",
+        "visibility": "ship_only"
+      },
+      {
+        "id": "R0:E4",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "45f0105519d0832dec81b1a49c1b3855fcf823c115e774471078eb1e2c1479fc",
+        "retry_action": "A_PATROL_CLOSE",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E5",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E6",
+        "type": "closure",
+        "endpoint": "T7",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E7",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "b279c2f89c649de8a53e81307f81b4cbe216ad28574e45ed234ffe98ac1d676d",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  },
+  {
+    "entry": "R_CAO",
+    "scenario": "responsive_dense",
+    "expected": "T8",
+    "actual": "T8",
+    "pass": true,
+    "trace": [
+      {
+        "action": "A_WAIT_WINDOW",
+        "node": "N12_DECIDE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "fog_thinning"
+        ]
+      },
+      {
+        "action": "A_WAIT_WINDOW",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "fog_thinning",
+          "fog_window_closed"
+        ]
+      },
+      {
+        "action": "A_REPORT",
+        "node": "N13_CLOSE",
+        "inventory": {
+          "available": 10000,
+          "deliverable": 0,
+          "acquired": 0,
+          "spent": 0,
+          "lost": 0
+        },
+        "actor_observations": [
+          "audible_signal",
+          "fog_thinning",
+          "fog_window_closed"
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "id": "preset-own",
+        "source": "preset-own",
+        "kind": "own",
+        "initial": 10000,
+        "spent": 0,
+        "lost": 0,
+        "remaining": 10000,
+        "eligible": false
+      }
+    ],
+    "events": [
+      {
+        "id": "R0:E1",
+        "type": "preset_contact",
+        "source": "declared scenario prehistory"
+      },
+      {
+        "id": "R0:E2",
+        "type": "scene_enter",
+        "node": "N04_CAO_REPORT",
+        "renderable": true
+      },
+      {
+        "id": "R0:E3",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_WAIT_WINDOW",
+        "params": {}
+      },
+      {
+        "id": "R0:E4",
+        "type": "authored_environment_phase",
+        "phase": {
+          "fog": "thinning",
+          "closed": false,
+          "report": "fog_thinning"
+        },
+        "source": "explicit plot wait; not elapsed wall-clock time"
+      },
+      {
+        "id": "R0:E5",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "audible_signal",
+          "fog_thinning"
+        ],
+        "policy": "standard"
+      },
+      {
+        "id": "R0:E6",
+        "type": "scene_enter",
+        "node": "N12_DECIDE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "a70dff262524ebbf2e293a34ea927e02d16bf3212c3feedb655d26e636ad321c",
+        "retry_action": "A_WAIT_WINDOW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E7",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_WAIT_WINDOW",
+        "params": {}
+      },
+      {
+        "id": "R0:E8",
+        "type": "authored_environment_phase",
+        "phase": {
+          "fog": "clear",
+          "closed": true,
+          "report": "fog_window_closed"
+        },
+        "source": "explicit plot wait; not elapsed wall-clock time"
+      },
+      {
+        "id": "R0:E9",
+        "type": "npc_policy_input",
+        "actor": "R_ZHUGE",
+        "observations": [
+          "audible_signal",
+          "fog_thinning",
+          "fog_window_closed"
+        ],
+        "policy": "standard"
+      },
+      {
+        "id": "R0:E10",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "53f9ce08b6abd22a7fd284e59b8a0bb55024fe5fd269d98a1e751214a2c5318f",
+        "retry_action": "A_WAIT_WINDOW",
+        "anchor_route": "R0"
+      },
+      {
+        "id": "R0:E11",
+        "type": "learner_action",
+        "actor": "R_CAO",
+        "action": "A_REPORT",
+        "params": {}
+      },
+      {
+        "id": "R0:E12",
+        "type": "closure",
+        "endpoint": "T8",
+        "deliverable": 0,
+        "inherited_prehistory": false
+      },
+      {
+        "id": "R0:E13",
+        "type": "scene_enter",
+        "node": "N13_CLOSE",
+        "renderable": true,
+        "phase": "action_destination",
+        "retry_checkpoint": "fbb3ebeadf7940898dbcc7649ac3747d65d903146bd4f27d121425e5ea829222",
+        "retry_action": "A_REPORT",
+        "anchor_route": "R0"
+      }
+    ]
+  }
+]
