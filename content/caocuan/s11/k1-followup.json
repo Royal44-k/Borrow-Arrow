@@ -1,0 +1,15 @@
+{
+  "id": "K1.watchboat",
+  "basis": "S1.1 04 K1完整换角桌面见证，第5—6项；独立于72条全边见证",
+  "trigger": "S8 snapshot, source role L, fork role Z; after the player's actual S10 signal/listen action",
+  "transition": {
+    "id": "K1.watchboat",
+    "label": "哨艇灯影靠近，岸上尚未射箭",
+    "to": "S12",
+    "reply": "鲁肃：“他们真的出艇了，现在就走，还是再等？”",
+    "when": "True",
+    "effects": {"k1_followup": "watchboat_visible", "scout_approaching": true}
+  },
+  "public_context": {"kind": "k1_new_situation", "title": "旧问重答·新情况", "description": "保留这一刻的旧问，接下来面对另一段军情。"},
+  "question": "他们真的出艇了，现在就走，还是再等？"
+}

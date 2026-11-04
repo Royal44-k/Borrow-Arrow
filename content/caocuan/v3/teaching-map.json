@@ -1,0 +1,1409 @@
+{
+  "schema_version": "1.0-D-C20",
+  "case": "caocuan-v3",
+  "run_id": "2026-10-24-caocuan-complete-2046",
+  "status": "design_not_classroom_validated",
+  "source_contract": "engineering canonical N01-N13 and T1-T8, as exchanged in this run",
+  "entry_roles": [
+    "R_LUSU",
+    "R_ZHUGE",
+    "R_CAO"
+  ],
+  "goal_ids": [
+    "G_PERSPECTIVE",
+    "G_NARRATIVE",
+    "G_ADAPT_EXPRESSION"
+  ],
+  "extension_goal_ids": [
+    "X_AI"
+  ],
+  "assessment_axes": {
+    "observability": {
+      "enum": [
+        "OBSERVED",
+        "PARTIAL",
+        "UNOBSERVED"
+      ],
+      "rule": "PARTIAL/UNOBSERVED => quality_level=null; missing_reason记录"
+    },
+    "quality_level": {
+      "enum": [
+        "Q1",
+        "Q2",
+        "Q3",
+        null
+      ],
+      "scope": "指定片段有限描述，不是稳定能力或总排名"
+    },
+    "support": {
+      "rule": "受助与独立不在质量轴排序；未开助手不证明无支持；旧路线与示例接触保留",
+      "condition_enum": [
+        "SUPPORTED",
+        "NO_NEW_RECORDED_ACADEMIC_SUPPORT",
+        "SUPPORT_UNKNOWN"
+      ],
+      "independence_scope": "只可对已记录的当次支持与个人归属作限定描述；旧示例/对方视角接触保留；不标绝对完全独立"
+    },
+    "attribution": {
+      "enum": [
+        "individual",
+        "collaborative",
+        "group_product",
+        "mixed",
+        "unresolved"
+      ],
+      "rule": "代表提交不复制个人掌握"
+    }
+  },
+  "nodes": [
+    {
+      "node_id": "N01_WEATHER",
+      "stage_name": "天气与出发",
+      "goal_ids": [
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "explicit_decision",
+        "weather_related_expression"
+      ],
+      "feedback_trigger": "学生求助时；新天气已呈现后的自然交流；N13回看相关转折时。现实用时不触发。",
+      "help_prompts": {
+        "H1": "先看当前这一段天气，想一想你的角色现在确实知道什么。",
+        "H2": "等候会进入下一个剧情阶段，但不保证有雾；把新消息和自己的安排接起来。",
+        "H3": "可改示例：“此刻仍看不清；我先候一次新消息，再决定这趟怎样安排。”只有你确实这样决定才采用。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N01_WEATHER",
+        "N12_DECIDE"
+      ],
+      "retry_task": "接演一条注明不同初态的天气报告，作一个明确安排并向同行说一句；允许出发、继续等候或结束本次准备。",
+      "comparison_focus": "比较安排和当前条件的联系；不比较反应速度、是否最终出雾或是否出船。",
+      "record_fields": [
+        "weather_phase_before",
+        "weather_phase_after",
+        "explicit_wait_event_id",
+        "departure_status"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N01_WEATHER",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N02_PREP",
+      "stage_name": "筹备与物件",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE"
+      ],
+      "artifact_types": [
+        "placement",
+        "preparation_expression",
+        "later_consequence_reference"
+      ],
+      "feedback_trigger": "主动求助；物件选择产生后果后的回看；不在每次拖放后评分。",
+      "help_prompts": {
+        "H1": "把镜头停在你刚布置的这一处：别人从外面能看见什么？",
+        "H2": "外部形象、承接层和人在何处是不同信息；外观不能直接保证后面的结果。",
+        "H3": "可改示例：“从这里看像一个人影，走近后会看见什么，我还不能断言。”这只是一个表达角度。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N05_OBSERVE",
+        "N02_PREP"
+      ],
+      "retry_task": "保留同一布置，换到对方实际允许的观察位置，演一段该位置的报告；也可回本方补一处布置说明。",
+      "comparison_focus": "比较两个位置对同一物件的叙述；不按选择草人还是盔甲排名。",
+      "record_fields": [
+        "prep_config_version",
+        "visible_components",
+        "placement_event_ids"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N05_OBSERVE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N02_PREP",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N03_NO_RESPONSE",
+      "stage_name": "接触而无回应",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "observation_action",
+        "report_expression",
+        "next_arrangement"
+      ],
+      "feedback_trigger": "求助时；NPC自然询问实际所见时；路线结束回看。无回应不自动触发错误标签。",
+      "help_prompts": {
+        "H1": "此刻是没看见人，没听见箭声，还是两者都有？只看当前角色能感到的这一层。",
+        "H2": "没有出现一种动静，不能自动说明另一件事；你的角色仍可作决定，不必先知道所有原因。",
+        "H3": "可改示例：“眼前没有人影，我还不知道里面的安排；先把这里的动静报清。”不要把这句当固定答案。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT"
+      ],
+      "retry_task": "接演“有声无影”或“有影而无新箭声”的一种新条件，向指定听者报告并作一次合法安排。",
+      "comparison_focus": "比较所说与当前感知条件，不以是否猜中对方计划判断。",
+      "record_fields": [
+        "visible_observation_ids",
+        "audible_event_ids",
+        "report_expression_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N03_NO_RESPONSE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N04_CAO_REPORT",
+      "stage_name": "曹营接报",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "received_report",
+        "followup_question",
+        "authorized_command",
+        "response_expression"
+      ],
+      "feedback_trigger": "报告到来后的自然接话；学生请求帮助；N13教师回看。",
+      "help_prompts": {
+        "H1": "先听清来报的人说的是亲见、听说，还是他自己的判断。",
+        "H2": "你可以保持果断，同时把报告内容和自己的处置分开；无需等到全知才行动。",
+        "H3": "可改示例：“你报的是这一处动静；我的安排先如此，有新变化再告诉我。”具体安排由你来定。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N04_CAO_REPORT",
+        "N05_OBSERVE"
+      ],
+      "retry_task": "保持同一角色，收到一条信息范围不同的新报告，自己追问或作安排并回应来报者。",
+      "comparison_focus": "比较人物表现与已得报告是否相接；不按停射或继续的选择判优。",
+      "record_fields": [
+        "report_origin",
+        "report_observation_ids",
+        "command_event_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N05_OBSERVE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N05_OBSERVE",
+      "stage_name": "观察位置变化",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE"
+      ],
+      "artifact_types": [
+        "authorized_observation_move",
+        "role_report",
+        "changed_description"
+      ],
+      "feedback_trigger": "主动求助；移动后实际出现新观察的边界；回看双方片段时。",
+      "help_prompts": {
+        "H1": "看清这个位置允许你看到的部分；其余地方仍可以不知道。",
+        "H2": "换位置可能出现新线索，也可能仍不明；报告不需要把未知补成完整故事。",
+        "H3": "可改示例：“从此处能辨出外形，里面还未看清。”只有当前画面确实支持时才这样说。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N05_OBSERVE",
+        "N04_CAO_REPORT"
+      ],
+      "retry_task": "从另一个明示可见条件接演一段观察报告，再由有权限的角色作一次回应。",
+      "comparison_focus": "比较新旧位置的叙述范围与角色判断，不把放大画面当作知识增加。",
+      "record_fields": [
+        "visibility_version",
+        "observer_role",
+        "observation_ids"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N05_OBSERVE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N06_ANOMALY",
+      "stage_name": "人影异常与疑点",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE"
+      ],
+      "artifact_types": [
+        "anomaly_report",
+        "interpretation_expression",
+        "revised_or_retained_arrangement"
+      ],
+      "feedback_trigger": "真实异常已被角色观察后；请求提示时；回看该判断后果时。隐藏异常不触发。",
+      "help_prompts": {
+        "H1": "你看见的是哪一处变化，哪一处没有变化？先留住这一点。",
+        "H2": "一项疑点可以改变安排，但不等于所有细节已经证实；果断或犹疑都能成为人物演法。",
+        "H3": "可改示例：“人影几乎未动，我疑有别的缘故；接下来怎样看，我另作安排。”这是推测式说法的示例。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N06_ANOMALY",
+        "N04_CAO_REPORT"
+      ],
+      "retry_task": "保留自己想演的人物性格，换一条只有声响或仍模糊的报告，完成一句回应和一项允许安排。",
+      "comparison_focus": "比较角色如何处理疑点；若是有意夸口或反讽，先结合本人作品说明再判断。",
+      "record_fields": [
+        "anomaly_observation_id",
+        "claim_expression_id",
+        "interpretation_origin"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N06_ANOMALY",
+          "resolver": "触发有限观察的A_NEAR/A_OBSERVE/实际volley等动作前快照",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N07_CEASEFIRE",
+      "stage_name": "停射与新安排",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "ceasefire_observation",
+        "response_action",
+        "followup_expression"
+      ],
+      "feedback_trigger": "角色确已听见箭声变化后的自然询问；请求帮助；结束后回看。",
+      "help_prompts": {
+        "H1": "箭声发生了什么变化？你的角色是否真的收到了对方停下的原因？",
+        "H2": "同样的停射可能有不同原因；你仍可观察、调整或结束，不必让AI替你猜一个确定解释。",
+        "H3": "可改示例：“现在不再有箭来，原因还不清楚；我先把眼前的安排说给你听。”后半句由你自己补。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N07_CEASEFIRE",
+        "N12_DECIDE"
+      ],
+      "retry_task": "接演仍是停射、但前史或新报告不同的一小段，完成一次安排并让同行知道当前能做什么。",
+      "comparison_focus": "比较回应是否承接新信息；已看过幕后原因须保留接触记录，不称未知条件下独立判断。",
+      "record_fields": [
+        "last_shot_event_id",
+        "ceasefire_observation_id",
+        "known_reason_ids",
+        "subsequent_action_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N07_CEASEFIRE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N08_TURN",
+      "stage_name": "调转与两侧受箭",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "delegation_or_command",
+        "turn_execution",
+        "opponent_observation",
+        "role_report"
+      ],
+      "feedback_trigger": "明确授权后的操作帮助；对岸形成真实新观察后；回看时。",
+      "help_prompts": {
+        "H1": "现在是谁作安排、谁受托传达？另一侧和对岸各能看见什么？",
+        "H2": "调转会改变朝向，也可能改变对方所见；两侧有箭不自动等于目标已足。",
+        "H3": "可改示例：“这一侧的变化我已看见，先把当前安排传清；对岸怎样理解，还需看后面的动静。”"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N08_TURN",
+        "N04_CAO_REPORT"
+      ],
+      "retry_task": "保留同一次转向，换到曹营作一段实际可见变化的报告，再回到原方接一句。",
+      "comparison_focus": "比较同一动作的两种叙述；不评价军事方向或把调转视作防识破答案。",
+      "record_fields": [
+        "orientation_before",
+        "orientation_after",
+        "delegation_id",
+        "opponent_visible_change_ids",
+        "inventory_snapshot_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N08_TURN",
+          "resolver": "A_TURN前已提交快照",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N09_SIGNAL",
+      "stage_name": "声响与形象造势",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "signal_command_or_suggestion",
+        "signal_event",
+        "received_response"
+      ],
+      "feedback_trigger": "声响合法执行后的实际回应；主动求助；路线结束回看。重复按钮无新事件先提示内容边界。",
+      "help_prompts": {
+        "H1": "这次你想让对方听见或看见什么？当前角色有权亲自安排，还是需要先提出建议？",
+        "H2": "发出声响与对方如何解释是两步；你的安排可以有目的，但不保证对方照预想回应。",
+        "H3": "可改示例：“先把这一段动静传过去，听见新的回应再安排下一步。”只在你选择这样做时采用。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N09_SIGNAL",
+        "N07_CEASEFIRE"
+      ],
+      "retry_task": "保留一次声响事件，接演对方没有按预想回应的情况，作一次新的表达或安排。",
+      "comparison_focus": "比较是否把真实回应接进故事，而非是否刷出更多箭。",
+      "record_fields": [
+        "signal_event_id",
+        "signal_type",
+        "receiver_observation_ids",
+        "response_event_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N09_SIGNAL",
+          "resolver": "A_SIGNAL前已提交快照",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N07_CEASEFIRE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N10_RETURN_FIRE",
+      "stage_name": "回射与支出",
+      "goal_ids": [
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "authorized_fire_command",
+        "inventory_spend",
+        "opponent_reaction",
+        "closing_narration"
+      ],
+      "feedback_trigger": "求助可解释眼前支出；N13回看本人叙述时才作目标反馈；权限/库存拒绝是操作反馈。",
+      "help_prompts": {
+        "H1": "先看这次实际用的是哪一批；用出与仍可交付要分开。",
+        "H2": "回射既改变余额，也会成为对方新观察；两种后果都应由实际事件决定，不靠一句台词保证。",
+        "H3": "可改示例：“已用出的不能再交一次；归营时我会把这次改变说清。”具体账目以当前路线为准。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N13_CLOSE",
+        "N10_RETURN_FIRE"
+      ],
+      "retry_task": "保留已发生回射与同一结尾，在归营报告中连接“已取得、实际用出、仍带回”；或另开完整路线改变本次决定。",
+      "comparison_focus": "比较本人叙述是否承接支出与反应；字幕修改、片段接演、完整新路线分开。",
+      "record_fields": [
+        "inventory_before",
+        "inventory_after",
+        "spend_event_id",
+        "conflict_change_event_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N10_RETURN_FIRE",
+          "resolver": "A_RETURN_FIRE前已提交快照",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N11_FIRE",
+      "stage_name": "带火事件与险情",
+      "goal_ids": [
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION",
+        "G_PERSPECTIVE"
+      ],
+      "artifact_types": [
+        "role_visible_signal",
+        "goal_arrangement",
+        "actual_contact_or_damage",
+        "closing_report"
+      ],
+      "feedback_trigger": "仅在当前角色具有相应可见事件的阶段提供情境反馈；操作困难立即帮助；自然收束后评价。",
+      "help_prompts": {
+        "H1": "你眼前是命令、已见火光，还是已收到接触报告？先认清当前这一刻。",
+        "H2": "发出、看见、接触和实际损失是不同阶段；报告和安排只承接本角色此时已知的部分。",
+        "H3": "可改示例：“先把眼前已经发生的说清，再说明我现在怎样安排。”不要自行补出未发生的损失。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N11_FIRE",
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "retry_task": "接演一段明确仅有危险信号、尚未接触的场景，向同行作安排并收束；若本轮使用实际损坏前史，须另明示。",
+      "comparison_focus": "比较目标和表达是否对应实际阶段；不以反应速度、勇敢或是否撤退排名。",
+      "record_fields": [
+        "fire_order_id",
+        "fire_sent_event_id",
+        "visible_signal_ids",
+        "contact_event_id",
+        "actual_damage_event_ids",
+        "goal_change_event_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N11_FIRE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N12_DECIDE",
+      "stage_name": "调整、保留与停止",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "explicit_decision",
+        "commitment",
+        "followthrough",
+        "optional_author_note"
+      ],
+      "feedback_trigger": "新报告与既有安排形成实际变化时的自然接话；求助；路线回看。每步理由非必需。",
+      "help_prompts": {
+        "H1": "当前有哪些事已经发生？先从仍然可执行的安排里选择。",
+        "H2": "改变决定或保留原决定都可以；关键是后面的行动和你想演的人物相接。",
+        "H3": "可改示例：“这一处变了，我的安排先保留，但现在要对你说明的是……”后面由你自己表达。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "retry_task": "保留同一个故事结果，给当前角色一项新的允许观察或换一个报告对象，再演一次安排与交代。",
+      "comparison_focus": "比较人物和表达如何承接变化，不以改选按钮本身当改进。",
+      "record_fields": [
+        "selected_action_id",
+        "stop_reason_event_id",
+        "commitment_ids",
+        "fulfillment_event_ids"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "node_id": "N13_CLOSE",
+      "stage_name": "归营与作品闭合",
+      "goal_ids": [
+        "G_PERSPECTIVE",
+        "G_NARRATIVE",
+        "G_ADAPT_EXPRESSION"
+      ],
+      "artifact_types": [
+        "resource_handover",
+        "personal_report",
+        "curated_story_clip",
+        "optional_linking_sentence"
+      ],
+      "feedback_trigger": "实际终场完成或学生主动回看后；先呈现一处保留表现和一项可选再试，不倾倒长评语。",
+      "help_prompts": {
+        "H1": "选一件你亲见或亲自决定的事，让眼前听者知道这一趟怎样结束。",
+        "H2": "把已发生、尚未完成和人物当时不知道的分开；结尾可以留悬念，但不改变实际账目。",
+        "H3": "可改示例：“这一趟先发生了这件事，后来我这样安排，实际带回的是眼前这些。”具体内容必须来自本路。"
+      },
+      "help_policy": {
+        "mode": "learner_choice_no_required_escalation",
+        "exposure_event": "HELP_SHOWN",
+        "H3_status": "D_modifiable_example_not_standard_answer",
+        "guard": "仅当前角色可知且已呈现的事实；示例不自动成为本人台词或执行命令"
+      },
+      "retry_node_ids": [
+        "N04_CAO_REPORT",
+        "N07_CEASEFIRE",
+        "N10_RETURN_FIRE",
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "retry_task": "从本人结尾选一个目标：换位报告、承接一次转折，或换听者重演交代；保留原版本，明确是片段还是完整新路线。",
+      "comparison_focus": "只比较本人新旧产物；自动动画与系统路线图不独自证明叙事理解，未提交再试不写改善。",
+      "record_fields": [
+        "terminal_id",
+        "stop_reason",
+        "inventory_ledger_ref",
+        "resource_handover_ids",
+        "side_epilogue_ids",
+        "report_expression_id"
+      ],
+      "support_fields": [
+        "help_event_state",
+        "help_content_id",
+        "help_shown_at",
+        "help_level",
+        "help_source",
+        "prior_example_exposure_ids",
+        "prior_route_exposure_ids",
+        "peer_teacher_support",
+        "support_unknown_reason",
+        "accessibility_support",
+        "support_condition",
+        "independence_scope"
+      ],
+      "attribution_fields": [
+        "learner_id",
+        "group_id",
+        "speaker_id",
+        "operator_id",
+        "coauthor_ids",
+        "attribution",
+        "authorship_confirmed"
+      ],
+      "ai_roles": {
+        "companion": "基于本角色观察演出当前合法回应，不评分或更改世界真值",
+        "learning_assistant": "按请求展示H1/H2/H3；请求失败不算支持已呈现",
+        "teacher_assistant": "引用本路可归属片段形成可编辑观察与具体再试；未提交不报改善"
+      },
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N07_CEASEFIRE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N10_RETURN_FIRE",
+          "resolver": "A_RETURN_FIRE前已提交快照",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用本路线该场景已保存且合法的稳定快照；无本人前史则明示预设接演",
+          "requires_saved_checkpoint": true,
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    }
+  ],
+  "terminals": [
+    {
+      "terminal_id": "T1",
+      "name": "借箭达成",
+      "retry_node_ids": [
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N07_CEASEFIRE"
+      ],
+      "retry_task": "换位报告或接演另一种对方回应；保留本路达成及暴露状态。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N05_OBSERVE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N07_CEASEFIRE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "terminal_id": "T2",
+      "name": "主动部分",
+      "retry_node_ids": [
+        "N13_CLOSE",
+        "N12_DECIDE"
+      ],
+      "retry_task": "保留提前结束，换听者说明本次安排；也可从决定点另演完整路线。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "terminal_id": "T3",
+      "name": "停射截断",
+      "retry_node_ids": [
+        "N07_CEASEFIRE",
+        "N04_CAO_REPORT"
+      ],
+      "retry_task": "区分船方实际听见的停射和另一方私下原因，再作一段角色报告。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N07_CEASEFIRE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "terminal_id": "T4",
+      "name": "相持收手",
+      "retry_node_ids": [
+        "N05_OBSERVE",
+        "N13_CLOSE"
+      ],
+      "retry_task": "加入一项明示新观察接演，或保留未知而完成交接叙述。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N05_OBSERVE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "terminal_id": "T5",
+      "name": "实际险情改目标",
+      "retry_node_ids": [
+        "N11_FIRE",
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "retry_task": "承接当前实际危险阶段安排并归营；仅信号与实际损坏前史不得混用。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N11_FIRE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "terminal_id": "T6",
+      "name": "升级交锋",
+      "retry_node_ids": [
+        "N10_RETURN_FIRE",
+        "N04_CAO_REPORT",
+        "N13_CLOSE"
+      ],
+      "retry_task": "连接回射、对方真实响应、实际支出与归营；按过回射不自动判T6。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N10_RETURN_FIRE",
+          "resolver": "A_RETURN_FIRE前已提交快照",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N04_CAO_REPORT",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "terminal_id": "T7",
+      "name": "未行先改",
+      "retry_node_ids": [
+        "N01_WEATHER",
+        "N13_CLOSE"
+      ],
+      "retry_task": "保留未出发结尾向委托者交代；新条件接演须明示，未经历的对岸片段仍未观察。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N01_WEATHER",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    },
+    {
+      "terminal_id": "T8",
+      "name": "窗口关闭不足",
+      "retry_node_ids": [
+        "N01_WEATHER",
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "retry_task": "从明确等候前接演一次，比较新条件与收束；现实操作时间不推进条件。",
+      "rank": null,
+      "preserve_original_route": true,
+      "retry_anchor_bindings": [
+        {
+          "target_node_id": "N01_WEATHER",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N12_DECIDE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        },
+        {
+          "target_node_id": "N13_CLOSE",
+          "resolver": "使用已保存合法稳定快照；无本人前史则明示预设接演",
+          "node_id_is_not_snapshot_id": true
+        }
+      ]
+    }
+  ],
+  "post_close_workflow": {
+    "stages": [
+      "REVIEW",
+      "editable_feedback",
+      "retry_task_choice",
+      "legal_snapshot",
+      "actual_retry",
+      "comparison"
+    ],
+    "distinct_events": [
+      "feedback_viewed",
+      "edit_subtitle",
+      "rehearsal_submit"
+    ],
+    "help_states": [
+      "HELP_AVAILABLE",
+      "HELP_REQUESTED",
+      "HELP_GENERATED",
+      "HELP_SHOWN"
+    ],
+    "clip_end": "CLIP_COMPLETE",
+    "clip_has_story_terminal": false,
+    "goal_retry_map": {
+      "G_PERSPECTIVE": [
+        "N04_CAO_REPORT",
+        "N05_OBSERVE"
+      ],
+      "G_NARRATIVE": [
+        "N07_CEASEFIRE",
+        "N10_RETURN_FIRE",
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "G_ADAPT_EXPRESSION": [
+        "N04_CAO_REPORT",
+        "N07_CEASEFIRE",
+        "N13_CLOSE"
+      ],
+      "X_AI": [
+        "N13_CLOSE"
+      ]
+    },
+    "x_ai_task": "回看一次实际求助/建议取舍，指明本人保留或改写的一处；没有求助也不制造AI错误或强制求助。",
+    "event_bindings": {
+      "edit_subtitle": "SUBTITLE_EDIT",
+      "rehearsal_submit": "REHEARSAL_SUBMIT",
+      "role_replay": "ROLE_REPLAY",
+      "feedback_viewed": "UI observation event; distinct from FEEDBACK_CONFIRM; root to bind in product layer"
+    }
+  },
+  "global_guards": [
+    "系统自动连贯和通关不独自构成学生叙事理解证据",
+    "所有反馈必须引用实际片段且带支持/归属",
+    "角色话语与旁白或故意反讽先区分",
+    "不强制每步解释或每人集齐八结尾",
+    "终场不排序；T5/T6不得由按钮直接套用",
+    "足额后窗口关闭不抹去余额，T8必须不足",
+    "无真实教师审定不填已审定",
+    "未执行再试不填提高；局部接演不冒领原故事终态"
+  ],
+  "retry_anchor_policy": {
+    "N08_TURN": "A_TURN前已提交快照",
+    "N09_SIGNAL": "A_SIGNAL前已提交快照",
+    "N10_RETURN_FIRE": "A_RETURN_FIRE前已提交快照",
+    "N06_ANOMALY": "触发有限观察的A_NEAR/A_OBSERVE/实际volley等动作前快照",
+    "event_fields": [
+      "phase",
+      "retry_checkpoint",
+      "retry_action",
+      "anchor_route"
+    ],
+    "constraint": "不能把过场node当稳定快照ID；通过哈希引用检索已存的动作前快照，复演保留前史和全部已展示帮助。"
+  }
+}

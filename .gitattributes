@@ -1,0 +1,2 @@
+# Preserve published assets and runtime files byte-for-byte for SHA-256 verification.
+* -text

@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "counts": {
+    "roles": 3,
+    "scenarios": 10,
+    "scenes": 13,
+    "scene_role_versions": 39,
+    "actions": 23,
+    "learner_action_types": 22,
+    "system_action_types": 1,
+    "observations": 25,
+    "ending_families": 8,
+    "ending_role_versions": 24,
+    "goals": 4,
+    "help_nodes": 13,
+    "help_levels_per_role": 3
+  },
+  "source_checks": [
+    {
+      "name": "01-案例总控.md",
+      "source_available": true,
+      "sha256_matches": true
+    },
+    {
+      "name": "02-分支场景与三视角结尾.md",
+      "source_available": true,
+      "sha256_matches": true
+    },
+    {
+      "name": "03-教学目标与反馈机制.md",
+      "source_available": true,
+      "sha256_matches": true
+    },
+    {
+      "name": "04-评价量规与课堂组织.md",
+      "source_available": true,
+      "sha256_matches": true
+    },
+    {
+      "name": "network-spec.json",
+      "source_available": true,
+      "sha256_matches": true
+    },
+    {
+      "name": "teaching-map.json",
+      "source_available": true,
+      "sha256_matches": true
+    }
+  ],
+  "sensitivity_checks": [
+    {
+      "case": "missing role",
+      "rejected": true
+    },
+    {
+      "case": "missing scene",
+      "rejected": true
+    },
+    {
+      "case": "missing action",
+      "rejected": true
+    },
+    {
+      "case": "missing ending role",
+      "rejected": true
+    },
+    {
+      "case": "unresolved placeholder",
+      "rejected": true
+    }
+  ],
+  "registered_assets": 2,
+  "errors": [],
+  "limitations": [
+    "词项与结构检查不能证明全部语义安全；动态投影还须后端与集成行为测试。",
+    "没有检验真实学习效果、量规效度或教师评价。",
+    "素材存在性检查不替代视觉与无障碍浏览器验收；仍无配音素材。"
+  ]
+}

@@ -1,0 +1,1836 @@
+{
+  "version": "S1.1",
+  "scope": "authoring walk only, not product",
+  "presets": [
+    "standard",
+    "late_fog",
+    "clear",
+    "quiet",
+    "fire_contact",
+    "fire_miss",
+    "fire_after_turn",
+    "counterfire",
+    "no_contact"
+  ],
+  "nodes": {
+    "S0": {
+      "id": "S0",
+      "scene": "M02",
+      "title": "借船",
+      "speaker": "诸葛亮",
+      "speech": "二十只轻船，青布作幔，草束立在两旁。",
+      "prompt": "随韩伯去看船",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S0.look",
+          "label": "去看船",
+          "to": "S1",
+          "reply": "韩伯拉住缆绳，领你到船舷边。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "S1": {
+      "id": "S1",
+      "scene": "M03",
+      "title": "船舷上的兵",
+      "speaker": "韩伯",
+      "speech": "草束系牢便能立住；空甲有兵形，里面却没人。",
+      "prompt": "挑一种布置，放到船舷",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S1.straw",
+          "label": "用草束",
+          "to": "S2",
+          "reply": "草束立上外侧，韩伯拿绳来系。",
+          "when": "True",
+          "effects": {
+            "material": "straw"
+          }
+        },
+        {
+          "id": "S1.armor",
+          "label": "用木撑空甲",
+          "to": "S2",
+          "reply": "鲁肃：远看像兵。近了，怕就瞒不住。",
+          "when": "True",
+          "effects": {
+            "material": "armor"
+          }
+        }
+      ]
+    },
+    "S2": {
+      "id": "S2",
+      "scene": "M03",
+      "title": "另一侧也要摆吗",
+      "speaker": "韩伯",
+      "speech": "中间给人留路。另一边也照着摆，还是先空着？",
+      "prompt": "完成两侧布置，或明确留空一侧",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S2.both",
+          "label": "两侧都摆好",
+          "to": "S3",
+          "reply": "船工沿两侧验绳，舱道能走人。",
+          "when": "True",
+          "effects": {
+            "layout": "both"
+          }
+        },
+        {
+          "id": "S2.one",
+          "label": "只摆右舷，左舷留空",
+          "to": "S3",
+          "reply": "韩伯：先生吩咐两侧。你留一边空着，那边的人可不能站出去。学生确认，左舷留空。",
+          "when": "True",
+          "effects": {
+            "layout": "one"
+          }
+        }
+      ]
+    },
+    "S3": {
+      "id": "S3",
+      "scene": "M04",
+      "title": "岸边实际天气",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "S3.fog",
+          "label": "江上已起雾",
+          "to": "S4",
+          "reply": "近船仍可见，远岸的灯消失。",
+          "when": "weather=='fog'",
+          "effects": {}
+        },
+        {
+          "id": "S3.clear",
+          "label": "远岸仍清楚",
+          "to": "S5",
+          "reply": "韩伯：对岸的灯，一盏一盏都数得清。",
+          "when": "weather=='clear'",
+          "effects": {}
+        }
+      ]
+    },
+    "S4": {
+      "id": "S4",
+      "scene": "M04",
+      "title": "雾已起",
+      "speaker": "诸葛亮",
+      "speech": "各船跟紧，不要走散。",
+      "prompt": "决定启船或取消",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S4.go",
+          "label": "按计划启船",
+          "to": "S8",
+          "reply": "韩伯解缆，桨落入水，船逐一离岸。",
+          "when": "True",
+          "effects": {
+            "launched": true
+          }
+        },
+        {
+          "id": "S4.cancel",
+          "label": "今晚不出发",
+          "to": "X7",
+          "reply": "孔明：既不出船，天明我去见都督。人船留岸。",
+          "when": "True",
+          "effects": {
+            "ending": "E7"
+          }
+        }
+      ]
+    },
+    "S5": {
+      "id": "S5",
+      "scene": "M04",
+      "title": "没有雾",
+      "speaker": "鲁肃",
+      "speech": "没有雾遮着，他们岂不一眼看见我们？",
+      "prompt": "等一更、清夜启船，或取消",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S5.wait",
+          "label": "等到下一更",
+          "to": "S6",
+          "reply": "更鼓响过，灯芯短了一截。再看江面。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "S5.go",
+          "label": "清夜仍然启船",
+          "to": "S8",
+          "reply": "孔明：没有雾，见势不对，立即收船。韩伯复述退路后解缆。",
+          "when": "True",
+          "effects": {
+            "launched": true
+          }
+        },
+        {
+          "id": "S5.cancel",
+          "label": "取消今夜行船",
+          "to": "X7",
+          "reply": "船工放下桨，泊岸绳未解。",
+          "when": "True",
+          "effects": {
+            "ending": "E7"
+          }
+        }
+      ]
+    },
+    "S6": {
+      "id": "S6",
+      "scene": "M04",
+      "title": "等待后的天气",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "S6.arrive",
+          "label": "迟雾改编中雾来到",
+          "to": "S4",
+          "reply": "远处岸灯渐渐隐去。",
+          "when": "preset=='late_fog'",
+          "effects": {
+            "weather": "fog"
+          }
+        },
+        {
+          "id": "S6.same",
+          "label": "晴夜改编中仍无雾",
+          "to": "S7",
+          "reply": "韩伯：更鼓过去了，寨门仍看得清。",
+          "when": "preset!='late_fog'",
+          "effects": {}
+        }
+      ]
+    },
+    "S7": {
+      "id": "S7",
+      "scene": "M04",
+      "title": "最后的岸边决定",
+      "speaker": "诸葛亮",
+      "speech": "再留便误了时辰。去，还是不去？",
+      "prompt": "明确启船或取消，不无限等天气",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S7.go",
+          "label": "清夜启船",
+          "to": "S8",
+          "reply": "各船从清楚可见的岸影前经过。",
+          "when": "True",
+          "effects": {
+            "launched": true
+          }
+        },
+        {
+          "id": "S7.cancel",
+          "label": "不出船，入帐说明",
+          "to": "X7",
+          "reply": "韩伯把桨收回，先送人下船。",
+          "when": "True",
+          "effects": {
+            "ending": "E7"
+          }
+        }
+      ]
+    },
+    "S8": {
+      "id": "S8",
+      "scene": "M05",
+      "title": "寨外发问K1",
+      "speaker": "鲁肃",
+      "speech": "孔明，你说来取箭，怎倒把船开到曹营来了？",
+      "prompt": "向孔明问清担忧；诸葛亮入口回应鲁肃",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S8.ask",
+          "label": "向孔明说清这一处担忧",
+          "to": "S9",
+          "reply": "鲁肃原问存入K1；孔明说明借箭打算，韩伯听令留好退路。",
+          "when": "True",
+          "effects": {
+            "utterance": true,
+            "utterance_kind": "@utterance_kind"
+          },
+          "label_by_role": {
+            "Z": "回应鲁肃，并安排退路"
+          },
+          "reply_by_role": {
+            "Z": "保存诸葛亮的本次回应；鲁肃旧问仍为独立原件，韩伯按已确认安排留好退路。"
+          }
+        },
+        {
+          "id": "S8.route",
+          "label": "先请韩伯指明退路",
+          "to": "S9",
+          "reply": "韩伯指向来路。孔明：不登岸，各船听我号令。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "S9": {
+      "id": "S9",
+      "scene": "M05",
+      "title": "停在哪里",
+      "speaker": "韩伯",
+      "speech": "前头就是曹营。还往近处走吗？",
+      "prompt": "在江面选定停船位置",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S9.far",
+          "label": "留在原处",
+          "to": "S10",
+          "reply": "韩伯收住桨，船停在寨外。",
+          "when": "True",
+          "effects": {
+            "distance": "far"
+          }
+        },
+        {
+          "id": "S9.near",
+          "label": "靠近看清",
+          "to": "S10",
+          "reply": "岸上轮廓清楚些，岸上也更容易看见来船。",
+          "when": "True",
+          "effects": {
+            "distance": "near"
+          }
+        }
+      ]
+    },
+    "S10": {
+      "id": "S10",
+      "scene": "M06",
+      "title": "让曹营听见",
+      "speaker": "阿成",
+      "speech": "船已摆好。现在敲鼓？",
+      "prompt": "在鼓、人声与静听中决定",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S10.drum",
+          "label": "传令各船齐鼓",
+          "to": "D0",
+          "reply": "一通鼓从本船传到全队，人声跟上。",
+          "when": "True",
+          "effects": {
+            "method": "drum"
+          }
+        },
+        {
+          "id": "S10.hail",
+          "label": "先向寨中喊话",
+          "to": "D0",
+          "reply": "喊声传向寨门，船上停下来听。",
+          "when": "True",
+          "effects": {
+            "method": "hail"
+          }
+        },
+        {
+          "id": "S10.listen",
+          "label": "先听岸上动静",
+          "to": "D0",
+          "reply": "鼓槌放下，岸灯移动。",
+          "when": "True",
+          "effects": {
+            "method": "listen"
+          }
+        }
+      ]
+    },
+    "D0": {
+      "id": "D0",
+      "scene": "M06",
+      "title": "对岸第一次回应",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "D0.seen",
+          "label": "清夜或近处空甲被看清",
+          "to": "S16",
+          "reply": "岸上传来：都别放箭，先看清那船！",
+          "when": "weather=='clear' or (material=='armor' and distance=='near')",
+          "effects": {
+            "revealed": true
+          }
+        },
+        {
+          "id": "D0.fire",
+          "label": "雾中火箭改编且已发声",
+          "to": "F0",
+          "reply": "先见岸上火光，再见燃着的箭划来。",
+          "when": "weather=='fog' and not(material=='armor' and distance=='near') and preset in ['fire_contact','fire_miss'] and method!='listen'",
+          "effects": {}
+        },
+        {
+          "id": "D0.quiet",
+          "label": "仍未开弓",
+          "to": "S11",
+          "reply": "岸灯有人走动，却没有箭来。",
+          "when": "weather=='fog' and not(material=='armor' and distance=='near') and (preset=='quiet' or method=='listen')",
+          "effects": {}
+        },
+        {
+          "id": "D0.volley",
+          "label": "浓雾中普通齐射",
+          "to": "A0",
+          "reply": "岸上弓弦响过，一阵箭落在当前船舷。",
+          "when": "weather=='fog' and not(material=='armor' and distance=='near') and preset not in ['fire_contact','fire_miss','quiet'] and method!='listen'",
+          "effects": {
+            "first": "@first_batch"
+          }
+        }
+      ]
+    },
+    "S11": {
+      "id": "S11",
+      "scene": "M09",
+      "title": "从未开弓",
+      "speaker": "阿成",
+      "speech": "岸上还是没动静。换个办法，还是回去？",
+      "prompt": "最多换一次未用过的办法",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S11.change",
+          "label": "做一次尚未用过的喊话或击鼓",
+          "to": "D1",
+          "reply": "按实际已用办法选另一种：敲过鼓便喊话；已喊话或仅静听便敲鼓。",
+          "when": "True",
+          "effects": {
+            "changed": true,
+            "method": "@alternate_method"
+          }
+        },
+        {
+          "id": "S11.go",
+          "label": "现在归岸",
+          "to": "R0",
+          "reply": "韩伯收索转向，空草束跟船一同回去。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "S11.near",
+          "label": "移近看看",
+          "to": "S16",
+          "reply": "哨艇看清了装置，岸上喊停；并非系统无故识破。",
+          "when": "True",
+          "effects": {
+            "distance": "near",
+            "revealed": true
+          }
+        }
+      ]
+    },
+    "D1": {
+      "id": "D1",
+      "scene": "M09",
+      "title": "换法后的回应",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "D1.still",
+          "label": "静寨仍不开弓",
+          "to": "S12",
+          "reply": "阿成：岸上还是不射。只报告实际做过的事，不补造喊话或击鼓。",
+          "when": "preset=='quiet'",
+          "effects": {}
+        },
+        {
+          "id": "D1.fire",
+          "label": "火箭改编此时首次发声",
+          "to": "F0",
+          "reply": "岸上亮起火箭，船上先看见来向。",
+          "when": "preset in ['fire_contact','fire_miss']",
+          "effects": {}
+        },
+        {
+          "id": "D1.arrows",
+          "label": "普通改编此时引来第一阵",
+          "to": "A0",
+          "reply": "弓弦声起，第一侧实际受箭。",
+          "when": "preset not in ['quiet','fire_contact','fire_miss']",
+          "effects": {
+            "first": "@first_batch"
+          }
+        }
+      ]
+    },
+    "S12": {
+      "id": "S12",
+      "scene": "M09",
+      "title": "试过仍没有回应",
+      "speaker": "鲁肃",
+      "speech": "他们不肯开弓，还留在这里吗？",
+      "prompt": "等待有明确时刻，或马上退",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S12.wait",
+          "label": "等到下一声更鼓",
+          "to": "S17",
+          "reply": "更鼓响，雾开始薄，岸楼露出轮廓。",
+          "when": "True",
+          "effects": {
+            "late": true,
+            "weather": "@later_visibility"
+          }
+        },
+        {
+          "id": "S12.near",
+          "label": "移近查明",
+          "to": "S16",
+          "reply": "来船与哨艇互相看清，对岸喊出装置。",
+          "when": "True",
+          "effects": {
+            "distance": "near",
+            "revealed": true
+          }
+        },
+        {
+          "id": "S12.go",
+          "label": "带人船回去",
+          "to": "R0",
+          "reply": "没有箭可取，韩伯先点人再返航。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "A0": {
+      "id": "A0",
+      "scene": "M07",
+      "title": "第一侧受箭",
+      "speaker": "韩伯",
+      "speech": "右边已经密了，左边还空着。",
+      "prompt": "看看两侧，再决定转舷或收船",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "A0.turn",
+          "label": "把另一侧转过去",
+          "to": "A1",
+          "reply": "手握船舵，预览目标，确认传令后全队依次转向。",
+          "when": "True",
+          "effects": {
+            "turned": true
+          }
+        },
+        {
+          "id": "A0.go",
+          "label": "现在收船",
+          "to": "R0",
+          "reply": "孔明看过船侧：不再留了，收船。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "A0.other",
+          "label": "商议再等或回射",
+          "to": "A2",
+          "reply": "鼓手暂不敲，给这两个具体打算留出一次商议。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "A1": {
+      "id": "A1",
+      "scene": "M08",
+      "title": "另一侧接续",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "A1.fire",
+          "label": "转舷后火箭改编",
+          "to": "F0",
+          "reply": "转到一半，韩伯看见岸上亮起火箭；同一条船仍只有已取得的第一批箭。",
+          "when": "preset=='fire_after_turn'",
+          "effects": {}
+        },
+        {
+          "id": "A1.empty",
+          "label": "另一侧原来没布置",
+          "to": "A3",
+          "reply": "韩伯：这边没有草束，箭落过去也留不住。",
+          "when": "preset!='fire_after_turn' and layout=='one'",
+          "effects": {}
+        },
+        {
+          "id": "A1.suspect",
+          "label": "空甲异常被注意",
+          "to": "S15",
+          "reply": "岸上传来：那排盔甲，怎么一动不动？箭声停了。",
+          "when": "preset!='fire_after_turn' and layout=='both' and material=='armor'",
+          "effects": {}
+        },
+        {
+          "id": "A1.second",
+          "label": "草束另一侧接到新一阵",
+          "to": "A4",
+          "reply": "阿成换号令，另一侧真的接上一批箭。",
+          "when": "preset!='fire_after_turn' and layout=='both' and material=='straw'",
+          "effects": {
+            "second": 51000
+          }
+        }
+      ]
+    },
+    "A2": {
+      "id": "A2",
+      "scene": "M11",
+      "title": "原侧再等或还箭",
+      "speaker": "鲁肃",
+      "speech": "再等他们射，还是还几箭，免得露馅？",
+      "prompt": "这两件事后果不同",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "A2.same",
+          "label": "留原侧再等",
+          "to": "A3",
+          "reply": "箭声渐稀，这一侧不再增加新的整批箭。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "A2.fire",
+          "label": "回射一阵",
+          "to": "H0",
+          "reply": "沈砚指出将用去的八千支箭。先确认再拿走。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "A2.back",
+          "label": "还是转舷",
+          "to": "A1",
+          "reply": "韩伯接回调头命令，各船按次序转。",
+          "when": "True",
+          "effects": {
+            "turned": true
+          }
+        }
+      ]
+    },
+    "A3": {
+      "id": "A3",
+      "scene": "M07",
+      "title": "没有新的一批箭",
+      "speaker": "韩伯",
+      "speech": "箭声稀了，没有新的一阵。船要怎么走？",
+      "prompt": "只允许一次有后果的再等待",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "A3.turn",
+          "label": "把有布置且未用的一侧转过去",
+          "to": "A1",
+          "reply": "这次真正调船，不把镜头旋转当转舷。",
+          "when": "layout=='both' and not turned",
+          "effects": {
+            "turned": true
+          }
+        },
+        {
+          "id": "A3.wait",
+          "label": "等到更鼓响",
+          "to": "S17",
+          "reply": "雾散开一层，岸影变清楚。",
+          "when": "True",
+          "effects": {
+            "late": true,
+            "weather": "@later_visibility"
+          }
+        },
+        {
+          "id": "A3.go",
+          "label": "带现有箭回去",
+          "to": "R0",
+          "reply": "收船后箭仍只在已受箭的一侧。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "A4": {
+      "id": "A4",
+      "scene": "M08",
+      "title": "两侧都已接箭",
+      "speaker": "韩伯",
+      "speech": "两边都接上了，天色也要亮了。",
+      "prompt": "决定及时退，还是冒险再留",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "A4.go",
+          "label": "传令收船",
+          "to": "R0",
+          "reply": "孔明：不再逗留。各船回南岸！",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "A4.wait",
+          "label": "再等一阵",
+          "to": "S17",
+          "reply": "更鼓传来，远岸从雾里显出。",
+          "when": "True",
+          "effects": {
+            "late": true,
+            "weather": "@later_visibility"
+          }
+        },
+        {
+          "id": "A4.fire",
+          "label": "回射掩护",
+          "to": "H0",
+          "reply": "鲁肃指出箭筐：这些发出去，就不在交箭数里了。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "H0": {
+      "id": "H0",
+      "scene": "M11",
+      "title": "回射前确认",
+      "speaker": "诸葛亮",
+      "speech": "还了箭，这一趟就不只是借箭。仍要这样做吗？",
+      "prompt": "确认八千支全队支出，或取消",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "H0.yes",
+          "label": "确认回射",
+          "to": "R0",
+          "reply": "箭束被弓手拿走，对岸还击；孔明令船靠拢撤离。",
+          "when": "first+second-loss-spent>=8000",
+          "effects": {
+            "spent": 8000,
+            "exchanged": true
+          }
+        },
+        {
+          "id": "H0.no",
+          "label": "不回射，收船",
+          "to": "R0",
+          "reply": "弓手把手移开，箭仍留在筐中。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "S15": {
+      "id": "S15",
+      "scene": "M09",
+      "title": "射过后突然停射",
+      "speaker": "鲁肃",
+      "speech": "他们起疑了？先听岸上说什么。",
+      "prompt": "在静听、佯攻与撤回中决定",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S15.hear",
+          "label": "停鼓听岸上",
+          "to": "S16",
+          "reply": "听见查验喊声，哨艇出来，装置被辨出。",
+          "when": "True",
+          "effects": {
+            "revealed": true
+          }
+        },
+        {
+          "id": "S15.bluff",
+          "label": "请阿成击一通鼓",
+          "to": "S16",
+          "reply": "新鼓声没有换来箭，岸上喊出木撑和空甲。",
+          "when": "True",
+          "effects": {
+            "revealed": true,
+            "method": "drum"
+          }
+        },
+        {
+          "id": "S15.go",
+          "label": "趁还能退，立即收船",
+          "to": "R0",
+          "reply": "来船主动离开；没有凭空认定对方已识破。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "S16": {
+      "id": "S16",
+      "scene": "M09",
+      "title": "已经露了底",
+      "speaker": "韩伯",
+      "speech": "他们出来查看了。再留，船就靠过来了。",
+      "prompt": "撤回，或明知危险仍等一次",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S16.go",
+          "label": "立刻撤回",
+          "to": "R0",
+          "reply": "船离开前看见哨艇逼近，退路仍通。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "S16.wait",
+          "label": "再等他们开弓",
+          "to": "S17",
+          "reply": "他们仍不射。雾薄了，哨艇更近了。",
+          "when": "True",
+          "effects": {
+            "late": true,
+            "weather": "@later_visibility"
+          }
+        }
+      ]
+    },
+    "S17": {
+      "id": "S17",
+      "scene": "M09",
+      "title": "雾散催归",
+      "speaker": "韩伯",
+      "speech": "这回，他们看得见我们的脸了。收船吧！",
+      "prompt": "发出撤回号令",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "S17.go",
+          "label": "收船离开",
+          "to": "R0",
+          "reply": "急促号令传遍船队，船终于离岸灯远去。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "F0": {
+      "id": "F0",
+      "scene": "M10",
+      "title": "火箭实际接触",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "F0.hit",
+          "label": "火擦到外侧布幔",
+          "to": "F1",
+          "reply": "船边明火可见，韩伯指脚边水桶。",
+          "when": "preset in ['fire_contact','fire_after_turn']",
+          "effects": {
+            "fire_sent": true,
+            "fire_hit": true,
+            "loss": "@loss"
+          }
+        },
+        {
+          "id": "F0.miss",
+          "label": "火落水熄灭",
+          "to": "F2",
+          "reply": "韩伯：没落在船上，船没着火。",
+          "when": "preset not in ['fire_contact','fire_after_turn']",
+          "effects": {
+            "fire_sent": true
+          }
+        }
+      ]
+    },
+    "F1": {
+      "id": "F1",
+      "scene": "M10",
+      "title": "船边着火",
+      "speaker": "鲁肃",
+      "speech": "先把人撤到舱后！",
+      "prompt": "先照应人，再决定离开还是处理后继续",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "F1.leave",
+          "label": "掩护船员立即撤离",
+          "to": "R0",
+          "reply": "船工移人并压住火处，撤离后留焦痕；不能带着未处理明火播平静归程。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "F1.water",
+          "label": "取水灭火再判断",
+          "to": "F3",
+          "reply": "桶落在火处，明火熄灭，焦黑篷布仍在。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "F2": {
+      "id": "F2",
+      "scene": "M10",
+      "title": "火已落水",
+      "speaker": "韩伯",
+      "speech": "这支没中。岸上换了普通箭，还留吗？",
+      "prompt": "先见岸上换箭、再决定继续或退回",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "F2.continue",
+          "label": "仍取一阵箭",
+          "to": "A0",
+          "reply": "火箭后普通一阵射来，首侧受箭。",
+          "when": "True",
+          "effects": {
+            "first": "@first_batch"
+          }
+        },
+        {
+          "id": "F2.leave",
+          "label": "立即离开",
+          "to": "R0",
+          "reply": "船体无焦痕，回岸也不播放火灾结尾。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "F3": {
+      "id": "F3",
+      "scene": "M10",
+      "title": "火灭，人点齐",
+      "speaker": "韩伯",
+      "speech": "人都在。岸上换了普通箭；篷边烧过，不能当没这回事。",
+      "prompt": "先见普通箭待发，离开或只再留一阵",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "F3.leave",
+          "label": "现在撤回",
+          "to": "R0",
+          "reply": "湿布搭住焦痕，船队撤离。",
+          "when": "True",
+          "effects": {}
+        },
+        {
+          "id": "F3.continue",
+          "label": "再留一阵便退",
+          "to": "R0",
+          "reply": "只接续本路尚未结算且有装置的一侧；无可用新侧便没有新整批，随后返航，火险仍在。",
+          "when": "True",
+          "effects": {
+            "volley": "ship_next",
+            "continued_after_fire": true
+          }
+        }
+      ]
+    },
+    "R0": {
+      "id": "R0",
+      "scene": "M11",
+      "title": "真实返航",
+      "speaker": "韩伯",
+      "speech": "回南岸！后船跟紧！",
+      "prompt": "操舵向南岸，带同一批人船归岸",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "R0.return",
+          "label": "操舵返航靠岸",
+          "to": "COUNT",
+          "reply": "韩伯操舵，桨手划船，岸灯后退；到南岸才接泊岸索，同一船的箭和焦痕保留。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "COUNT": {
+      "id": "COUNT",
+      "scene": "M12",
+      "title": "按实际有没有箭安排清点",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "COUNT.arrows",
+          "label": "有可交付箭",
+          "to": "COUNT1",
+          "reply": "从本路实际草束或木撑/船板上取箭，原处减少、盘中增加；先前回射备筐只清点不再拔，清点不新增库存。",
+          "when": "first+second-spent-loss>0",
+          "effects": {}
+        },
+        {
+          "id": "COUNT.empty",
+          "label": "无可交付箭",
+          "to": "RESOLVE",
+          "reply": "只有空草束/空甲，没有虚构拔箭，先点人。",
+          "when": "first+second-spent-loss==0",
+          "effects": {}
+        }
+      ]
+    },
+    "COUNT1": {
+      "id": "COUNT1",
+      "scene": "M12",
+      "title": "清点归盘",
+      "speaker": "沈砚",
+      "speech": "两边分开取，别把空的一侧也算进去。",
+      "prompt": "清点实际箭，送进帐中",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "COUNT1.done",
+          "label": "送箭入帐",
+          "to": "RESOLVE",
+          "reply": "军士搬走的是实际有的箭。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "RESOLVE": {
+      "id": "RESOLVE",
+      "scene": "M13",
+      "title": "选择实际独立末场",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "RESOLVE.E6",
+          "label": "E6",
+          "to": "X6",
+          "reply": "按本路实情演出E6；不是学生的结果选项。",
+          "when": "exchanged",
+          "effects": {
+            "ending": "E6"
+          }
+        },
+        {
+          "id": "RESOLVE.E5",
+          "label": "E5",
+          "to": "X5",
+          "reply": "按本路实情演出E5；不是学生的结果选项。",
+          "when": "not exchanged and fire_hit",
+          "effects": {
+            "ending": "E5"
+          }
+        },
+        {
+          "id": "RESOLVE.E8",
+          "label": "E8",
+          "to": "X8",
+          "reply": "按本路实情演出E8；不是学生的结果选项。",
+          "when": "not exchanged and not fire_hit and late",
+          "effects": {
+            "ending": "E8"
+          }
+        },
+        {
+          "id": "RESOLVE.E3",
+          "label": "E3",
+          "to": "X3",
+          "reply": "按本路实情演出E3；不是学生的结果选项。",
+          "when": "not exchanged and not fire_hit and not late and revealed",
+          "effects": {
+            "ending": "E3"
+          }
+        },
+        {
+          "id": "RESOLVE.E1",
+          "label": "E1",
+          "to": "X1",
+          "reply": "按本路实情演出E1；不是学生的结果选项。",
+          "when": "not exchanged and not fire_hit and not late and not revealed and first+second-spent-loss>=100000",
+          "effects": {
+            "ending": "E1"
+          }
+        },
+        {
+          "id": "RESOLVE.E2",
+          "label": "E2",
+          "to": "X2",
+          "reply": "按本路实情演出E2；不是学生的结果选项。",
+          "when": "not exchanged and not fire_hit and not late and not revealed and 0<first+second-spent-loss<100000",
+          "effects": {
+            "ending": "E2"
+          }
+        },
+        {
+          "id": "RESOLVE.E4",
+          "label": "E4",
+          "to": "X4",
+          "reply": "按本路实情演出E4；不是学生的结果选项。",
+          "when": "not exchanged and not fire_hit and not late and not revealed and first+second-spent-loss==0",
+          "effects": {
+            "ending": "E4"
+          }
+        }
+      ]
+    },
+    "C0": {
+      "id": "C0",
+      "scene": "C01",
+      "title": "北岸值夜",
+      "speaker": "哨长",
+      "speech": "弓手、哨艇都在寨内待命。",
+      "prompt": "到寨前听取这一班的哨报",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C0.look",
+          "label": "去寨前",
+          "to": "CD0",
+          "reply": "曹操走到寨墙，仍只知道己方哨报。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "CD0": {
+      "id": "CD0",
+      "scene": "C01",
+      "title": "是否有接触",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "CD0.none",
+          "label": "公开巡夜改编无来船",
+          "to": "X7",
+          "reply": "哨长交班：江面无接触，寨门无事。",
+          "when": "preset=='no_contact'",
+          "effects": {
+            "ending": "E7"
+          }
+        },
+        {
+          "id": "CD0.contact",
+          "label": "江上有来船",
+          "to": "C1",
+          "reply": "哨长急报：江上来船，鼓声很密！曹操只听到本方实际来报。",
+          "when": "preset!='no_contact'",
+          "effects": {}
+        }
+      ]
+    },
+    "C1": {
+      "id": "C1",
+      "scene": "C02",
+      "title": "守寨决定",
+      "speaker": "哨长",
+      "speech": "弓手已经就位，等丞相令下。",
+      "prompt": "先射、近看，或停弓听动静",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C1.shoot",
+          "label": "留在寨内放箭",
+          "to": "C2",
+          "reply": "弓手确实射出第一轮，对岸一侧出现箭影。",
+          "when": "True",
+          "effects": {
+            "first": 52000,
+            "cao_spend": 60000,
+            "launched": true
+          }
+        },
+        {
+          "id": "C1.scout",
+          "label": "派哨艇近看",
+          "to": "C3",
+          "reply": "哨艇离寨，看清需一段来回；玩家不瞬间获得全知。",
+          "when": "True",
+          "effects": {
+            "distance": "near",
+            "observer": "boat",
+            "launched": true
+          }
+        },
+        {
+          "id": "C1.hold",
+          "label": "暂且停弓",
+          "to": "C4",
+          "reply": "弓手放低弓，来船仍在寨外。",
+          "when": "True",
+          "effects": {
+            "launched": true
+          }
+        }
+      ]
+    },
+    "C2": {
+      "id": "C2",
+      "scene": "C03",
+      "title": "人影中箭却不倒",
+      "speaker": "哨长",
+      "speech": "中了不少，可那排人影动也不动。",
+      "prompt": "面对这个异常再作决定",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C2.shoot",
+          "label": "继续放一阵箭",
+          "to": "CD1",
+          "reply": "来船转侧；弓手再放一阵，本方箭库减少。",
+          "when": "True",
+          "effects": {
+            "second": 51000,
+            "cao_spend": 60000
+          }
+        },
+        {
+          "id": "C2.inspect",
+          "label": "停射，在寨墙查验",
+          "to": "C3",
+          "reply": "弓手停下，哨长在寨墙瞭望；未派艇，距离仍远。",
+          "when": "True",
+          "effects": {
+            "observer": "wall"
+          }
+        },
+        {
+          "id": "C2.fire",
+          "label": "换火箭试探",
+          "to": "CF0",
+          "reply": "弓手先举箭确认，曹操令下后才点火。",
+          "when": "True",
+          "effects": {
+            "cao_spend": 800
+          }
+        }
+      ]
+    },
+    "CD1": {
+      "id": "CD1",
+      "scene": "C06",
+      "title": "来船第二轮行动",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "CD1.exchange",
+          "label": "回射改编中对方还箭",
+          "to": "C6",
+          "reply": "外来箭落在寨前护栏，弓手低伏。",
+          "when": "preset=='counterfire'",
+          "effects": {
+            "spent": 8000,
+            "exchanged": true
+          }
+        },
+        {
+          "id": "CD1.leave",
+          "label": "其余改编中来船归去",
+          "to": "CX",
+          "reply": "船侧密箭，鼓声远去；己方不能显示对方准确余量。",
+          "when": "preset!='counterfire'",
+          "effects": {
+            "ending": "E1"
+          }
+        }
+      ]
+    },
+    "C3": {
+      "id": "C3",
+      "scene": "C04",
+      "title": "查验看到了什么",
+      "speaker": "哨长",
+      "speech": "看过这一处，我就来回报。",
+      "prompt": "等待实际哨报，不靠猜测宣称识破",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C3.report",
+          "label": "听本次查验报告",
+          "to": "CD2",
+          "reply": "按实际观察方式：派艇路线跟哨艇，在寨墙路线跟哨长登高，不暗改距离。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "CD2": {
+      "id": "CD2",
+      "scene": "C04",
+      "title": "本距离能看见的内容",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "CD2.known",
+          "label": "清夜或已近看",
+          "to": "C5",
+          "reply": "哨长指出草束/木撑；未放箭时说“草束扎成的人形”，已放箭才说“草束扎着箭”。",
+          "when": "weather=='clear' or distance=='near'",
+          "effects": {
+            "revealed": true
+          }
+        },
+        {
+          "id": "CD2.unknown",
+          "label": "雾深且仍在远处",
+          "to": "C4",
+          "reply": "哨长：只见轮廓，看不清人脸。不能断定。",
+          "when": "weather=='fog' and distance=='far'",
+          "effects": {}
+        }
+      ]
+    },
+    "C4": {
+      "id": "C4",
+      "scene": "C04",
+      "title": "仍不知来意",
+      "speaker": "曹操",
+      "speech": "寨门不开。来意未明，不必急着出战。",
+      "prompt": "守寨，或再作一次驱退",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C4.hold",
+          "label": "继续守寨，停止放箭",
+          "to": "CX",
+          "reply": "鼓声渐远；哨长只说来船已退，没有宣称识破。",
+          "when": "True",
+          "effects": {
+            "ending": "@partial_or_empty"
+          }
+        },
+        {
+          "id": "C4.shoot",
+          "label": "放一阵箭驱船",
+          "to": "CX",
+          "reply": "新的一阵真实发出，不覆盖已发的那阵；来船在箭声后退去。",
+          "when": "True",
+          "effects": {
+            "volley": "cao_next",
+            "cao_spend": 60000,
+            "ending": "@partial_or_full"
+          }
+        },
+        {
+          "id": "C4.wait",
+          "label": "等到更鼓响",
+          "to": "CX",
+          "reply": "晨光使船影更清，来船退去，不编造它为何退；曹营合理等待不被写作迟退错误。",
+          "when": "True",
+          "effects": {
+            "late": true,
+            "weather": "@later_visibility",
+            "ending": "E8"
+          }
+        }
+      ]
+    },
+    "C5": {
+      "id": "C5",
+      "scene": "C04",
+      "title": "已经辨出装置",
+      "speaker": "曹操",
+      "speech": "住手。别替他们送箭！",
+      "prompt": "守住寨门或坚持再射",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C5.hold",
+          "label": "止射守寨",
+          "to": "CX",
+          "reply": "弓手收弦，未发箭放回筒；此前发出的不返库。",
+          "when": "True",
+          "effects": {
+            "ending": "E3"
+          }
+        },
+        {
+          "id": "C5.shoot",
+          "label": "仍放箭驱退",
+          "to": "CX",
+          "reply": "明知装置仍射，只演驱退和消耗；末场明确这次额外放箭，不播从未开弓的空库。",
+          "when": "True",
+          "effects": {
+            "volley": "cao_next",
+            "cao_spend": 60000,
+            "drove_with_arrows": true,
+            "ending": "E3"
+          }
+        }
+      ]
+    },
+    "CF0": {
+      "id": "CF0",
+      "scene": "C05",
+      "title": "火箭接触的己方可见报告",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "CF0.hit",
+          "label": "本段火接触船边",
+          "to": "C7",
+          "reply": "哨长：船边有火光，损伤看不清。",
+          "when": "preset in ['fire_contact','fire_after_turn']",
+          "effects": {
+            "fire_sent": true,
+            "fire_hit": true,
+            "loss": "@loss"
+          }
+        },
+        {
+          "id": "CF0.miss",
+          "label": "本段火落水",
+          "to": "C7",
+          "reply": "哨长：火落水了，没见船边起火。",
+          "when": "preset not in ['fire_contact','fire_after_turn']",
+          "effects": {
+            "fire_sent": true
+          }
+        }
+      ]
+    },
+    "C7": {
+      "id": "C7",
+      "scene": "C05",
+      "title": "火后还射吗",
+      "speaker": "曹操",
+      "speech": "不准擅自出寨。弓手听令。",
+      "prompt": "止射，或再用普通箭驱退一阵",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C7.hold",
+          "label": "止射守寨",
+          "to": "CX",
+          "reply": "来船离开火光方向；只汇报看见的事。",
+          "when": "True",
+          "effects": {
+            "ending": "@fire_or_partial"
+          }
+        },
+        {
+          "id": "C7.shoot",
+          "label": "普通箭再射一阵",
+          "to": "CX",
+          "reply": "多一阵普通箭的支出，来船后退。",
+          "when": "True",
+          "effects": {
+            "second": 51000,
+            "cao_spend": 60000,
+            "ending": "@fire_or_full"
+          }
+        }
+      ]
+    },
+    "C6": {
+      "id": "C6",
+      "scene": "C06",
+      "title": "已经互射",
+      "speaker": "哨长",
+      "speech": "来船还箭了！",
+      "prompt": "停止对射或压制一阵，不追出寨",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "C6.hold",
+          "label": "止射让船退去",
+          "to": "CX",
+          "reply": "弓手收弦，末场保留外来箭和本方耗用。",
+          "when": "True",
+          "effects": {
+            "ending": "E6"
+          }
+        },
+        {
+          "id": "C6.press",
+          "label": "压制一阵再止射",
+          "to": "CX",
+          "reply": "弓手多发一阵，未把箭自动算给对方；己方耗用另记。",
+          "when": "True",
+          "effects": {
+            "extra_cao": 8000,
+            "cao_spend": 8000,
+            "ending": "E6"
+          }
+        }
+      ]
+    },
+    "CX": {
+      "id": "CX",
+      "scene": "C07",
+      "title": "天亮交接",
+      "speaker": "哨长",
+      "speech": "今夜来船的动静和用箭，都在这里。",
+      "prompt": "核本方记录，听最后一场",
+      "kind": "choice",
+      "edges": [
+        {
+          "id": "CX.close",
+          "label": "听完军报",
+          "to": "CE",
+          "reply": "曹操根据自己知道的事实收束，不显示南岸账。",
+          "when": "True",
+          "effects": {}
+        }
+      ]
+    },
+    "CE": {
+      "id": "CE",
+      "scene": "C07",
+      "title": "曹营独立末场",
+      "speaker": "镜头",
+      "speech": "此项为制作条件，不给学生选择。",
+      "prompt": "",
+      "kind": "director",
+      "edges": [
+        {
+          "id": "CE.E1",
+          "label": "E1",
+          "to": "X1",
+          "reply": "只播E1曹营版本。",
+          "when": "ending=='E1'",
+          "effects": {}
+        },
+        {
+          "id": "CE.E2",
+          "label": "E2",
+          "to": "X2",
+          "reply": "只播E2曹营版本。",
+          "when": "ending=='E2'",
+          "effects": {}
+        },
+        {
+          "id": "CE.E3",
+          "label": "E3",
+          "to": "X3",
+          "reply": "只播E3曹营版本。",
+          "when": "ending=='E3'",
+          "effects": {}
+        },
+        {
+          "id": "CE.E4",
+          "label": "E4",
+          "to": "X4",
+          "reply": "只播E4曹营版本。",
+          "when": "ending=='E4'",
+          "effects": {}
+        },
+        {
+          "id": "CE.E5",
+          "label": "E5",
+          "to": "X5",
+          "reply": "只播E5曹营版本。",
+          "when": "ending=='E5'",
+          "effects": {}
+        },
+        {
+          "id": "CE.E6",
+          "label": "E6",
+          "to": "X6",
+          "reply": "只播E6曹营版本。",
+          "when": "ending=='E6'",
+          "effects": {}
+        },
+        {
+          "id": "CE.E8",
+          "label": "E8",
+          "to": "X8",
+          "reply": "只播E8曹营版本。",
+          "when": "ending=='E8'",
+          "effects": {}
+        }
+      ]
+    },
+    "X1": {
+      "id": "X1",
+      "scene": "E1",
+      "title": "箭入军帐",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    },
+    "X2": {
+      "id": "X2",
+      "scene": "E2",
+      "title": "少带回的箭",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    },
+    "X3": {
+      "id": "X3",
+      "scene": "E3",
+      "title": "疑兵露了底",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    },
+    "X4": {
+      "id": "X4",
+      "scene": "E4",
+      "title": "一箭未得",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    },
+    "X5": {
+      "id": "X5",
+      "scene": "E5",
+      "title": "先把人带回来",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    },
+    "X6": {
+      "id": "X6",
+      "scene": "E6",
+      "title": "借箭成了交锋",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    },
+    "X7": {
+      "id": "X7",
+      "scene": "E7",
+      "title": "绳结没有解开",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    },
+    "X8": {
+      "id": "X8",
+      "scene": "E8",
+      "title": "等到雾散",
+      "speaker": "末场",
+      "speech": "采用02中当前角色专属三镜头、对白与真实物件状态。",
+      "prompt": "人物末句后留3秒，再回看或考试。",
+      "kind": "ending",
+      "edges": []
+    }
+  },
+  "role_dialogue": {
+    "S4.go": [
+      "请孔明启船",
+      "鲁肃：“人船都齐了，走吗？”孔明：“走。韩伯解缆，各船跟紧。”"
+    ],
+    "S4.cancel": [
+      "请孔明今夜停航",
+      "鲁肃：“我还是担心，今夜先不走。”孔明：“好。船留岸，三日之约由我去交代。”"
+    ],
+    "S5.wait": [
+      "请孔明再等一更",
+      "鲁肃：“再等一更，看江面会不会变。”孔明：“便等这一更。韩伯，暂不解缆。”"
+    ],
+    "S5.go": [
+      "请孔明清夜出发",
+      "鲁肃：“雾没来，还要走吗？”孔明：“既定清夜去，就不能指望瞒住。退路先留好，解缆。”"
+    ],
+    "S5.cancel": [
+      "请孔明取消行船",
+      "鲁肃：“岸上看得太清楚，我不赞成今夜去。”孔明：“不去了。人下船，我去见都督。”"
+    ],
+    "S7.go": [
+      "请孔明清夜启船",
+      "鲁肃：“再等也不见雾，仍走这一趟？”孔明：“走。别靠得太近，见势不对便回。”"
+    ],
+    "S7.cancel": [
+      "请孔明停航入帐",
+      "鲁肃：“这一更已过，还是停下吧。”孔明：“好。把人送回营，我去交代。”"
+    ],
+    "S9.far": [
+      "请孔明停在寨外",
+      "鲁肃：“就在这里停吧，不必再近。”孔明：“停桨。韩伯守住来路。”"
+    ],
+    "S9.near": [
+      "请孔明再近一些",
+      "鲁肃：“再近些，兴许能看清寨门。”孔明：“近些，他们也会看清我们。依你所议，只近这一段。”"
+    ],
+    "S10.drum": [
+      "请孔明发出击鼓令",
+      "鲁肃：“人已藏好，现在叫他们听见？”孔明：“阿成，各船齐鼓！”"
+    ],
+    "S10.hail": [
+      "请孔明先向寨中喊话",
+      "鲁肃：“先喊一声，听他们怎么应。”孔明：“好。喊过便静下来听。”"
+    ],
+    "S10.listen": [
+      "请孔明先听岸上",
+      "鲁肃：“先别敲，听听岸上动静。”孔明：“鼓槌放下，别出声。”"
+    ],
+    "S11.go": [
+      "请孔明现在归岸",
+      "鲁肃：“还没有箭，再留也未必有用。回吧？”孔明：“收船。韩伯先点人。”"
+    ],
+    "S11.near": [
+      "请孔明移近查明",
+      "鲁肃：“移近些，看看他们到底在做什么。”孔明：“那边也会看见我们。韩伯，只近这一段。”"
+    ],
+    "S12.wait": [
+      "请孔明等到更鼓",
+      "鲁肃：“再等到下一声更鼓，如何？”孔明：“只到那一声。韩伯留好回路。”"
+    ],
+    "S12.near": [
+      "请孔明移近观察",
+      "鲁肃：“他们仍不射，近些看清再作打算。”孔明：“依你。若已被看穿，就不要再留。”"
+    ],
+    "S12.go": [
+      "请孔明带人船回去",
+      "鲁肃：“仍没有箭来，先把人带回去吧。”孔明：“收船。经过我向都督说明。”"
+    ],
+    "A0.turn": [
+      "请孔明转向另一舷",
+      "鲁肃：“右边已有箭，把另一面转过去？”孔明：“转。韩伯领头，后船依次跟上。”"
+    ],
+    "A0.go": [
+      "请孔明现在收船",
+      "鲁肃：“先带这些回去吧。”孔明：“好，不再留了。各船收回。”"
+    ],
+    "A0.other": [
+      "问孔明还要怎样应对",
+      "鲁肃：“就这样等下一阵，还是也还几箭？”孔明：“留着，是等；还箭，便是交手。子敬，你说呢？”"
+    ],
+    "A2.same": [
+      "请孔明留原侧再等",
+      "鲁肃：“先不还箭，就在这里再等一阵。”孔明：“再看这一阵。阿成，不必催鼓。”"
+    ],
+    "A2.fire": [
+      "请孔明考虑回射",
+      "鲁肃：“要不要还几箭，免得他们起疑？”孔明：“先把要用的箭取出来。用去的，就不能再交给都督。”"
+    ],
+    "A2.back": [
+      "请孔明转舷",
+      "鲁肃：“不还箭了，还是换另一面接。”孔明：“韩伯，转舷。”"
+    ],
+    "A3.turn": [
+      "请孔明换向未受箭侧",
+      "鲁肃：“这面不再添了，换另一面试试？”孔明：“转过去。后船看住长索。”"
+    ],
+    "A3.wait": [
+      "请孔明再等到更鼓",
+      "鲁肃：“等到更鼓响，若还不来便回。”孔明：“就等到那一声。”"
+    ],
+    "A3.go": [
+      "请孔明带现有箭回去",
+      "鲁肃：“没有新的一阵，带现有的回去吧。”孔明：“韩伯，收船。”"
+    ],
+    "A4.go": [
+      "请孔明收船返航",
+      "鲁肃：“两边都接上了，该回去了。”孔明：“正是。各船回南岸！”"
+    ],
+    "A4.wait": [
+      "请孔明再留一阵",
+      "鲁肃：“再多取一阵，如何？”孔明：“天色已近亮。既还要等，只到下一声更鼓。”"
+    ],
+    "A4.fire": [
+      "请孔明考虑回射掩护",
+      "鲁肃：“回去前还几箭，能不能遮掩？”孔明：“还了箭，便是交手。先看要用去多少。”"
+    ],
+    "H0.yes": [
+      "请孔明确认回射",
+      "鲁肃：“这八千支，还是发出去。”孔明：“准。弓手还箭，韩伯随后撤船。”"
+    ],
+    "H0.no": [
+      "请孔明不回射，直接返航",
+      "鲁肃：“留着交箭，不还了，回吧。”孔明：“弓手收手，各船返航。”"
+    ],
+    "S15.hear": [
+      "请孔明停鼓听清",
+      "鲁肃：“忽然停了，听他们在喊什么。”孔明：“停鼓。都别出声。”"
+    ],
+    "S15.bluff": [
+      "请孔明击一通鼓",
+      "鲁肃：“击一通鼓，看他们会不会接着射。”孔明：“阿成，只这一通，随后静听。”"
+    ],
+    "S15.go": [
+      "请孔明趁此退回",
+      "鲁肃：“他们起疑了，趁退路还在，走吧。”孔明：“收船，不再添声势。”"
+    ],
+    "S16.go": [
+      "请孔明立即撤回",
+      "鲁肃：“他们看穿了，不能再等！”孔明：“韩伯，回南岸！”"
+    ],
+    "S16.wait": [
+      "请孔明再等一阵",
+      "鲁肃：“也许他们还会开弓，再等一下？”孔明：“只等到更鼓，后船不要散。”"
+    ],
+    "S17.go": [
+      "喊韩伯收船",
+      "鲁肃：“韩伯，快收船！”孔明：“撤回南岸，各船跟紧！”"
+    ],
+    "F2.continue": [
+      "请孔明再看一阵",
+      "鲁肃：“火落水了，他们换了普通箭，还留吗？”孔明：“再看这一阵，随时备着收船。”"
+    ],
+    "F2.leave": [
+      "请孔明立即退回",
+      "鲁肃：“火箭已经到了船边，不等了！”孔明：“收船，先离开这里。”"
+    ],
+    "F3.leave": [
+      "请孔明现在撤回",
+      "鲁肃：“火灭了，人也齐，回去吧。”孔明：“带好人，退！”"
+    ],
+    "F3.continue": [
+      "请孔明只再留一阵",
+      "鲁肃：“看他们又换普通箭了，只留这一阵？”孔明：“先看能用的船侧。只这一阵，接不住也要退。”"
+    ]
+  },
+  "variant_renderer": "script_dialogue.py"
+}

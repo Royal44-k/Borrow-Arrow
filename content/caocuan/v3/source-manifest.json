@@ -1,0 +1,47 @@
+{
+  "version": "v3.1",
+  "source_design": "U035 / D-C20 / 草船借箭v3",
+  "source_policy": "既有规格复用；本次没有新增学术全文阅读，也不将工程验证当作教学效果。",
+  "source_files": [
+    {
+      "path": "D:\\Codex-chat-II\\thesis-llm-wiki\\case-designs\\草船借箭-v3-完整案例规格\\01-案例总控.md",
+      "sha256": "fe506a739359bc56ebe4c262c964432e998eacc58f18a61faa2a5ae698b16bfc",
+      "copied_as": null
+    },
+    {
+      "path": "D:\\Codex-chat-II\\thesis-llm-wiki\\case-designs\\草船借箭-v3-完整案例规格\\02-分支场景与三视角结尾.md",
+      "sha256": "725292bddf41be7abb2eedd7ff62f2cb068e1f8c7bb7bc1d810887799861a369",
+      "copied_as": null
+    },
+    {
+      "path": "D:\\Codex-chat-II\\thesis-llm-wiki\\case-designs\\草船借箭-v3-完整案例规格\\03-教学目标与反馈机制.md",
+      "sha256": "5e2b1ac914a5a9ea615338ed612e30aa59e6a69fc96facebc524256f0946f68c",
+      "copied_as": null
+    },
+    {
+      "path": "D:\\Codex-chat-II\\thesis-llm-wiki\\case-designs\\草船借箭-v3-完整案例规格\\04-评价量规与课堂组织.md",
+      "sha256": "8f57995df1f36070c773c5670c35afed3a9a6c97c1f505f8a539c1803ec861d0",
+      "copied_as": null
+    },
+    {
+      "path": "D:\\Codex-chat-II\\thesis-llm-wiki\\case-designs\\草船借箭-v3-完整案例规格\\network-spec.json",
+      "sha256": "7d879967764c2d7a6089dfaa2f3a8201e7d3605a82787779681e51310b9ea6f8",
+      "copied_as": "network-spec.json"
+    },
+    {
+      "path": "D:\\Codex-chat-II\\thesis-llm-wiki\\case-designs\\草船借箭-v3-完整案例规格\\teaching-map.json",
+      "sha256": "b964e321ff5224f9f2afec4197715273f242fc85b7b8e9f1634288adc75e4cd0",
+      "copied_as": "teaching-map.json"
+    }
+  ],
+  "authored_files": [
+    "presentation.json",
+    "assistance.json",
+    "dynamic-text-policy.json",
+    "assets-manifest.json",
+    "validate_content.py",
+    "build_content.py"
+  ],
+  "authorship": "由本项目基于既有v3原稿编写、压缩、条件化的产品文案；新增台词为教学改编，非原著引文、真人课堂资料或生成模型实测。",
+  "reference_engine_read": "只读reference_engine.py以核对当前观察码与动作参数，未复制或改写原文件。"
+}

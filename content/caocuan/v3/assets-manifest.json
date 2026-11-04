@@ -1,0 +1,28 @@
+{
+  "version": "v3.1",
+  "assets": [
+    {
+      "path": "../../../frontend/src/components/RiverStage.vue",
+      "type": "inline-svg",
+      "purpose": "江面、远山、雾层、船侧、码头、曹营帷幕与人物剪影；按角色与场景组合。",
+      "origin": "本项目原创程序美术，由前端实现；非外部图片素材。",
+      "sha256_at_registration": "6c1be191ef42fd93206193ab8286e7a1ecf3869ab588460a5ee7d8e1626e0848"
+    },
+    {
+      "path": "../../../frontend/src/style.css",
+      "type": "css-motion",
+      "purpose": "江雾与船势的有限程序动画，含prefers-reduced-motion支持。",
+      "origin": "本项目原创程序美术，由前端实现；非外部图片素材。",
+      "sha256_at_registration": "6032eab64915f78f1c31b5f390f390fc29e4825579efabf822c81afac6b95788"
+    }
+  ],
+  "status": "只登记当前实际存在的程序美术源文件；不声称已制成配音、录播或外部图片素材。",
+  "voiceover": {
+    "available": false,
+    "note": "无配音素材，不提供假播放或假音频地址。"
+  },
+  "music": {
+    "available": false
+  },
+  "art_registration_policy": "path相对本内容包目录；登记哈希仅对应登记时源文件。前端修改后重新登记，不把尚未存在的素材提前写入清单。"
+}

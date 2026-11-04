@@ -1,0 +1,1231 @@
+{
+  "schema_version": "U035-1",
+  "kind": "finite narrative rule reference specification, not product",
+  "roles": [
+    "R_LUSU",
+    "R_ZHUGE",
+    "R_CAO"
+  ],
+  "nodes": [
+    {
+      "id": "N01_WEATHER",
+      "type": "choice"
+    },
+    {
+      "id": "N02_PREP",
+      "type": "choice"
+    },
+    {
+      "id": "N03_NO_RESPONSE",
+      "type": "choice"
+    },
+    {
+      "id": "N04_CAO_REPORT",
+      "type": "choice"
+    },
+    {
+      "id": "N05_OBSERVE",
+      "type": "choice"
+    },
+    {
+      "id": "N06_ANOMALY",
+      "type": "rendered_transition_scene"
+    },
+    {
+      "id": "N07_CEASEFIRE",
+      "type": "choice"
+    },
+    {
+      "id": "N08_TURN",
+      "type": "rendered_transition_scene"
+    },
+    {
+      "id": "N09_SIGNAL",
+      "type": "rendered_transition_scene"
+    },
+    {
+      "id": "N10_RETURN_FIRE",
+      "type": "rendered_transition_scene"
+    },
+    {
+      "id": "N11_FIRE",
+      "type": "choice"
+    },
+    {
+      "id": "N12_DECIDE",
+      "type": "choice"
+    },
+    {
+      "id": "N13_CLOSE",
+      "type": "close"
+    }
+  ],
+  "endpoints": {
+    "T1": "借箭达成",
+    "T2": "见好收场",
+    "T3": "计划被截断",
+    "T4": "两岸相持后收手",
+    "T5": "险情中改换目标",
+    "T6": "由借转战",
+    "T7": "未行先改",
+    "T8": "错失时机"
+  },
+  "inventory_config": {
+    "unit": "支（剧本预置数量，非物理预测）",
+    "target": 100000,
+    "incoming_batch": 40000,
+    "return_cost": 30000,
+    "own_stock": 10000,
+    "contact_loss_cap": 15000,
+    "cao_batches": 3,
+    "note": "每一取得批次是独立剧本事件；固定有限曹营本次可投入批次防止无限刷取，不代表真实历史库存。"
+  },
+  "actions": [
+    {
+      "id": "A_PREP_STRAW",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N02_PREP"
+      ],
+      "condition": "unprepared",
+      "effect": "prepare_straw",
+      "observation": "本方确认草束外观与固定承接层；曹方无观察",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N01_WEATHER"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_PREP_ARMOR",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N02_PREP"
+      ],
+      "condition": "unprepared",
+      "effect": "prepare_armor",
+      "observation": "本方确认空甲外观与同一承接层；曹方无观察",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N01_WEATHER"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_WAIT_WEATHER",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N01_WEATHER"
+      ],
+      "condition": "weather_wait_available",
+      "effect": "weather_step",
+      "observation": "本方新天气报告",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N01_WEATHER"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_LAUNCH",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N01_WEATHER"
+      ],
+      "condition": "prepared",
+      "effect": "launch",
+      "observation": "曹方仅收到江上动静/轮廓",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N03_NO_RESPONSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_CANCEL",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N01_WEATHER"
+      ],
+      "condition": "prepared",
+      "effect": "cancel",
+      "observation": "未接触，不向曹方泄露撤销原因",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_PATROL_CLOSE",
+      "roles": [
+        "R_CAO"
+      ],
+      "nodes": [
+        "N01_WEATHER"
+      ],
+      "condition": "no_contact_package",
+      "effect": "patrol_close",
+      "observation": "曹方仅巡防未接触；船方取消是声明的NPC前史",
+      "opponent_response": "ship_no_launch",
+      "next_nodes": [
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_SIGNAL",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "encounter_open",
+      "effect": "signal",
+      "observation": "鼓/喊可闻，旗影只在许可视野可见，安静无虚假声响",
+      "opponent_response": "cao_policy",
+      "next_nodes": [
+        "N07_CEASEFIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": [
+        "N09_SIGNAL"
+      ]
+    },
+    {
+      "id": "A_NEAR",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE",
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "far",
+      "effect": "near",
+      "observation": "变更本方观察位置，获取有限外观；不是全知",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N05_OBSERVE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_OBSERVE",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE",
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "encounter_open",
+      "effect": "observe",
+      "observation": "只能投影当前清晰度/已发生受箭迹象",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N05_OBSERVE",
+        "N06_ANOMALY"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_PROBE",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE",
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "encounter_open",
+      "effect": "probe",
+      "observation": "新喊话/应答作为可闻事件",
+      "opponent_response": "opposite_policy",
+      "next_nodes": [
+        "N07_CEASEFIRE",
+        "N11_FIRE",
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_VOLLEY",
+      "roles": [
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "ammo_available",
+      "effect": "volley",
+      "observation": "实际射出与船方实际取得分别记录",
+      "opponent_response": "ship_policy",
+      "next_nodes": [
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_HOLD",
+      "roles": [
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "encounter_open",
+      "effect": "hold",
+      "observation": "船方仅知道箭声停止，不知原因",
+      "opponent_response": "ship_policy",
+      "next_nodes": [
+        "N07_CEASEFIRE",
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_TURN",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "has_acquired",
+      "effect": "turn",
+      "observation": "另一方只在当前能看见时得到船势改变",
+      "opponent_response": "cao_policy",
+      "next_nodes": [
+        "N07_CEASEFIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": [
+        "N08_TURN"
+      ]
+    },
+    {
+      "id": "A_RETURN_FIRE",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "return_stock",
+      "effect": "return_fire",
+      "observation": "扣具体批次；曹方观察到实际来箭，不知道其来源",
+      "opponent_response": "cao_policy",
+      "next_nodes": [
+        "N07_CEASEFIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": [
+        "N10_RETURN_FIRE"
+      ]
+    },
+    {
+      "id": "A_FIRE",
+      "roles": [
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "fire_available",
+      "effect": "launch_fire",
+      "observation": "只产生发出和可见火光，不等于接触",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N11_FIRE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_RESOLVE_FIRE",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE",
+        "R_CAO"
+      ],
+      "nodes": [
+        "N11_FIRE"
+      ],
+      "condition": "fire_launched",
+      "effect": "resolve_fire",
+      "observation": "独立声明情境事件：实际接触或未接触；仅实际损失扣账",
+      "opponent_response": "ship_policy",
+      "next_nodes": [
+        "N11_FIRE",
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "actor_kind": "system",
+      "via_nodes": []
+    },
+    {
+      "id": "A_EVADE",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "fire_seen",
+      "effect": "evade",
+      "observation": "火光前撤离可没有实际损失；已接触则保留",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_WAIT_WINDOW",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE",
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "window_wait_available",
+      "effect": "window_step",
+      "observation": "显式剧情等待推进环境，现实停留不推进",
+      "opponent_response": "ship_policy",
+      "next_nodes": [
+        "N12_DECIDE",
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_WITHDRAW",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "launched",
+      "effect": "withdraw",
+      "observation": "船方真实离开，曹方只看见离去",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_REPORT",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE",
+        "R_CAO"
+      ],
+      "nodes": [
+        "N13_CLOSE"
+      ],
+      "condition": "closure_ready",
+      "effect": "report",
+      "observation": "归营交接和本角色报告；终态双方世界一致",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N13_CLOSE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_SAY",
+      "roles": [
+        "R_LUSU",
+        "R_ZHUGE",
+        "R_CAO"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "encounter_open",
+      "effect": "say",
+      "observation": "原句记录，不能据关键词直接改变世界",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_FACE_RUSU",
+      "roles": [
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "encounter_open",
+      "effect": "face_rusu",
+      "observation": "面向鲁肃的已发生动作",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    },
+    {
+      "id": "A_FAN_SIGNAL",
+      "roles": [
+        "R_ZHUGE"
+      ],
+      "nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "condition": "encounter_open",
+      "effect": "fan_signal",
+      "observation": "D改编手势；当场能看到才进入观察",
+      "opponent_response": "none",
+      "next_nodes": [
+        "N03_NO_RESPONSE",
+        "N04_CAO_REPORT",
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N07_CEASEFIRE",
+        "N08_TURN",
+        "N09_SIGNAL",
+        "N10_RETURN_FIRE",
+        "N11_FIRE",
+        "N12_DECIDE"
+      ],
+      "actor_kind": "learner",
+      "via_nodes": []
+    }
+  ],
+  "scenarios": {
+    "responsive_dense": {
+      "fog": "dense",
+      "weather_after": "dense",
+      "cao_policy": "responsive",
+      "ship_policy": "standard",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "skeptic_clear": {
+      "fog": "clear",
+      "weather_after": "clear",
+      "cao_policy": "skeptic",
+      "ship_policy": "stop_after_probe",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "quiet_dense": {
+      "fog": "dense",
+      "weather_after": "dense",
+      "cao_policy": "quiet",
+      "ship_policy": "stop_after_probe",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "battle_dense": {
+      "fog": "dense",
+      "weather_after": "dense",
+      "cao_policy": "battle",
+      "ship_policy": "battle",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "fire_contact": {
+      "fog": "dense",
+      "weather_after": "dense",
+      "cao_policy": "fire",
+      "ship_policy": "standard",
+      "fire_contact": true,
+      "fire_enabled": true,
+      "containable": true,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "fire_miss": {
+      "fog": "dense",
+      "weather_after": "dense",
+      "cao_policy": "fire",
+      "ship_policy": "standard",
+      "fire_contact": false,
+      "fire_enabled": true,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "no_fog_stays": {
+      "fog": "clear",
+      "weather_after": "clear",
+      "cao_policy": "responsive",
+      "ship_policy": "standard",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "fog_forming": {
+      "fog": "clear",
+      "weather_after": "dense",
+      "cao_policy": "responsive",
+      "ship_policy": "standard",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "early_return": {
+      "fog": "dense",
+      "weather_after": "dense",
+      "cao_policy": "responsive",
+      "ship_policy": "early_return",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    },
+    "no_contact_patrol": {
+      "fog": "clear",
+      "weather_after": "clear",
+      "cao_policy": "quiet",
+      "ship_policy": "not_launched",
+      "fire_contact": false,
+      "fire_enabled": false,
+      "window_phases": {
+        "dense": [
+          {
+            "fog": "thinning",
+            "closed": false,
+            "report": "fog_thinning"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "fog_window_closed"
+          }
+        ],
+        "clear": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "guard_readiness_advances"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ],
+        "thinning": [
+          {
+            "fog": "clear",
+            "closed": false,
+            "report": "fog_cleared"
+          },
+          {
+            "fog": "clear",
+            "closed": true,
+            "report": "probe_opportunity_closed_guard_ready"
+          }
+        ]
+      }
+    }
+  },
+  "postprocess": [
+    "REVIEW",
+    "HELP_REQUEST",
+    "HELP_GENERATE",
+    "HELP_SHOW",
+    "FEEDBACK_DRAFT",
+    "FEEDBACK_EDIT",
+    "FEEDBACK_CONFIRM",
+    "ROLE_REPLAY",
+    "REVISIT",
+    "SUBTITLE_EDIT",
+    "REHEARSAL_SUBMIT",
+    "AI_RESPONSE"
+  ],
+  "goals": [
+    "G_PERSPECTIVE",
+    "G_NARRATIVE",
+    "G_ADAPT_EXPRESSION",
+    "X_AI"
+  ],
+  "entry_nodes": {
+    "R_LUSU": "N02_PREP",
+    "R_ZHUGE": "N02_PREP",
+    "R_CAO": "N04_CAO_REPORT"
+  },
+  "special_entry": "no_contact_patrol曹营从N01巡防未接触，不知道船方取消原因",
+  "global_action_constraints": {
+    "active_hazard": [
+      "A_EVADE",
+      "A_WITHDRAW",
+      "A_SAY"
+    ],
+    "fire_flight_pending": [
+      "A_RESOLVE_FIRE",
+      "A_EVADE",
+      "A_SAY"
+    ],
+    "meaning": "pending/active fire gates plot actions; help and UI reading remain possible without advancing time",
+    "window_closed": [
+      "A_OBSERVE",
+      "A_SAY",
+      "A_WITHDRAW",
+      "A_EVADE",
+      "A_RESOLVE_FIRE",
+      "A_FACE_RUSU",
+      "A_FAN_SIGNAL"
+    ]
+  },
+  "retry_anchors": {
+    "N08_TURN": "A_TURN前已提交快照",
+    "N09_SIGNAL": "A_SIGNAL前已提交快照",
+    "N10_RETURN_FIRE": "A_RETURN_FIRE前已提交快照",
+    "N06_ANOMALY": "触发有限观察的A_NEAR/A_OBSERVE/实际volley等动作前快照",
+    "event_fields": [
+      "phase",
+      "retry_checkpoint",
+      "retry_action",
+      "anchor_route"
+    ],
+    "constraint": "不能把过场node当稳定快照ID；通过哈希引用检索已存的动作前快照，复演保留前史和全部已展示帮助。"
+  }
+}

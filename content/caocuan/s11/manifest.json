@@ -1,0 +1,14 @@
+{
+  "version": "S1.1",
+  "basis": "U058 approved finite script; no live model",
+  "nodes": 54,
+  "edges": 112,
+  "witness_routes": 72,
+  "source_sha256": {
+    "..\\thesis-llm-wiki\\research-runs\\2026-10-27-caocuan-script-rewrite\\script-network.json": "bdef3292ea0bae92f0a86b68553bb04ee8da5fad7fde9468d77347b53db2fc5f",
+    "..\\thesis-llm-wiki\\research-runs\\2026-10-27-caocuan-script-rewrite\\build_network.py": "0b74ddff2af07a95a502f24b6b6521abc987bd0f8fb788298d0467372f96822b",
+    "..\\thesis-llm-wiki\\research-runs\\2026-10-27-caocuan-script-rewrite\\script_dialogue.py": "b6d51df3ab3a4e1e2a95a61402010be9dd6e5f7c802e5687241ca1e962f0f8a9",
+    "..\\thesis-llm-wiki\\research-runs\\2026-10-27-caocuan-script-rewrite\\review\\route-witnesses.json": "52aff837c9c27c7ea145a41a97c6337249822af8c0745bce20e842c4d148c14c"
+  },
+  "scope": "Network/variant renderer copied from the approved script; production HTTP, persistence and public projection implemented independently."
+}

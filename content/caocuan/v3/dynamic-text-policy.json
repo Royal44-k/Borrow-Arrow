@@ -1,0 +1,129 @@
+{
+  "version": "v3.1",
+  "mechanism": "presentation中不含待替换占位符。后端将以下已发生且角色可知的补充句加入scene.lines/observations/ending.side_notes；不能把内部对象或情境策略发到客户端。",
+  "slots": [
+    {
+      "id": "current_weather",
+      "locations": [
+        "N01_WEATHER",
+        "N05_OBSERVE",
+        "T8"
+      ],
+      "rule": "依本路当前fog与明确等待报告决定。clear起始不得写雾刚散；等待结果不得由情境标题预告。"
+    },
+    {
+      "id": "arrow_history",
+      "locations": [
+        "N03_NO_RESPONSE",
+        "N07_CEASEFIRE"
+      ],
+      "rule": "区分未见出寨、此前从未收到箭、已收到而后停三种；旧observations是历史，须保留时间语境。"
+    },
+    {
+      "id": "current_receipt",
+      "locations": [
+        "N08_TURN",
+        "N10_RETURN_FIRE",
+        "N13_CLOSE"
+      ],
+      "rule": "只向船方展示实际取得、支出、损失与当前余额；曹营只见本方支出批次，不见目标或对岸账目。"
+    },
+    {
+      "id": "return_fire_preview",
+      "locations": [
+        "A_RETURN_FIRE"
+      ],
+      "rule": "提交前列出固定扣除规则所选批次与提交后可交付余额；确认与实际扣除一致，取消无事件。"
+    },
+    {
+      "id": "visible_detail",
+      "locations": [
+        "N05_OBSERVE",
+        "N06_ANOMALY",
+        "N08_TURN"
+      ],
+      "rule": "只有角色已有相应observation才显示草束/壳体/不动人影/船势变化，不能直接读取decoy输出曹营台词。"
+    },
+    {
+      "id": "fire_phase",
+      "locations": [
+        "N11_FIRE",
+        "A_EVADE",
+        "T5"
+      ],
+      "rule": "分别投影发出、看见、实际接触、实际损失与已处理。曹营未确认落处时只报火光和已见船势，不得泄露actual_danger或lost。"
+    },
+    {
+      "id": "evasion_choice",
+      "locations": [
+        "A_EVADE"
+      ],
+      "rule": "contain仅在实际接触、当前局部险情和containable成立时开放；按params.mode使用对应choice.response。leave不预先宣称曾受损。"
+    },
+    {
+      "id": "signal_choice",
+      "locations": [
+        "A_SIGNAL"
+      ],
+      "rule": "按params.variant选对应回应，quiet不生成声音，dense时flag不生成对方可见旗影；call是原规则shout别名，可正规化为shout。"
+    },
+    {
+      "id": "role_action_copy",
+      "locations": [
+        "actions",
+        "scenes",
+        "moments"
+      ],
+      "rule": "动作按role_overrides覆盖label/description；场景与片段标题按scenes.roles内title/location/stage覆盖公共字段。鲁肃策略动作先呈现诸葛亮授权再执行。曹营A_NEAR只能移动本方观察员。"
+    },
+    {
+      "id": "terminal_balance",
+      "locations": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "rule": "T5/T6不得固定写未足；T1可带支出/损失/窗口变化副事件；T8只由不足且窗口关闭成立。曹营不通过标题、正文、ID或side_notes获知对方终态分类依据。"
+    },
+    {
+      "id": "same_endpoint_cao",
+      "locations": [
+        "T1",
+        "T2",
+        "T3",
+        "T4",
+        "T5",
+        "T6",
+        "T7",
+        "T8"
+      ],
+      "rule": "曹营终场仅以其实际观察选择补句，未确认时不写对方受损、空手、未足、借足、取消或十万原约。"
+    },
+    {
+      "id": "help_role_scope",
+      "locations": [
+        "assistance.json"
+      ],
+      "rule": "按role_prompts覆盖source_prompts。来源显示预写支持，不声称实际调用LLM；H3不替学生提交表达。"
+    },
+    {
+      "id": "k1_previous_expression",
+      "locations": [
+        "replay"
+      ],
+      "rule": "只用存档中的本人鲁肃原句或手势，保留原归属；缺失原句显示未留下自己的提问，改走普通换角，不造旧句。"
+    }
+  ],
+  "teaching_limits": [
+    "不根据箭数/通关/按钮选择给能力等级",
+    "无个人作品说明材料不足",
+    "没有实际新作品时只显示待再观察",
+    "没有真人处理不显示教师审定",
+    "人物预写台词、帮助示例与本人原话分开保存"
+  ]
+}

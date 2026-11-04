@@ -1,0 +1,17 @@
+node_modules/
+dist/
+release/
+release-support/
+qa/
+data/
+/runtime/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite*
+*.db
+.env*
+*.log
+*.zip
+!public/runtime/python_stdlib.zip
