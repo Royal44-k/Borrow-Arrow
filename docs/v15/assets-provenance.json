@@ -1,0 +1,178 @@
+[
+  {
+    "id": "fleet_order",
+    "prompt": "Generate one original 16:9 cinematic realistic scene background for Chinese Three Kingdoms naval historical fiction educational interactive game. Film still texture, grounded wood boats contacting water, believable adult Chinese soldiers in late Han clothing, moonlit deep teal river, amber lanterns, restrained mist, realistic anatomy, no fantasy, no modern objects, no text, no UI, no watermark. Bottom 22 percent visually quiet for dialogue overlay. Distinct fresh composition, not a reused scene. View from high stern of a wooden command boat. A hooded bronze lamp and rope coils foreground. Ahead, several small covered wooden boats wait at different distances on dark water, their tiny warm lamps visible through mist. Far northern fortified riverside camp small in background. Meaning: about to transmit a command.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-11deb5d4-b2a0-4339-bbae-aed7ea9bd1fd.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "c35bd2b49a296f53028e3623680af3f1c5d17e55f71f9777527e92dcf647c891",
+    "runtime": "public/v15/fleet_order.webp"
+  },
+  {
+    "id": "press_channel",
+    "prompt": "Generate one original 16:9 cinematic realistic scene background for Chinese Three Kingdoms naval historical fiction educational interactive game. Film still texture, grounded wood boats contacting water, believable adult Chinese soldiers in late Han clothing, moonlit deep teal river, amber lanterns, restrained mist, realistic anatomy, no fantasy, no modern objects, no text, no UI, no watermark. Bottom 22 percent visually quiet for dialogue overlay. Distinct fresh composition, not a reused scene. Low cinematic side view at waterline. A front wooden boat with straw bundles and blue-grey cloth canopy advances slowly, oars dipping in synchronized motion, smaller following boats visible behind to the left. Ahead a fortified north shore appears between drifting fog banks. Meaning: boats move forward, still no arrows.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-6ade7830-f82a-4613-9fd2-fb53b2c54465.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "c50c4093e4b5c7b0e36a3f9e93bd64033e4ff6be041fb4d3cbfdf19c7884e12f",
+    "runtime": "public/v15/press_channel.webp"
+  },
+  {
+    "id": "spread_channel",
+    "prompt": "Generate one original 16:9 cinematic realistic scene background for Chinese Three Kingdoms naval historical fiction educational interactive game. Film still texture, grounded wood boats contacting water, believable adult Chinese soldiers in late Han clothing, moonlit deep teal river, amber lanterns, restrained mist, realistic anatomy, no fantasy, no modern objects, no text, no UI, no watermark. Bottom 22 percent visually quiet for dialogue overlay. Distinct fresh composition, not a reused scene. Wide overhead oblique film view of two groups of small traditional wooden covered boats deliberately moving apart on moonlit river, creating an unmistakable broad empty water corridor between them. Straw along sides, calm skilled boatmen, northern camp tiny and distant. No arrows. Diagonal composition different from stern view.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-477291a9-6a5a-4088-b890-82ce4f339dc3.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "08494043c6c008386d64b059d3a6a794779cadf89a0efc27d6de166fdc1d8984",
+    "runtime": "public/v15/spread_channel.webp"
+  },
+  {
+    "id": "hold_channel",
+    "prompt": "Create an original wide 16:9 photorealistic cinematic late Han Chinese naval historical-fiction scene, film texture, anatomically natural adult Chinese men, period wood boats genuinely floating in dark river water, blue teal night and amber fire, no text, no UI, no modern objects, no fantasy, no violence injury. Bottom fifth quiet water/shadow for dialogue. A fresh distinct composition. High oblique view from beside a mast: a small fleet has halted and gathered in a loose curved crescent on open river, lowered oars motionless, dim hooded lanterns. Vast dark empty water beyond. The commander watches silently, profile at far right, tense patience. NOT the two-column separation composition.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-007fa1d7-3443-4698-b50e-3be3cbeb6ef9.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "b5022db5560360ac709a41d6e39ff3085803f4ccc4316fee5fcf94dbf49ad2a4",
+    "runtime": "public/v15/hold_channel.webp"
+  },
+  {
+    "id": "near_bank",
+    "prompt": "Create an original wide 16:9 photorealistic cinematic late Han Chinese naval historical-fiction scene, film texture, anatomically natural adult Chinese men, period wood boats genuinely floating in dark river water, blue teal night and amber fire, no text, no UI, no modern objects, no fantasy, no violence injury. Bottom fifth quiet water/shadow for dialogue. A fresh distinct composition. Point of view from a low grass-covered boat unexpectedly very close to the wooden palisade of a northern river fortress. A watchtower torch beams sharply through a thick patch of fog; a small enemy patrol boat emerges behind a pier on the right. Wet rope and straw on foreground gunwale, high tension, no shooting.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-0f3c6db4-6659-4db6-8bce-9654517acb93.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "2bee3ef2522c7a24ee50d783bd7e5b04d3048949a3997d3c69364f11e28f9de6",
+    "runtime": "public/v15/near_bank.webp"
+  },
+  {
+    "id": "exposed",
+    "prompt": "Create an original wide 16:9 photorealistic cinematic late Han Chinese naval historical-fiction scene, film texture, anatomically natural adult Chinese men, period wood boats genuinely floating in dark river water, blue teal night and amber fire, no text, no UI, no modern objects, no fantasy, no violence injury. Bottom fifth quiet water/shadow for dialogue. A fresh distinct composition. Tight cinematic narrative shot from a northern patrol boat: a broad warm torchlight reveals an unmistakable tied straw dummy with lifeless straw face on the side of an opposing blue-cloth covered wooden boat. Two adult armored scouts in profile inspect it with wary realization. Carefully natural hands holding torch. No arrows, no fighting, richly textured wet hull.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-cba2b9f6-0105-47f7-91c4-5aae1d4ca304.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "c9775485390e1cece06d74d20517cfe5ea8d989e66ab49662d9a66fdc52c7dcc",
+    "runtime": "public/v15/exposed.webp"
+  },
+  {
+    "id": "gap_escape",
+    "prompt": "Create an original wide 16:9 photorealistic cinematic late Han Chinese naval historical-fiction scene, film texture, anatomically natural adult Chinese men, period wood boats genuinely floating in dark river water, blue teal night and amber fire, no text, no UI, no modern objects, no fantasy, no violence injury. Bottom fifth quiet water/shadow for dialogue. A fresh distinct composition. Moonlit overhead diagonal scene of a single narrow northern patrol skiff passing through a wide open gap between two groups of straw-covered allied boats, sparse fog curls. Each boat's oars and wake show separation. The scouts look toward silhouettes but not face to face. Quiet tension, no arrows, no weapons raised.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-b29aca98-15f4-47de-9e37-81ee13f08bd1.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "d305d0ae62cac03330502bac69cadee8eb9e943f2cbd04919497f607ce8189a0",
+    "runtime": "public/v15/gap_escape.webp"
+  },
+  {
+    "id": "close_withdraw",
+    "prompt": "Create an original wide 16:9 photorealistic cinematic late Han Chinese naval historical-fiction scene, film texture, anatomically natural adult Chinese men, period wood boats genuinely floating in dark river water, blue teal night and amber fire, no text, no UI, no modern objects, no fantasy, no violence injury. Bottom fifth quiet water/shadow for dialogue. A fresh distinct composition. View looking back from the stern of a withdrawing covered straw boat. Foreground an adult boatman pulls an oar, waiting for the final small boat to catch up from the right; distant fortress lights recede through mist at left. Boat hulls and reflected lanterns grounded in water, cool quiet relief, no arrows.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-ac78c5d6-be88-4ab3-ba49-9ece2e04199f.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "4dc62bc95314959cdb11ea0715f471a65c3854b88d534b7d6a301eacbb67a03d",
+    "runtime": "public/v15/close_withdraw.webp"
+  },
+  {
+    "id": "C_far_contact",
+    "prompt": "Create an original wide 16:9 photorealistic cinematic late Han Chinese naval historical-fiction scene, film texture, anatomically natural adult Chinese men, period wood boats genuinely floating in dark river water, blue teal night and amber fire, no text, no UI, no modern objects, no fantasy, no violence injury. Bottom fifth quiet water/shadow for dialogue. A fresh distinct composition. From the bow of a northern scout boat far beyond the fortress: an isolated lantern on a second skiff is barely visible deep in a dense fog bank, northern camp lights extremely distant behind on far left. Adult sentry at right leans forward listening into the unfamiliar water; his spear rests vertical, no arrow fire. Claustrophobic darkness but readable detail.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-f17eec1e-7d14-4509-9d6f-3b9abfd2651f.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "0342fd8bb407c88ff1e8d55b077076dcc08859774b29d6f28747e390a861da19",
+    "runtime": "public/v15/C_far_contact.webp"
+  },
+  {
+    "id": "C_order",
+    "prompt": "Original single 16:9 cinematic photoreal late Han Chinese naval historical-fiction game scene. Adult Chinese people, natural anatomy, richly detailed wood/rope/cloth/water, dim blue teal night contrasted with amber firelight, wood boats physically on river, no text, no UI, no modern lights, no fantasy, no gore. Bottom fifth quiet for subtitle overlay. Distinct camera composition. Camera inside the open wooden northern water-gate looking outward. Foreground adult armored officer holds a small bronze signaling gong beside a leather drum on wooden stand. Two light scout boats await order outside in dark water, no straw on these northern boats, fortress timbers frame top and sides. Strategic pause.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-62f706a8-88a0-4030-8be2-f461283141ba.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "3dac2c892d93300315d540d7af5538fb40843bdd9d6abb2c9fa202276600a711",
+    "runtime": "public/v15/C_order.webp"
+  },
+  {
+    "id": "near_order",
+    "prompt": "Original single 16:9 cinematic photoreal late Han Chinese naval historical-fiction game scene. Adult Chinese people, natural anatomy, richly detailed wood/rope/cloth/water, dim blue teal night contrasted with amber firelight, wood boats physically on river, no text, no UI, no modern lights, no fantasy, no gore. Bottom fifth quiet for subtitle overlay. Distinct camera composition. From inside a grass covered southern boat's low cabin, looking past the half-curtain toward an adult middle-aged boatman holding a hooded small oil lantern. Outside, neighboring straw boat is very close in mist; distant large northern watchtower ominous. Interior foreground drum and rope, tension before giving signal. No arrows.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-c025ff95-d6cc-421f-94d1-2b564ae93a17.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "9170e1b2b384184b6ae8e4639501edec52b3020cc96d88ff4b68662a1395cf22",
+    "runtime": "public/v15/near_order.webp"
+  },
+  {
+    "id": "C_contact",
+    "prompt": "Original single 16:9 cinematic photoreal late Han Chinese naval historical-fiction game scene. Adult Chinese people, natural anatomy, richly detailed wood/rope/cloth/water, dim blue teal night contrasted with amber firelight, wood boats physically on river, no text, no UI, no modern lights, no fantasy, no gore. Bottom fifth quiet for subtitle overlay. Distinct camera composition. On a northern scout skiff, viewed from behind three adult dark-armored guards. Their lamp illuminates empty straw dummy figures tied to a nearby southern boat that is beginning to turn away. Northern scout lead lowers his bow WITHOUT shooting, realizing the trick. Close taut maritime film scene, no arrows on straw.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-8ddd5e97-f768-4d9f-b9eb-875c167b75f5.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "5387a747b1f873af785159c6cf0fd74c310261c9b4a9f144d6d073d5662c1de2",
+    "runtime": "public/v15/C_contact.webp"
+  },
+  {
+    "id": "C_flank",
+    "prompt": "Original single 16:9 cinematic photoreal late Han Chinese naval historical-fiction game scene. Adult Chinese people, natural anatomy, richly detailed wood/rope/cloth/water, dim blue teal night contrasted with amber firelight, wood boats physically on river, no text, no UI, no modern lights, no fantasy, no gore. Bottom fifth quiet for subtitle overlay. Distinct camera composition. Wide panoramic river shot with two isolated northern scout skiffs moving away from one another toward opposite sides of a thick central fog bank. Each boat carries small dark armored adult guards and one dim oil lantern. Distant straw-covered boats almost lost behind fog, uncertainty. No huge ships or mass formation.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-411a22d2-9ea6-43ad-82d5-99fe76e61eaf.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "3a69fcfd1e44b113a2b3b3a6875d21f2cd7641c939a9da5e0d86e3e44fd46e5a",
+    "runtime": "public/v15/C_flank.webp"
+  },
+  {
+    "id": "C_regroup",
+    "prompt": "Original single 16:9 cinematic photoreal late Han Chinese naval historical-fiction game scene. Adult Chinese people, natural anatomy, richly detailed wood/rope/cloth/water, dim blue teal night contrasted with amber firelight, wood boats physically on river, no text, no UI, no modern lights, no fantasy, no gore. Bottom fifth quiet for subtitle overlay. Distinct camera composition. Intimate side-on shot of two northern wooden scout skiffs coming safely alongside one another after a fog search; two adult sentries exchange a raised hand acknowledging return. Their warm lamps nearly meet over dark rippling water, mist behind. Relief but alert, natural hands, no weapons brandished, small crews.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-5e89ea6e-18ad-4e5d-87d5-4b52896a9628.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "116e2badd0b5734c5283a19314901a16123be0c27e72db436b1acf1289bba971",
+    "runtime": "public/v15/C_regroup.webp"
+  },
+  {
+    "id": "C_holdline",
+    "prompt": "Original single 16:9 cinematic photoreal late Han Chinese naval historical-fiction game scene. Adult Chinese people, natural anatomy, richly detailed wood/rope/cloth/water, dim blue teal night contrasted with amber firelight, wood boats physically on river, no text, no UI, no modern lights, no fantasy, no gore. Bottom fifth quiet for subtitle overlay. Distinct camera composition. Northern water-gate interior viewed diagonally from a timber walkway. Two scout skiffs have returned to a wooden mooring. An adult sentry reports to an officer while several crossbow guards remain stationary overlooking dark river through palisade gaps. Warm braziers, lantern reflection, no arrows being fired, restrained vigilant atmosphere.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-6393effc-4f09-4cb1-8dc8-e9097e2c8546.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "987604f96926b5b243a7a07cdd3ccfe3fa643b4bc998cff734e3a2953275e095",
+    "runtime": "public/v15/C_holdline.webp"
+  },
+  {
+    "id": "caught_tail",
+    "prompt": "Original single 16:9 cinematic photoreal late Han Chinese naval historical-fiction game scene. Adult Chinese people, natural anatomy, richly detailed wood/rope/cloth/water, dim blue teal night contrasted with amber firelight, wood boats physically on river, no text, no UI, no modern lights, no fantasy, no gore. Bottom fifth quiet for subtitle overlay. Distinct camera composition. Dramatic close action from low on river: a lead straw-covered wooden boat slows alongside a last allied boat turned sideways by current. Adult boatmen carefully throw and catch a thick rope to pull the tail boat into formation. No injury, no arrows, no impossible rope anatomy. Water splashing at real hull level, a far northern torch visible through fog.",
+    "path": "C:\\Users\\lenovo\\.codex\\generated_images\\01a1665a-62d6-7eb0-ac31-f738e7aa730a\\exec-501b7239-8b99-407e-9856-ed66d695f48b.png",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "sha256": "5c88464879a2cad5f5ef589aa0597e046c15757c50a1f807c60e3f7bbc567e20",
+    "runtime": "public/v15/caught_tail.webp"
+  }
+]

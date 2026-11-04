@@ -1,0 +1,24 @@
+{
+  "name": "borrow-arrow-lst",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5190 --strictPort",
+    "build": "vue-tsc --noEmit && vite build",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "preview": "vite preview --host 127.0.0.1 --port 5190 --strictPort"
+  },
+  "dependencies": {
+    "vue": "3.5.44",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.180.0",
+    "@types/node": "24.9.1",
+    "@vitejs/plugin-vue": "6.0.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vue-tsc": "3.1.1"
+  }
+}

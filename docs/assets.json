@@ -1,0 +1,278 @@
+[
+  {
+    "id": "arrows",
+    "prompt": "Original first-person deck battle plate; full prompt in current conversation.",
+    "original": "design-assets/v16/arrows.png",
+    "path": "public\\v16\\arrows.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 309498,
+    "sha256": "0a343b2f880517b2920cbdea7bcb0a598ce4f9276ec8341c7c5da1b62af99bcf"
+  },
+  {
+    "id": "second",
+    "prompt": "One original landscape 16:9 cinematic photographic frame for a late Han Three Kingdoms interactive drama. Realistic dark Chinese wooden river boats, aged planks and rope-bound rough straw, coherent late-Han robes and lamellar armor, midnight slate-blue fog with restrained warm lanterns, epic but believable, rich foreground texture, no modern weapons, no cartoons, no game HUD, no text or watermarks. Create a distinct camera shot, not a collage. First-person view from the opposite side of a straw boat AFTER a half turn, port-side straw rails in foreground already thickly covered with cold iron-headed arrows, the near starboard rail still unshot. The wooden fort now stretches diagonally across the left background with thousands of tiny archers getting ready. More fleet boats visible at right, large open stormy sky for a second incoming volley. No arrows flying yet, no fire arrows, low camera between blue canvas and bow ropes, open midground water.",
+    "original": "design-assets/v16/second.png",
+    "path": "public\\v16\\second.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 284100,
+    "sha256": "4c109218f10dc5a31b9d8178a4de2c4e9ab441b9c9d2bc05c0fe948bce74a340"
+  },
+  {
+    "id": "arrows_after",
+    "prompt": "One original landscape 16:9 cinematic photographic frame for a late Han Three Kingdoms interactive drama. Realistic dark Chinese wooden river boats, aged planks and rope-bound rough straw, coherent late-Han robes and lamellar armor, midnight slate-blue fog with restrained warm lanterns, epic but believable, rich foreground texture, no modern weapons, no cartoons, no game HUD, no text or watermarks. Create a distinct camera shot, not a collage. Intimate low first-person close view along the port bulwark of a straw boat after a massive volley: hundreds of cold ordinary wooden arrows stand densely embedded at varied realistic angles in wet bound straw, no arrows floating, no blood. Other rail largely empty, dark fort out of focus behind swirling fog. Clear central deck, bow oarsman crouched with his face mostly hidden at far end, only one natural adult figure. The danger has momentarily paused. Rich individual feathers, broken straw fibers and droplets catch moonlight.",
+    "original": "design-assets/v16/arrows_after.png",
+    "path": "public\\v16\\arrows_after.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 282776,
+    "sha256": "ffa15a6b5bad33bf6983c9275e5a51b386955e4dd78f5233ca8350a89c346fcf"
+  },
+  {
+    "id": "second_after",
+    "prompt": "One original landscape 16:9 cinematic photographic frame for a late Han Three Kingdoms interactive drama. Realistic dark Chinese wooden river boats, aged planks and rope-bound rough straw, coherent late-Han robes and lamellar armor, midnight slate-blue fog with restrained warm lanterns, epic but believable, rich foreground texture, no modern weapons, no cartoons, no game HUD, no text or watermarks. Create a distinct camera shot, not a collage. Wide low bow view AFTER two volleys and turning: BOTH left and right straw-covered rails are thick with hundreds of embedded arrows, natural unequal individual directions but both loaded, central walkway safely clear. A neighboring similarly loaded boat glides beside us at right. Camp lanterns receding far in fog at left. Dawn remains faint navy, not sunrise. Camera near deck with ropes and damp arrow feathers crisp. No airborne arrows, no flames on the ship.",
+    "original": "design-assets/v16/second_after.png",
+    "path": "public\\v16\\second_after.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 287416,
+    "sha256": "55572a39c02384ceaa3161c315f3ab10918c286918e07879eea77ac9942dcce8"
+  },
+  {
+    "id": "rain_warning",
+    "prompt": "One original landscape 16:9 cinematic photographic frame for a late Han Three Kingdoms interactive drama. Realistic dark Chinese wooden river boats, aged planks and rope-bound rough straw, coherent late-Han robes and lamellar armor, midnight slate-blue fog with restrained warm lanterns, epic but believable, rich foreground texture, no modern weapons, no cartoons, no game HUD, no text or watermarks. Create a distinct camera shot, not a collage. Extreme-wide first-person from low inside a straw boat at a cautious distance from enemy water fortress. Water occupies the central distance, three narrow fresh splashes from short-ranging test arrows appear in front of the bow, with tiny ordinary arrows hitting water far from camera. Straw rails are empty. Far bank watchtowers glimmer orange, vast silent fog, night blue ripples. Oarsman seen only as a cropped natural adult shoulder and hand steadying an oar at far left; suspense rather than full battle.",
+    "original": "design-assets/v16/rain_warning.png",
+    "path": "public\\v16\\rain_warning.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 181298,
+    "sha256": "d1abb2b26aa2113d271de2e68c9905a7403be24a393a465ab8fbe5bedf59cbfc"
+  },
+  {
+    "id": "rain_ranks",
+    "prompt": "Create an original 16:9 realistic cinematic still for a Three Kingdoms late-Han river drama. Moonlit midnight, slate teal mist and warm amber lanterns, intricate weathered wooden boats and straw ropes, period-appropriate Chinese architecture and clothing, rich photographic detail, no text, UI, logos, collage, guns, blood, cartoon or fantasy. The deck feels real, not LEGO. Distinct camera composition. View FROM LOW ON THE SOUTHERN STRAW BOAT toward enemy NORTH SHORE: foreground is only the wet bow edge and empty straw bundles; in distance successive ranks of adult lamellar-armored bowmen hurry down wooden stairs to the fort rampart, herald carrying lantern. Long diagonal lines of yellow torchlight reveal the size of the reserve force; fog hangs between boat and shore. Bows carried upright, not yet shooting.",
+    "original": "design-assets/v16/rain_ranks.png",
+    "path": "public\\v16\\rain_ranks.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 256118,
+    "sha256": "6b739d2d75fceeb514104ccc8fda52113da49c9ffd0c66735558a8b996a3b883"
+  },
+  {
+    "id": "rain_early_return",
+    "prompt": "Create an original 16:9 realistic cinematic still for a Three Kingdoms late-Han river drama. Moonlit midnight, slate teal mist and warm amber lanterns, intricate weathered wooden boats and straw ropes, period-appropriate Chinese architecture and clothing, rich photographic detail, no text, UI, logos, collage, guns, blood, cartoon or fantasy. The deck feels real, not LEGO. Distinct camera composition. Side-on low tracking view of a fleet of small covered wooden straw boats making an early retreat into deep fog, empty straw screens clearly contain NO embedded arrows. Stern oars dig into water, ropes between boats relaxed but traceable; a single adult boatman at our stern looks toward distant fort. Fort fading at upper right, safe darker water at left. Quiet unresolved mood, not triumphant.",
+    "original": "design-assets/v16/rain_early_return.png",
+    "path": "public\\v16\\rain_early_return.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 235054,
+    "sha256": "5209facb15c4c27f4b3e46428f08ca74c2c4f45cea685b7e119ed5085a1e9771"
+  },
+  {
+    "id": "turn_gap",
+    "prompt": "Create an original 16:9 realistic cinematic still for a Three Kingdoms late-Han river drama. Moonlit midnight, slate teal mist and warm amber lanterns, intricate weathered wooden boats and straw ropes, period-appropriate Chinese architecture and clothing, rich photographic detail, no text, UI, logos, collage, guns, blood, cartoon or fantasy. The deck feels real, not LEGO. Distinct camera composition. Close oblique view down the inside of a straw boat DURING a broadside turn. Left bulwark densely full of embedded wooden arrows, right bulwark still bare straw. An adult boatman firmly pushes the long stern sweep with both hands, natural working posture. Blue cloth over low arched canopy, coiled rope secured clear of central walkway. Two following boats are banking in the same curve across the moonlit wake. Empty sky, no flying arrows. Weight and physical water contact obvious.",
+    "original": "design-assets/v16/turn_gap.png",
+    "path": "public\\v16\\turn_gap.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 337944,
+    "sha256": "f8190442ea8f800120bfc8c45529597ea6764a4c9c1e98a325b557c69f7d33ef"
+  },
+  {
+    "id": "rain_listen",
+    "prompt": "Create an original 16:9 realistic cinematic still for a Three Kingdoms late-Han river drama. Moonlit midnight, slate teal mist and warm amber lanterns, intricate weathered wooden boats and straw ropes, period-appropriate Chinese architecture and clothing, rich photographic detail, no text, UI, logos, collage, guns, blood, cartoon or fantasy. The deck feels real, not LEGO. Distinct camera composition. Quiet eye-level intimate shot from inside a dark blue-cloth boat canopy looking toward open water. At left a mature scholar with composed expression, dark mustache, simple pale late-Han robe, feather fan held LOW at waist makes a small palm-down hush gesture; at right an anxious mature bearded envoy leans to hear distant bowstrings, not theatrical exaggerated poses. Behind them one rail filled with arrows and the opposite empty, far shore lanterns hazy. Natural adult proportions, deep subtle suspense.",
+    "original": "design-assets/v16/rain_listen.png",
+    "path": "public\\v16\\rain_listen.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 223598,
+    "sha256": "408da669027ba39c435c83ea3ab9f557000d37c566051deea6790af6162b8951"
+  },
+  {
+    "id": "rain_lull",
+    "prompt": "Original widescreen 16:9 photorealistic historical film still, late Han Three Kingdoms river at midnight. Slate-blue moonlight, drifting river fog, fine textured timber, damp rope and straw, distant warm orange fort lanterns. Period-appropriate Chinese clothing and boats, compelling natural drama, no modern objects, no UI, no writing, logos, collage or cartoon, no blood. Distinct scene and camera. From a southern boat looking toward north fort after the first volley. Foreground LEFT straw bundles contain many embedded arrows; RIGHT rail clear. Across the dark water the archers have all lowered their bows, interrupted in an eerie sudden silence. A distant adult commander on battlement holds out a hand to halt. Our blue sail rope sways, empty sky. Use a compressed telephoto composition over the arrow feathers, focused silence and suspicion.",
+    "original": "design-assets/v16/rain_lull.png",
+    "path": "public\\v16\\rain_lull.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 223444,
+    "sha256": "6a033d26fc4df6a94553d03ffd34835e8f47b43e032adc311d8ab482a357ff3b"
+  },
+  {
+    "id": "rain_escape",
+    "prompt": "Original widescreen 16:9 photorealistic historical film still, late Han Three Kingdoms river at midnight. Slate-blue moonlight, drifting river fog, fine textured timber, damp rope and straw, distant warm orange fort lanterns. Period-appropriate Chinese clothing and boats, compelling natural drama, no modern objects, no UI, no writing, logos, collage or cartoon, no blood. Distinct scene and camera. Low dynamic stern-side view of loaded-on-one-side straw fleet retreating through a narrow bank of fog, oars pushing hard in sync and wake curling around heavy curved hulls. A mature natural boatman pulls a towrope, no weapon violence. Left bank lanterns recede far behind, right half open dark water. Only one side of lead boat visibly covered in arrows, the other has bare straw. Under pressure but disciplined formation.",
+    "original": "design-assets/v16/rain_escape.png",
+    "path": "public\\v16\\rain_escape.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 316490,
+    "sha256": "089193c77a02704f389b0d2f79abc302ed27fa24b9b0957cf765692f150bf49e"
+  },
+  {
+    "id": "C_draw_bows",
+    "prompt": "Original widescreen 16:9 photorealistic historical film still, late Han Three Kingdoms river at midnight. Slate-blue moonlight, drifting river fog, fine textured timber, damp rope and straw, distant warm orange fort lanterns. Period-appropriate Chinese clothing and boats, compelling natural drama, no modern objects, no UI, no writing, logos, collage or cartoon, no blood. Distinct scene and camera. North fort parapet, shoulder-level close view behind three mature Chinese adult bowmen in dark lamellar armor raising long wooden bows but not releasing. A stern older commanding officer in darker cloak extends his right hand forward, steady natural posture, face profile. Rows of additional archers extend deep along the wooden palisade. Far below mysterious southern straw boats are vague in moonlit fog. Warm torchlight across taut bowstrings, quiet before first command.",
+    "original": "design-assets/v16/C_draw_bows.png",
+    "path": "public\\v16\\C_draw_bows.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 231588,
+    "sha256": "e177e11c6328330823e551eb6ad3c6e8d1e59ff0109f2b7c0b09a1765d2d328a"
+  },
+  {
+    "id": "C_probe_report",
+    "prompt": "Original 16:9 realistic cinematic film still of late-Han China, wooden river fortress at deep midnight. Cool slate blue moonlight and warm amber torchlight, natural mature Chinese adults, accurate natural hands and posture, period lamellar armor, intricate damp wood and bowstrings. Clear visibility over open water; no thick mist (runtime will add fog when story needs it). No lettering, UI, logos, collage, modern weapons, blood or cartoon. Distinct thoughtful composition. North fort close-up: a mature adult scout sergeant with serious expression, dark moustache and worn helmet speaks quietly to an older bearded Chinese commander in dark cloak seen in profile. He points to three small ripples well short of enemy straw boats far out on river; their empty straw sides visible at distance. Bows lowered behind the men, the commander weighing his decision, not generic posed portrait.",
+    "original": "design-assets/v16/C_probe_report.png",
+    "path": "public\\v16\\C_probe_report.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 219162,
+    "sha256": "3c88b1c00b7cd46024ba0a44bd25740563b4fdae7c9b999c1fae66456980eded"
+  },
+  {
+    "id": "C_first_rain",
+    "prompt": "Original 16:9 realistic cinematic film still of late-Han China, wooden river fortress at deep midnight. Cool slate blue moonlight and warm amber torchlight, natural mature Chinese adults, accurate natural hands and posture, period lamellar armor, intricate damp wood and bowstrings. Clear visibility over open water; no thick mist (runtime will add fog when story needs it). No lettering, UI, logos, collage, modern weapons, blood or cartoon. Distinct thoughtful composition. Diagonal view along north fort rampart immediately AFTER first full volley. Many adult bowmen are lowering arms and reaching to quivers, the nearest bowman has a fully slack string. Beyond battlements a line of small wooden straw boats shows dense arrow shafts on ONE side. Empty sky, no aerial volley drawn. Lantern highlights iron helmets, tense organized military activity. North commander's shoulder at lower left.",
+    "original": "design-assets/v16/C_first_rain.png",
+    "path": "public\\v16\\C_first_rain.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 268850,
+    "sha256": "79bf7dc7f52554a3881d2de0613a973dcd2139edae5faf9cea1bd8dca2e6dc94"
+  },
+  {
+    "id": "C_stop_signal",
+    "prompt": "Original 16:9 realistic cinematic film still of late-Han China, wooden river fortress at deep midnight. Cool slate blue moonlight and warm amber torchlight, natural mature Chinese adults, accurate natural hands and posture, period lamellar armor, intricate damp wood and bowstrings. Clear visibility over open water; no thick mist (runtime will add fog when story needs it). No lettering, UI, logos, collage, modern weapons, blood or cartoon. Distinct thoughtful composition. Close dramatic silhouette of older north commander raising one open palm to stop shooting, his natural hand well shaped, face in side profile stern and concentrating. A herald beside him repeats the halt, archers along the parapet have visibly lowered bows in staggered rows. Moonlit river with straw fleet in distance, amber torch strongly rims the open palm. No written banners.",
+    "original": "design-assets/v16/C_stop_signal.png",
+    "path": "public\\v16\\C_stop_signal.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 255424,
+    "sha256": "2e74379c206cb1180ab088f0d28a9f056b88c3c055e8c62245daa71b00e15143"
+  },
+  {
+    "id": "C_reload",
+    "prompt": "Original 16:9 realistic cinematic film still of late-Han China, wooden river fortress at deep midnight. Cool slate blue moonlight and warm amber torchlight, natural mature Chinese adults, accurate natural hands and posture, period lamellar armor, intricate damp wood and bowstrings. Clear visibility over open water; no thick mist (runtime will add fog when story needs it). No lettering, UI, logos, collage, modern weapons, blood or cartoon. Distinct thoughtful composition. Low detailed shot along a north fort wooden ammunition table: adult archers draw ordinary feathered arrows from bundled quivers and lay them beside bows, NOT firing yet. Older commander's hand rests on the table while he looks toward river at the side. Many bowmen readying behind, rhythmic ranks with authentic varied posture. This is the uncertain pause between volleys, focused hands/arrows/bowstrings, warm lantern on dark wood.",
+    "original": "design-assets/v16/C_reload.png",
+    "path": "public\\v16\\C_reload.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 287936,
+    "sha256": "8cac3a1a64e42161d5c22d5bf7651e2870c3792b9c55c0878f49fcc5557151f5"
+  },
+  {
+    "id": "C_second_rain",
+    "prompt": "One original cinematic realistic widescreen 16:9 film still for late-Han Chinese Three Kingdoms drama. Photographic textures, moonlit deep midnight slate blue and warm amber lanterns, natural adult humans in Chinese period armor/robes, believable wooden river boats and fort, NO thick fog (clear-night version; atmosphere can be overlaid separately), no UI, lettering, logos, collage, cartoon, modern arms or blood. North shoreline close side angle looking along a long rank of adult bowmen after a second immense volley, arms lowering and quivers noticeably less full. The commander looks past a battlement with real concern, foreground lamellar shoulder and loose bowstring sharp. Far on the wide river, straw boats are turning home with both sides visibly densely lined with arrow shafts. No airborne projectiles. High but not aerial camera, full context of both shore and river.",
+    "original": "design-assets/v16/C_second_rain.png",
+    "path": "public\\v16\\C_second_rain.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 287096,
+    "sha256": "2436e742c5953415a2b2391edbf0d94ace1f2ae98b3fa31f52e85841c971580f"
+  },
+  {
+    "id": "C_arrow_depart",
+    "prompt": "One original cinematic realistic widescreen 16:9 film still for late-Han Chinese Three Kingdoms drama. Photographic textures, moonlit deep midnight slate blue and warm amber lanterns, natural adult humans in Chinese period armor/robes, believable wooden river boats and fort, NO thick fog (clear-night version; atmosphere can be overlaid separately), no UI, lettering, logos, collage, cartoon, modern arms or blood. High north watchtower looking DOWN along a curved railing to the river below. Loaded straw boats recede in coordinated columns, little lanterns retreat toward distant south bank. An older adult Chinese commander stands naturally in profile at the parapet, one hand holding the timber, an adult sentry waits behind without exaggerated gesture. Quivers on empty firing line, reflective aftermath. Moonlit clear river, many individual wakes, no triumphant posing.",
+    "original": "design-assets/v16/C_arrow_depart.png",
+    "path": "public\\v16\\C_arrow_depart.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 249364,
+    "sha256": "f2eb0ceb03370a1086a16be13c070fafe7bfcbe5dbe9a8841514b8579f460d06"
+  },
+  {
+    "id": "C_holdfire",
+    "prompt": "One original cinematic realistic widescreen 16:9 film still for late-Han Chinese Three Kingdoms drama. Photographic textures, moonlit deep midnight slate blue and warm amber lanterns, natural adult humans in Chinese period armor/robes, believable wooden river boats and fort, NO thick fog (clear-night version; atmosphere can be overlaid separately), no UI, lettering, logos, collage, cartoon, modern arms or blood. North fortress at the water gate, medium-wide view. Adult archers stand at ease with bows DOWN behind stout wooden stakes; younger but adult lookout awaits orders next to a shielded warm lantern. Through open space between stakes the southern straw boats wait intact and visibly not loaded with arrows. A narrow dark scout skiff tied below. Deliberate restraint, silence, tense faces, clear moonlit water. No flaming arrows.",
+    "original": "design-assets/v16/C_holdfire.png",
+    "path": "public\\v16\\C_holdfire.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 227738,
+    "sha256": "25a53cab4c69b39a97e4f50e18bf321c3e843499efd516ffba5d2e7b97b14e18"
+  },
+  {
+    "id": "arrows_clear",
+    "prompt": "One original cinematic realistic widescreen 16:9 film still for late-Han Chinese Three Kingdoms drama. Photographic textures, moonlit deep midnight slate blue and warm amber lanterns, natural adult humans in Chinese period armor/robes, believable wooden river boats and fort, NO thick fog (clear-night version; atmosphere can be overlaid separately), no UI, lettering, logos, collage, cartoon, modern arms or blood. FIRST-PERSON plate from inside a straw boat about to receive first volley, from stern looking past rough EMPTY straw-wrapped left and right rails toward huge distant enemy north fort. Clear night visibility, absolutely no fog across water, dark blue moonlit ripples, orange torch rows, tiny archers on far wall. Central deck open, wet textured planks, hemp rope, low blue canvas edge. No flying arrows or embedded arrows; WebGL adds flight later. Wide open upper sky and central distance, foreboding scale.",
+    "original": "design-assets/v16/arrows_clear.png",
+    "path": "public\\v16\\arrows_clear.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 323468,
+    "sha256": "9aab2246b96cf0175f61998f19c0970c07dbeec5495bbb3ba9573d3b35ed6205"
+  },
+  {
+    "id": "second_clear",
+    "prompt": "One original cinematic realistic widescreen 16:9 film still for late-Han Chinese Three Kingdoms drama. Photographic textures, moonlit deep midnight slate blue and warm amber lanterns, natural adult humans in Chinese period armor/robes, believable wooden river boats and fort, NO thick fog (clear-night version; atmosphere can be overlaid separately), no UI, lettering, logos, collage, cartoon, modern arms or blood. FIRST-PERSON view from stern after turning broadside of wooden straw boat, clear midnight water and enemy fort angled at LEFT, allied boats visible far RIGHT. LEFT straw bulwark already laden with dense ordinary wooden arrows, RIGHT straw rail still empty and facing fort after turn; show both, clear center planked deck. No fog, no flying arrows, no fire arrows. Textured rope and blue canvas trim, low perspective, dramatic luminous moonlit clouds. Different camera and composition from the first volley.",
+    "original": "design-assets/v16/second_clear.png",
+    "path": "public\\v16\\second_clear.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 302764,
+    "sha256": "83dc6e575fab800d14067bf7efc782416baa282533664881bd90b0fda4a42e62"
+  },
+  {
+    "id": "rain_feint",
+    "prompt": "Lantern local glow corrected, original composition preserved.",
+    "original": "design-assets/v16/rain_feint.png",
+    "path": "public\\v16\\rain_feint.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 276104,
+    "sha256": "bdc04ad1c5e7da719c27bd5a400a3576a68709f4dd8c4cb64a15dd8600e9d3cf"
+  },
+  {
+    "id": "C_draw_bows_clear",
+    "prompt": "Edit the supplied original historical cinematic scene only for weather: remove ALL fog and mist so this is a crisp clear moonlit night, open visible water and distant shore. Preserve the adult commander's raised palm, archers holding arrows unloosed, natural faces/hands, all boats, composition, lighting, realistic historical clothing, 16:9 full-bleed cinema quality. No text, no UI, no watermarks. This is the clear-weather alternate scene before the first volley, not a fog scene.",
+    "original": "design-assets/v16/C_draw_bows_clear.png",
+    "path": "public\\v16\\C_draw_bows_clear.webp",
+    "size": [
+      1672,
+      941
+    ],
+    "bytes": 268312,
+    "sha256": "2322bc33106f75097d2910e93ddba05d5fed6a31be24d52009950e6d83a82dd2"
+  }
+]

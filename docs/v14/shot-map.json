@@ -1,0 +1,292 @@
+{
+  "version": "V1.4",
+  "resolution": "first matching variant then default; dotted when keys read scene payload paths",
+  "nodes": {
+    "prepare": {
+      "default": "v14/borrowed-boats",
+      "reason": "岸边面对面借船，船只尚未整备，区别于片头两岸地图",
+      "variants": []
+    },
+    "prepare_discuss": {
+      "default": "v14/discussion-map",
+      "reason": "近看手与河道模型，说明后续应对",
+      "variants": []
+    },
+    "prepare_reply": {
+      "default": "v14/planning-reply",
+      "reason": "物资棚内人物应答，回应刚才的表达",
+      "variants": []
+    },
+    "assembly": {
+      "default": "v11/preparation",
+      "reason": "船上草把青布整备，与商议镜头分开",
+      "variants": []
+    },
+    "signals": {
+      "default": "v14/crew-signal",
+      "reason": "前后船复号的人物关系",
+      "variants": []
+    },
+    "weather": {
+      "default": "v11/harbor",
+      "reason": "出航前岸上看江",
+      "variants": []
+    },
+    "weather_late": {
+      "default": "v14/wait-later",
+      "reason": "换更与候船细节，等待后的不同时间",
+      "variants": []
+    },
+    "K1": {
+      "default": "v11/deck",
+      "reason": "登船后的同伴提问",
+      "variants": []
+    },
+    "K1_reply": {
+      "default": "v14/companion-reply",
+      "reason": "舱中面对面的回答",
+      "variants": []
+    },
+    "approach": {
+      "default": "v12/look-waterway",
+      "reason": "外侧水道与停船空间",
+      "variants": []
+    },
+    "challenge": {
+      "default": "v12/drum-deck",
+      "reason": "鼓的具体镜位",
+      "variants": []
+    },
+    "arrows": {
+      "default": "v13/arrows-laden",
+      "reason": "第一舷受箭",
+      "variants": []
+    },
+    "side_check": {
+      "default": "v14/side-reply",
+      "reason": "后船复号与单舷箭载",
+      "variants": []
+    },
+    "second": {
+      "default": "v13/arrows-both",
+      "reason": "两舷受箭后的满载",
+      "variants": []
+    },
+    "silence": {
+      "default": "v11/silent-gate",
+      "reason": "寨门不应的外景",
+      "variants": []
+    },
+    "silence_again": {
+      "default": "v12/look-fog-fort",
+      "reason": "第二次鼓后从江面看仍静止的寨",
+      "variants": []
+    },
+    "disagree": {
+      "default": "v14/disagreement-cabin",
+      "reason": "南岸船舱中争论人船责任，零箭不伪造箭载",
+      "variants": []
+    },
+    "scout": {
+      "default": "v11/scout",
+      "reason": "哨艇离寨",
+      "variants": []
+    },
+    "late_rescue": {
+      "default": "v11/river-rescue",
+      "reason": "横流接缆的具体行动",
+      "variants": []
+    },
+    "clear_seen": {
+      "default": "v12/look-clear-straw",
+      "reason": "月光照见未中箭草把",
+      "variants": []
+    },
+    "C_alarm": {
+      "default": "v11/command",
+      "reason": "北岸帐中接报",
+      "variants": []
+    },
+    "C_observe": {
+      "default": "v11/lookout",
+      "reason": "从北岸远眺江面",
+      "variants": []
+    },
+    "C_wait": {
+      "default": "v12/look-fog-boats",
+      "reason": "船影仍在原水线",
+      "variants": []
+    },
+    "C_shoot": {
+      "default": "v14/north-volley",
+      "reason": "从北岸守军背后向江面射击，明确射击方向",
+      "variants": []
+    },
+    "C_recognize": {
+      "default": "v12/look-clear-straw",
+      "reason": "辨认草把的近观察",
+      "variants": []
+    },
+    "C_scout": {
+      "default": "v11/north-bowline",
+      "reason": "北岸出艇的缆位",
+      "variants": []
+    },
+    "C_depart": {
+      "default": "v12/look-fog-fort",
+      "reason": "雾中寨门与江面重新静下",
+      "variants": [
+        {
+          "when": {
+            "weather": "clear"
+          },
+          "art": "v11/clear-river",
+          "reason": "晴夜水面归静，与天气一致"
+        }
+      ]
+    },
+    "return": {
+      "default": "v13/return-loaded",
+      "reason": "离开北岸后的返航全景",
+      "variants": [
+        {
+          "when": {
+            "cargo.arrows": 0
+          },
+          "art": "v13/return-empty",
+          "reason": "零箭画面不得出现中箭草把或箭束，且此幕独立镜位"
+        }
+      ]
+    },
+    "landing": {
+      "default": "v13/landing-loaded",
+      "reason": "抵岸系缆，与返航不同角度",
+      "variants": [
+        {
+          "when": {
+            "cargo.arrows": 0
+          },
+          "art": "v13/landing-empty",
+          "reason": "零箭画面不得出现中箭草把或箭束，且此幕独立镜位"
+        }
+      ]
+    },
+    "muster": {
+      "default": "v13/muster-dock",
+      "reason": "人员与船牌核点",
+      "variants": [
+        {
+          "when": {
+            "cargo.arrows": 0
+          },
+          "art": "v14/empty-inspection",
+          "reason": "零箭画面不得出现中箭草把或箭束，且此幕独立镜位"
+        }
+      ]
+    },
+    "unload": {
+      "default": "v13/unload-arrows",
+      "reason": "草把与箭卸到岸上",
+      "variants": [
+        {
+          "when": {
+            "cargo.arrows": 0
+          },
+          "art": "v14/empty-unload",
+          "reason": "零箭画面不得出现中箭草把或箭束，且此幕独立镜位"
+        }
+      ]
+    },
+    "arrow_tally": {
+      "default": "v14/dock-tally",
+      "reason": "样箭、两舷分区、核收的近景",
+      "variants": [
+        {
+          "when": {
+            "cargo.arrows": 0
+          },
+          "art": "v14/empty-tally",
+          "reason": "零箭画面不得出现中箭草把或箭束，且此幕独立镜位"
+        }
+      ]
+    },
+    "cancelled": {
+      "default": "v12/ending-empty",
+      "reason": "仍系岸边的人船，未出航不伪造卸箭",
+      "variants": []
+    },
+    "north": {
+      "default": "v13/north-dawn",
+      "reason": "北岸事后守御",
+      "variants": []
+    },
+    "south": {
+      "default": "v13/camp-debrief",
+      "reason": "南岸实际结果交代",
+      "variants": []
+    },
+    "report": {
+      "default": "v11/council",
+      "reason": "向周瑜正式复命",
+      "variants": [
+        {
+          "when": {
+            "role": "C"
+          },
+          "art": "v14/command-record",
+          "reason": "曹操在北岸核看号令记录，与南岸议事帐不同"
+        }
+      ]
+    },
+    "epilogue_1": {
+      "default": "v14/north-armory",
+      "reason": "北岸晨更与箭库余量",
+      "variants": [
+        {
+          "when": {
+            "ending": "E4",
+            "cargo.arrows": 0
+          },
+          "art": "v14/north-patrol-rest",
+          "reason": "北寨内无草把的巡逻艇回泊、湿衣桨手与交班，零箭及接应路线均保持北岸阵营"
+        },
+        {
+          "when": {
+            "ending": "E4"
+          },
+          "art": "v14/north-patrol-rest",
+          "reason": "北寨内无草把的巡逻艇回泊、湿衣桨手与交班，零箭及接应路线均保持北岸阵营"
+        },
+        {
+          "when": {
+            "ending": "E0"
+          },
+          "art": "v11/north-bowline",
+          "reason": "零发箭路线箭库不可显示亏空，以北岸照常警戒镜位承接晨更"
+        },
+        {
+          "when": {
+            "ending": "E1"
+          },
+          "art": "v11/north-bowline",
+          "reason": "零发箭路线箭库不可显示亏空，以北岸照常警戒镜位承接晨更"
+        }
+      ]
+    },
+    "epilogue_2": {
+      "default": "v14/southern-corridor",
+      "reason": "复命后帐门外余话",
+      "variants": []
+    },
+    "epilogue_3": {
+      "default": "v14/dawn-rest",
+      "reason": "军士喝热汤歇息的收束",
+      "variants": []
+    },
+    "done": {
+      "default": "v13/dawn-horizon",
+      "reason": "空阔天明江面，区别于人物尾声",
+      "variants": []
+    }
+  }
+}

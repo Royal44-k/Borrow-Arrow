@@ -1,0 +1,2994 @@
+[
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "K1",
+    "action": "ask",
+    "label": "对诸葛亮说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "challenge"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "challenge",
+    "action": "drum",
+    "label": "擂鼓，等寨中回应",
+    "to": "arrows"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "arrows",
+    "action": "turn",
+    "label": "前后船复号，一齐转舷",
+    "to": "second"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "second",
+    "action": "return",
+    "label": "顺外侧水道回航",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "arrows",
+    "action": "withdraw",
+    "label": "已有一批，收队回航",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "arrows",
+    "action": "holdside",
+    "label": "先不转，查看后船",
+    "to": "side_check"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "side_check",
+    "action": "turn",
+    "label": "回号已齐，转向",
+    "to": "second"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "side_check",
+    "action": "withdraw",
+    "label": "不再等，传令归队",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "mist",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "K1",
+    "action": "ask",
+    "label": "对诸葛亮说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "challenge"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "challenge",
+    "action": "drum",
+    "label": "擂鼓，等寨中回应",
+    "to": "silence"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "silence",
+    "action": "probe",
+    "label": "仍在原处，再传一通鼓号",
+    "to": "silence_again"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "silence_again",
+    "action": "withdraw",
+    "label": "停鼓，收回船队",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "silence",
+    "action": "withdraw",
+    "label": "停鼓，收回船队",
+    "to": "disagree"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "disagree",
+    "action": "probe",
+    "label": "只再试一次，仍守住回船水道",
+    "to": "silence_again"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "disagree",
+    "action": "insist",
+    "label": "坚持收队，我来传令",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "quiet",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "K1",
+    "action": "ask",
+    "label": "对诸葛亮说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "challenge"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "challenge",
+    "action": "drum",
+    "label": "擂鼓，等寨中回应",
+    "to": "scout"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "scout",
+    "action": "rescue",
+    "label": "接应末船，再一同撤回",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "scout",
+    "action": "signalback",
+    "label": "先传归队号，等末船靠拢",
+    "to": "late_rescue"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "late_rescue",
+    "action": "rescue",
+    "label": "看近船收紧缆，等末船归齐",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "scout",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "K1",
+    "action": "ask",
+    "label": "对诸葛亮说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "clear_seen"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "clear_seen",
+    "action": "withdraw",
+    "label": "原路撤回",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "clear_seen",
+    "action": "probe",
+    "label": "停在原处，等哨报回应",
+    "to": "scout"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "scout",
+    "action": "rescue",
+    "label": "接应末船，再一同撤回",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "scout",
+    "action": "signalback",
+    "label": "先传归队号，等末船靠拢",
+    "to": "late_rescue"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "late_rescue",
+    "action": "rescue",
+    "label": "看近船收紧缆，等末船归齐",
+    "to": "return"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "L",
+    "scenario": "clear",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "K1",
+    "action": "ask",
+    "label": "对鲁肃说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "challenge"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "challenge",
+    "action": "drum",
+    "label": "擂鼓，等寨中回应",
+    "to": "arrows"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "arrows",
+    "action": "turn",
+    "label": "前后船复号，一齐转舷",
+    "to": "second"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "second",
+    "action": "return",
+    "label": "顺外侧水道回航",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "arrows",
+    "action": "withdraw",
+    "label": "已有一批，收队回航",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "arrows",
+    "action": "holdside",
+    "label": "先不转，查看后船",
+    "to": "side_check"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "side_check",
+    "action": "turn",
+    "label": "回号已齐，转向",
+    "to": "second"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "side_check",
+    "action": "withdraw",
+    "label": "不再等，传令归队",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "mist",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "K1",
+    "action": "ask",
+    "label": "对鲁肃说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "challenge"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "challenge",
+    "action": "drum",
+    "label": "擂鼓，等寨中回应",
+    "to": "silence"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "silence",
+    "action": "probe",
+    "label": "仍在原处，再传一通鼓号",
+    "to": "silence_again"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "silence_again",
+    "action": "withdraw",
+    "label": "停鼓，收回船队",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "silence",
+    "action": "withdraw",
+    "label": "停鼓，收回船队",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "quiet",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "K1",
+    "action": "ask",
+    "label": "对鲁肃说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "challenge"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "challenge",
+    "action": "drum",
+    "label": "擂鼓，等寨中回应",
+    "to": "scout"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "scout",
+    "action": "rescue",
+    "label": "接应末船，再一同撤回",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "scout",
+    "action": "signalback",
+    "label": "先传归队号，等末船靠拢",
+    "to": "late_rescue"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "late_rescue",
+    "action": "rescue",
+    "label": "看近船收紧缆，等末船归齐",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "scout",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "prepare",
+    "action": "explain",
+    "label": "先商议后续应对之策，再整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "prepare_discuss",
+    "action": "discuss",
+    "label": "把最要紧的一句话说清",
+    "to": "prepare_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "signals"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "signals",
+    "action": "signals",
+    "label": "前后船复号，准备起行",
+    "to": "weather"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "weather",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "K1",
+    "action": "ask",
+    "label": "对鲁肃说",
+    "to": "K1_reply"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "K1_reply",
+    "action": "continue",
+    "label": "听明白后，定下停船线",
+    "to": "approach"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "approach",
+    "action": "approach",
+    "label": "停在外侧水道",
+    "to": "clear_seen"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "clear_seen",
+    "action": "withdraw",
+    "label": "原路撤回",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "muster",
+    "action": "verify",
+    "label": "确认前后队应答与船数",
+    "to": "unload"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "核收分舷清册",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "south",
+    "action": "report",
+    "label": "带着实际结果复命",
+    "to": "report"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "clear_seen",
+    "action": "probe",
+    "label": "停在原处，等哨报回应",
+    "to": "scout"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "scout",
+    "action": "rescue",
+    "label": "接应末船，再一同撤回",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "scout",
+    "action": "signalback",
+    "label": "先传归队号，等末船靠拢",
+    "to": "late_rescue"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "late_rescue",
+    "action": "rescue",
+    "label": "看近船收紧缆，等末船归齐",
+    "to": "return"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "weather",
+    "action": "wait",
+    "label": "再等一更，看江面变化",
+    "to": "weather_late"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "weather_late",
+    "action": "launch",
+    "label": "沿外侧水道前去探看",
+    "to": "K1"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "weather_late",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "cancelled",
+    "action": "account",
+    "label": "记明未出航，转看北岸换更",
+    "to": "north"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "weather",
+    "action": "cancel",
+    "label": "今夜不出船，回去说明",
+    "to": "cancelled"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "prepare",
+    "action": "load",
+    "label": "先整备船只，解缆前商议",
+    "to": "assembly"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "assembly",
+    "action": "assemble",
+    "label": "验看船只整备",
+    "to": "prepare_discuss"
+  },
+  {
+    "role": "Z",
+    "scenario": "clear",
+    "from": "prepare_reply",
+    "action": "continue",
+    "label": "照商定的次序往下办",
+    "to": "signals"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_alarm",
+    "action": "observe",
+    "label": "出帐登台，远眺江面",
+    "to": "C_observe"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_observe",
+    "action": "hold",
+    "label": "严守寨门，静待对方行动",
+    "to": "C_wait"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_wait",
+    "action": "stay",
+    "label": "仍不放箭，盯住来路",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_depart",
+    "action": "return",
+    "label": "收齐哨报，查看两岸后续",
+    "to": "return"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "muster",
+    "action": "verify",
+    "label": "听韩伯核清人船",
+    "to": "unload"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "听鲁肃核收清册",
+    "to": "north"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "south",
+    "action": "report",
+    "label": "回北岸，交代后续守令",
+    "to": "report"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_wait",
+    "action": "boats",
+    "label": "派哨艇查看，仍禁放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_scout",
+    "action": "recall",
+    "label": "看清即回，守住水寨",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_scout",
+    "action": "press",
+    "label": "再逼近一段，令其离开",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_wait",
+    "action": "shoot",
+    "label": "改令放箭，止住鼓声",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_shoot",
+    "action": "stop",
+    "label": "停射，观察船侧",
+    "to": "C_recognize"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_recognize",
+    "action": "stay",
+    "label": "守寨目送，不再追",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_recognize",
+    "action": "boats",
+    "label": "派近哨探看，限定外侧水线",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_shoot",
+    "action": "continue",
+    "label": "继续射击，压住转向",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_shoot",
+    "action": "boats",
+    "label": "停射，放哨艇察看",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_observe",
+    "action": "shoot",
+    "label": "弓弩齐发，压住江面",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_observe",
+    "action": "boats",
+    "label": "哨艇出寨探看，不许放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "mist",
+    "from": "C_observe",
+    "action": "delegate",
+    "label": "交哨长守御，有变化再报",
+    "to": "C_wait"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_alarm",
+    "action": "observe",
+    "label": "出帐登台，远眺江面",
+    "to": "C_observe"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_observe",
+    "action": "hold",
+    "label": "严守寨门，静待对方行动",
+    "to": "C_wait"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_wait",
+    "action": "stay",
+    "label": "仍不放箭，盯住来路",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_depart",
+    "action": "return",
+    "label": "收齐哨报，查看两岸后续",
+    "to": "return"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "muster",
+    "action": "verify",
+    "label": "听韩伯核清人船",
+    "to": "unload"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "听鲁肃核收清册",
+    "to": "north"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "south",
+    "action": "report",
+    "label": "回北岸，交代后续守令",
+    "to": "report"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_wait",
+    "action": "boats",
+    "label": "派哨艇查看，仍禁放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_scout",
+    "action": "recall",
+    "label": "看清即回，守住水寨",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_scout",
+    "action": "press",
+    "label": "再逼近一段，令其离开",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_wait",
+    "action": "shoot",
+    "label": "改令放箭，止住鼓声",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_shoot",
+    "action": "stop",
+    "label": "停射，观察船侧",
+    "to": "C_recognize"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_recognize",
+    "action": "stay",
+    "label": "守寨目送，不再追",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_recognize",
+    "action": "boats",
+    "label": "派近哨探看，限定外侧水线",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_shoot",
+    "action": "continue",
+    "label": "继续射击，压住转向",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_shoot",
+    "action": "boats",
+    "label": "停射，放哨艇察看",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_observe",
+    "action": "shoot",
+    "label": "弓弩齐发，压住江面",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_observe",
+    "action": "boats",
+    "label": "哨艇出寨探看，不许放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "quiet",
+    "from": "C_observe",
+    "action": "delegate",
+    "label": "交哨长守御，有变化再报",
+    "to": "C_wait"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_alarm",
+    "action": "observe",
+    "label": "出帐登台，远眺江面",
+    "to": "C_observe"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_observe",
+    "action": "hold",
+    "label": "严守寨门，静待对方行动",
+    "to": "C_wait"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_wait",
+    "action": "stay",
+    "label": "仍不放箭，盯住来路",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_depart",
+    "action": "return",
+    "label": "收齐哨报，查看两岸后续",
+    "to": "return"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "muster",
+    "action": "verify",
+    "label": "听韩伯核清人船",
+    "to": "unload"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "听鲁肃核收清册",
+    "to": "north"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "south",
+    "action": "report",
+    "label": "回北岸，交代后续守令",
+    "to": "report"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_wait",
+    "action": "boats",
+    "label": "派哨艇查看，仍禁放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_scout",
+    "action": "recall",
+    "label": "看清即回，守住水寨",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_scout",
+    "action": "press",
+    "label": "再逼近一段，令其离开",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_wait",
+    "action": "shoot",
+    "label": "改令放箭，止住鼓声",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_shoot",
+    "action": "stop",
+    "label": "停射，观察船侧",
+    "to": "C_recognize"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_recognize",
+    "action": "stay",
+    "label": "守寨目送，不再追",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_recognize",
+    "action": "boats",
+    "label": "派近哨探看，限定外侧水线",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_shoot",
+    "action": "continue",
+    "label": "继续射击，压住转向",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_shoot",
+    "action": "boats",
+    "label": "停射，放哨艇察看",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_observe",
+    "action": "shoot",
+    "label": "弓弩齐发，压住江面",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_observe",
+    "action": "boats",
+    "label": "哨艇出寨探看，不许放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "scout",
+    "from": "C_observe",
+    "action": "delegate",
+    "label": "交哨长守御，有变化再报",
+    "to": "C_wait"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_alarm",
+    "action": "observe",
+    "label": "出帐登台，远眺江面",
+    "to": "C_observe"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_observe",
+    "action": "hold",
+    "label": "严守寨门，静待对方行动",
+    "to": "C_wait"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_wait",
+    "action": "stay",
+    "label": "仍不放箭，盯住来路",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_depart",
+    "action": "return",
+    "label": "收齐哨报，查看两岸后续",
+    "to": "return"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "return",
+    "action": "moor",
+    "label": "收桨靠岸，系稳船缆",
+    "to": "landing"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "landing",
+    "action": "muster",
+    "label": "到码头核对前后船牌",
+    "to": "muster"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "muster",
+    "action": "verify",
+    "label": "听韩伯核清人船",
+    "to": "unload"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "unload",
+    "action": "unload",
+    "label": "到分舷清点处验看",
+    "to": "arrow_tally"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "arrow_tally",
+    "action": "verify",
+    "label": "听鲁肃核收清册",
+    "to": "north"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "north",
+    "action": "south",
+    "label": "回到南岸",
+    "to": "south"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "south",
+    "action": "report",
+    "label": "回北岸，交代后续守令",
+    "to": "report"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "report",
+    "action": "finish",
+    "label": "合上这一夜的故事",
+    "to": "epilogue_1"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "epilogue_1",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_2"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "epilogue_2",
+    "action": "next",
+    "label": "继续看后续",
+    "to": "epilogue_3"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "epilogue_3",
+    "action": "finish",
+    "label": "合上这一夜",
+    "to": "done"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_wait",
+    "action": "boats",
+    "label": "派哨艇查看，仍禁放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_scout",
+    "action": "recall",
+    "label": "看清即回，守住水寨",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_scout",
+    "action": "press",
+    "label": "再逼近一段，令其离开",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_wait",
+    "action": "shoot",
+    "label": "改令放箭，止住鼓声",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_shoot",
+    "action": "stop",
+    "label": "停射，观察船侧",
+    "to": "C_recognize"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_recognize",
+    "action": "stay",
+    "label": "守寨目送，不再追",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_recognize",
+    "action": "boats",
+    "label": "派近哨探看，限定外侧水线",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_shoot",
+    "action": "continue",
+    "label": "继续射击，压住转向",
+    "to": "C_depart"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_shoot",
+    "action": "boats",
+    "label": "停射，放哨艇察看",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_observe",
+    "action": "shoot",
+    "label": "弓弩齐发，压住江面",
+    "to": "C_shoot"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_observe",
+    "action": "boats",
+    "label": "哨艇出寨探看，不许放箭",
+    "to": "C_scout"
+  },
+  {
+    "role": "C",
+    "scenario": "clear",
+    "from": "C_observe",
+    "action": "delegate",
+    "label": "交哨长守御，有变化再报",
+    "to": "C_wait"
+  }
+]

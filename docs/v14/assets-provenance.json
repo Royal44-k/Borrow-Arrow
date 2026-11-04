@@ -1,0 +1,288 @@
+{
+  "version": "V1.4",
+  "generated": [
+    {
+      "slug": "discussion-map",
+      "scene": "Overhead oblique close wide view of a southern military cabin table: two Han dynasty advisers' sleeves and hands discussing a rough blank river model made with stones and small wooden boats, warm oil lamp, bamboo slips rolled closed, river glimpsed through window. No readable marks. No arrows in boats.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Overhead oblique close wide view of a southern military cabin table: two Han dynasty advisers' sleeves and hands discussing a rough blank river model made with stones and small wooden boats, warm oil lamp, bamboo slips rolled closed, river glimpsed through window. No readable marks. No arrows in boats. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-ba274932-ac43-45fb-9893-e6800d0efdf3.png",
+      "output": "public/v14/discussion-map.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "93a4cf46af234153242bb53ac7cab50c7743dc1c51eb4e15399795583d683ae7"
+    },
+    {
+      "slug": "crew-signal",
+      "scene": "Night southern dock, medium-wide side-on view along three small wooden boats: one boatman cups hands calling, another at distant stern raises a hand answering, ropes and bare straw bundles, distinct human relay across dark water. No arrows.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Night southern dock, medium-wide side-on view along three small wooden boats: one boatman cups hands calling, another at distant stern raises a hand answering, ropes and bare straw bundles, distinct human relay across dark water. No arrows. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-c7384f55-b7f4-4ec3-a5e6-9852a2b37708.png",
+      "output": "public/v14/crew-signal.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "11042a0713c416f0a8ee3824ffa9df6c72469f55c4a49ec1ad790052f2501abc"
+    },
+    {
+      "slug": "wait-later",
+      "scene": "Same historical river region but distinct shore viewpoint, deep late night: extinguishing watch incense beside changing guard boots, abandoned oar and lantern at wet dock edge, pale fog ahead. No arrows, no foreground heroic character.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Same historical river region but distinct shore viewpoint, deep late night: extinguishing watch incense beside changing guard boots, abandoned oar and lantern at wet dock edge, pale fog ahead. No arrows, no foreground heroic character. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-6bc28d4c-a203-4a05-86db-7d9580ee6301.png",
+      "output": "public/v14/wait-later.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "d13523bcca3a2f4e9b095d6809ea0eab10aac9876312e20d43a5d4ce9b2e70dc"
+    },
+    {
+      "slug": "companion-reply",
+      "scene": "Intimate wide cinematic view from inside a covered wooden boat at night: two mature Han Chinese advisers in plain period robes, one pale scholar with feather fan held low listens, one dark-robed middle-aged companion gestures toward distant northern lanterns. Straw bundles outside window have no arrows.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Intimate wide cinematic view from inside a covered wooden boat at night: two mature Han Chinese advisers in plain period robes, one pale scholar with feather fan held low listens, one dark-robed middle-aged companion gestures toward distant northern lanterns. Straw bundles outside window have no arrows. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-433b3a56-92bc-428a-b75a-6d1c077564b6.png",
+      "output": "public/v14/companion-reply.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "32c3ca2a68d495822d227f49899d5924aafe11bb16a733f95b56a1ba164370ab"
+    },
+    {
+      "slug": "side-reply",
+      "scene": "Night over-shoulder view of a veteran Han boatman at stern, raising a small lantern to answer a distant rear boat, arrows visible lodged ONLY in far outer starboard straw fence, wet wooden gunwale and rope dominate foreground. Fog and lantern amber.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Night over-shoulder view of a veteran Han boatman at stern, raising a small lantern to answer a distant rear boat, arrows visible lodged ONLY in far outer starboard straw fence, wet wooden gunwale and rope dominate foreground. Fog and lantern amber. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-d84e0c43-20a1-479c-b351-a5fcd35e5fbc.png",
+      "output": "public/v14/side-reply.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "0473563c7e76186c4aed120e03fbc49c9d8c94a77f22ada19f6e88dfa91ed976"
+    },
+    {
+      "slug": "empty-inspection",
+      "scene": "Early dawn southern dock, close wide view of a timber rack holding exactly two groups of ten plain unmarked wooden boat tokens, veteran hands checking them, moored straw covered boats empty of arrows behind. No text or glyphs.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Early dawn southern dock, close wide view of a timber rack holding exactly two groups of ten plain unmarked wooden boat tokens, veteran hands checking them, moored straw covered boats empty of arrows behind. No text or glyphs. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-4a23372a-d646-40d3-a06f-92a6c35bd477.png",
+      "output": "public/v14/empty-inspection.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "78abaef4abd04a368b49ee07ccf6bf1f1514cda01b20f312cf0d4690d2f33c54"
+    },
+    {
+      "slug": "empty-unload",
+      "scene": "Dawn southern landing, wide low side view of two tired Han Chinese soldiers carrying a dripping unpierced straw bundle up a gangplank; empty boat and coiled wet rope behind, no arrows anywhere, sober documentary still.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Dawn southern landing, wide low side view of two tired Han Chinese soldiers carrying a dripping unpierced straw bundle up a gangplank; empty boat and coiled wet rope behind, no arrows anywhere, sober documentary still. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-8bd7a8c9-fe22-4104-972d-8df5c7162056.png",
+      "output": "public/v14/empty-unload.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "8a6204fae1cba0b86ccc6d3cde50f1b75883bbe91cbdc5bb5dffe5d925a6bcff"
+    },
+    {
+      "slug": "dock-tally",
+      "scene": "Dawn southern quartermaster dock, wide close-up on rough counting table: loose period arrows arranged in two visibly separate modest sample piles, one hand inspects single iron arrowhead, cord bundles and bamboo trays, loaded straw boat blurred beyond. No numbers, text or writing.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Dawn southern quartermaster dock, wide close-up on rough counting table: loose period arrows arranged in two visibly separate modest sample piles, one hand inspects single iron arrowhead, cord bundles and bamboo trays, loaded straw boat blurred beyond. No numbers, text or writing. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-1b8fdb90-84bd-47e9-b46d-8c2c0b1b00aa.png",
+      "output": "public/v14/dock-tally.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "c883f3e1f05ef436b801b4b6cbe3f6bca9f6a3bc32f43f1584dd62791b348eec"
+    },
+    {
+      "slug": "command-record",
+      "scene": "Northern Han military command tent in blue early dawn, lateral wide detail of a commander's hand beside CLOSED bamboo slips and a worn ink stone, messenger standing beyond, square oil lamp, northern palisade through flap. Blank surfaces, no readable writing.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Northern Han military command tent in blue early dawn, lateral wide detail of a commander's hand beside CLOSED bamboo slips and a worn ink stone, messenger standing beyond, square oil lamp, northern palisade through flap. Blank surfaces, no readable writing. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-203f2497-0279-4203-ae41-ebd753a791b6.png",
+      "output": "public/v14/command-record.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "b747a45521fcf434d2be8bd1affe7f3bf740ff7d5765860a73dc63b4435e1f76"
+    },
+    {
+      "slug": "north-armory",
+      "scene": "Wide interior of northern Han arrow armory in morning: tall wooden racks with bundles of feathered arrows, one clearly depleted section, tired crossbowmen loosening wrist wraps and handing shift to next guards, cool daylight through lattice, muted amber lamps.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Wide interior of northern Han arrow armory in morning: tall wooden racks with bundles of feathered arrows, one clearly depleted section, tired crossbowmen loosening wrist wraps and handing shift to next guards, cool daylight through lattice, muted amber lamps. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-5abd2edd-c7cb-4b00-83d4-fac83e74d4b5.png",
+      "output": "public/v14/north-armory.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "0d9906a85060799654926ea7b7dd788e200046a04522e0c4bfeb949457b4d76a"
+    },
+    {
+      "slug": "southern-corridor",
+      "scene": "Dawn exterior passage between southern Han military canvas tents, medium wide scene of two advisers leaving a commander tent seen from rear, pale robe scholar with low-held fan and dark-robed companion pausing near tent rope, quartermaster carries closed slips farther away. No readable text.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Dawn exterior passage between southern Han military canvas tents, medium wide scene of two advisers leaving a commander tent seen from rear, pale robe scholar with low-held fan and dark-robed companion pausing near tent rope, quartermaster carries closed slips farther away. No readable text. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-540478b6-3a75-416e-87a5-f09d00073743.png",
+      "output": "public/v14/southern-corridor.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "03adfdd13d1c50d47d86bc2a6463432818d3733ec3a04e5a9c54a12615fb9608"
+    },
+    {
+      "slug": "dawn-rest",
+      "scene": "Quiet morning southern riverside, wide low intimate view of exhausted Han boat crew seated beside moored empty wooden boats sharing steaming plain bowls, coiled ropes drying on posts, two unpierced straw bundles in background, gentle light, humane restrained ending. No arrows prominent.",
+      "prompt": "Use case: historical-scene. Asset type: original standalone landscape background for serious Three Kingdoms interactive film, 16:9. Quiet morning southern riverside, wide low intimate view of exhausted Han boat crew seated beside moored empty wooden boats sharing steaming plain bowls, coiled ropes drying on posts, two unpierced straw bundles in background, gentle light, humane restrained ending. No arrows prominent. Style: mature Chinese historical live-action cinema, photorealistic natural faces and tactile weathered materials, blue-gray river atmosphere, restrained moonlight and lantern amber, 35mm anamorphic composition, deep believable space. Entirely new single unified shot. Historically plausible late Eastern Han wood, hemp, linen, iron; no modern objects, no fantasy armor. No collage, panels, titles, captions, UI, logos, watermark, or readable text.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-eb5e3ee6-d25b-4a60-9e4f-3ccb4be684a2.png",
+      "output": "public/v14/dawn-rest.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "77ea8b6d30cc25cb21f571850a9c64bc21a30c5af4d0eab318e776f63d29d402"
+    },
+    {
+      "slug": "empty-tally",
+      "scene": "Dawn southern dock, macro-wide cinematic composition of a veteran inspecting a clean UNPIERCED wet straw bundle on a low wooden bench, open EMPTY bamboo trays on either side, no arrows anywhere. Hand parts straw to establish nothing embedded; no tokens, no writing. Behind are vague ropes and moored boats.",
+      "prompt": "Use case: historical-scene. Asset: serious Three Kingdoms cinematic landscape 16:9 game backdrop. Dawn southern dock, macro-wide cinematic composition of a veteran inspecting a clean UNPIERCED wet straw bundle on a low wooden bench, open EMPTY bamboo trays on either side, no arrows anywhere. Hand parts straw to establish nothing embedded; no tokens, no writing. Behind are vague ropes and moored boats. Photorealistic mature Chinese historical live-action film, Eastern Han wood/hemp/linen, tactile weathered materials, blue-gray atmosphere and restrained amber lamp, 35mm lens deep space. One original unified scene, no collage, no modern objects, no illustration/cartoon, no text, UI, watermark or logo.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-54460afb-777f-46cb-9d5f-165b8e03a585.png",
+      "output": "public/v14/empty-tally.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "b965cf3b8b790dfce2115ed1c81056837fc6a0cfb89b933a51c61e6c4b6cfa61"
+    },
+    {
+      "slug": "planning-reply",
+      "scene": "Night inside southern Han dockside storehouse, lateral medium-wide: two mature plain-robed Chinese advisers in earnest conversation beside rolled blue cloth and coils of hemp rope, a weathered boat foreman listening at open wooden doorway, practical preparation supplies, no arrows, no map visible. One adviser in pale scholar robe holds a feather fan low, companion in dark robe. Natural unsmiling faces.",
+      "prompt": "Use case: historical-scene. Asset: serious Three Kingdoms cinematic landscape 16:9 game backdrop. Night inside southern Han dockside storehouse, lateral medium-wide: two mature plain-robed Chinese advisers in earnest conversation beside rolled blue cloth and coils of hemp rope, a weathered boat foreman listening at open wooden doorway, practical preparation supplies, no arrows, no map visible. One adviser in pale scholar robe holds a feather fan low, companion in dark robe. Natural unsmiling faces. Photorealistic mature Chinese historical live-action film, Eastern Han wood/hemp/linen, tactile weathered materials, blue-gray atmosphere and restrained amber lamp, 35mm lens deep space. One original unified scene, no collage, no modern objects, no illustration/cartoon, no text, UI, watermark or logo.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-bf33b305-8bc3-4eb4-aed4-bb9dbcac9a4a.png",
+      "output": "public/v14/planning-reply.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "e8a10d28703c158f7107456e178eb5435de8682e960af9320aec7dfeb4f950ed"
+    },
+    {
+      "slug": "disagreement-cabin",
+      "scene": "Night southern boat cabin, tense practical disagreement between two mature Han Chinese advisers, dark-robed companion leans forward with open hand, pale-robed scholar listens beside low-set feather fan; rain-wet hemp ropes and untouched drumsticks, empty unpierced straw outside window; no arrows. Wide lateral human close shot.",
+      "prompt": "Use case: historical-scene. Original cinematic 16:9 landscape background for Three Kingdoms. Night southern boat cabin, tense practical disagreement between two mature Han Chinese advisers, dark-robed companion leans forward with open hand, pale-robed scholar listens beside low-set feather fan; rain-wet hemp ropes and untouched drumsticks, empty unpierced straw outside window; no arrows. Wide lateral human close shot. Serious photorealistic live-action historical cinema, historically plausible Eastern Han natural linen, hemp wood iron, mature faces, cool blue-gray and restrained amber, tactile weathered surfaces. Single new unified shot, no montage, text, readable script, UI, watermark, logo, cartoon, fantasy or modern objects.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-aa426fdb-7d85-4247-8063-9031bbd3b9ca.png",
+      "output": "public/v14/disagreement-cabin.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "65fc67bebaadac2d3a15d15a6dd5ba8360b562f57c8b227eb0eb47d7d3ceec4d"
+    },
+    {
+      "slug": "north-volley",
+      "scene": "Night Northern Han river fortress, wide view FROM INSIDE northern timber palisade BEHIND disciplined Chinese crossbowmen and archers shooting OUTWARD into thick blue-gray river fog. Their backs and taut bow arms foreground, small distant straw boats barely visible on water beyond wall, amber watchfire. No arrows stuck in foreground boats; correct outward defensive firing direction.",
+      "prompt": "Use case: historical-scene. Original cinematic 16:9 landscape background for Three Kingdoms. Night Northern Han river fortress, wide view FROM INSIDE northern timber palisade BEHIND disciplined Chinese crossbowmen and archers shooting OUTWARD into thick blue-gray river fog. Their backs and taut bow arms foreground, small distant straw boats barely visible on water beyond wall, amber watchfire. No arrows stuck in foreground boats; correct outward defensive firing direction. Serious photorealistic live-action historical cinema, historically plausible Eastern Han natural linen, hemp wood iron, mature faces, cool blue-gray and restrained amber, tactile weathered surfaces. Single new unified shot, no montage, text, readable script, UI, watermark, logo, cartoon, fantasy or modern objects.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-0c2b237c-3c29-40a6-a069-527a5695048b.png",
+      "output": "public/v14/north-volley.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "c4d3cd57b9c6224052e2a78603b141bc1aa5fb182647a0533a4a76ba387aae1e"
+    },
+    {
+      "slug": "borrowed-boats",
+      "prompt": "Use case: historical-scene. Asset: original single 16:9 landscape shot for serious Three Kingdoms interactive cinema. Late evening southern Han boat landing, two mature Chinese advisers negotiating the loan of boats face to face on a wooden dock: plain pale-robed scholar with feather fan low beside his sleeve, sober dark-robed bearded companion gesturing toward a row of unprepared wooden boats. No arrows, no straw yet on boats, stacked bare ropes and folded blue cloth ashore. Low lateral establishing view, figures occupy middle distance, real weathered timbers, blue-gray river and warm lantern amber, realistic Eastern Han linen and wood, photorealistic mature historical live-action movie, restrained expressions. No cartoon, fantasy, modern objects, text, UI, watermark, logo, panels or montage.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-e6ffb096-2eba-431d-b670-188de527ce4f.png",
+      "output": "public/v14/borrowed-boats.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "6ff0081f13cc32a5c722076dc70f2105f6173726104373092332b1bd1d75c551"
+    },
+    {
+      "slug": "north-patrol-rest",
+      "prompt": "Use case: historical-scene. Asset: original serious Three Kingdoms cinematic landscape 16:9. Early morning INSIDE NORTHERN CAO army fortified river harbor, plain small OPEN patrol skiffs without canvas covers or straw bundles moored against timber palisade quay; tired northern Han Chinese oarsmen wring wet dark coarse clothing, a second crew relieves them, one boatman reties a frayed oar rope. Gray dawn light, damp wood, coils of hemp, northern armored sentry in background at wooden gate. No southern scholarly characters, no straw-covered boats, no arrows or arrow cargo visible, no sail boats dominating. Camera low lateral documentary wide view centered on rowing crew and small utilitarian open patrol boat, mature photorealistic live-action Chinese historical cinema, blue-gray with restrained amber watch lamps, historically plausible Eastern Han materials. No text, UI, logos, watermark, collage, illustration, fantasy or modern objects.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-736bbe18-d1c0-487c-9d1e-c22516b019ec.png",
+      "output": "public/v14/north-patrol-rest.webp",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1672,
+        941
+      ],
+      "mode": "RGB",
+      "sha256": "bfa9a9d5fa465e29ce13ecc13a57b4546c495a9142b5b319ddd52c73bbf58810"
+    },
+    {
+      "slug": "tally-straw-cutout",
+      "prompt": "Use case: product-mockup. Asset type: transparent photorealistic prop cutout for cinematic Three Kingdoms arrow inspection game. A single tightly tied cylindrical wet rice-straw bundle lying horizontally, viewed from slightly above at a three-quarter angle, blunt ragged cut end toward lower left and long bound body toward upper right, realistic fine golden-brown straw fibers, two rough dark hemp ropes firmly binding the bundle, subdued cool dawn lighting from upper left, tactile damp organic detail, low perspective suitable to sit on a wooden table. Entire object fully visible with generous transparent margin, no cast surface or floor, no background, no hands, no people, no arrows, no writing, no UI, no watermark or logo, no cartoon or illustration. Preserve genuinely transparent alpha around every straw fiber.",
+      "source": "C:\\Users\\lenovo\\.codex\\generated_images\\01a191cb-80a5-7611-837d-6f09398387c0\\exec-8e336c09-0771-495c-a889-9b1aced8f419.png",
+      "output": "public/v14/tally-straw-cutout.png",
+      "tool": "built-in image_gen",
+      "visualQA": "inspected; single original scene/prop, no text/UI/watermark",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "sha256": "792a730400179048244e9bf89554ddf7338b659fc964f8a786ce5a05a5e9112c"
+    }
+  ],
+  "transform": "PNG to WebP via Pillow quality90; cutout native alpha PNG preserved; no painting/compositing"
+}
